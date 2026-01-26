@@ -145,7 +145,11 @@ details.project-accordion > summary {
     font-size: 1.1rem;
   }
 }
-
+  @media (min-width: 1024px) {
+    .species-card{
+      min-width: calc(25% - 15px); /* Four columns on desktop */
+    }
+  }
 /* PHONE (Width under 480px) */
 @media (max-width: 480px) {
   .header-images img {
@@ -161,6 +165,7 @@ details.project-accordion > summary {
     justify-content: flex-start;
   }
 }
+  
 /* --- FORCE 2 COLUMNS ON MOBILE --- */
 @media (max-width: 600px) {
   .filter-chip {
