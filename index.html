@@ -411,6 +411,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
   #filter-form:has(#key-silver-plates:checked) .species-card:not([data-key*="silver-plates"]) { display: none; }
 #filter-form:has(#key-barbels-present:checked) .species-card:not([data-key*="barbels-present"]) { display: none; }
   #filter-form:has(#key-scales-tiny:checked) .species-card:not([data-key*="scales-tiny"]) { display: none; }
+  #filter-form:has(#key-round-tail:checked) .species-card:not([data-key*="round-tail"]) { display: none; }
   #filter-form:has(#key-red-spot-head:checked) .species-card:not([data-key*="red-spot-head"]) { display: none; }
   #filter-form:has(#key-red-pigment-eye:checked) .species-card:not([data-key*="red-pigment-eye"]) { display: none; }
   #filter-form:has(#key-tiny-caudal-peduncle:checked) .species-card:not([data-key*="tiny-caudal-peduncle"]) { display: none;}
@@ -930,11 +931,11 @@ html {
               <span class="title"> Tiny caudal-peduncle</span><span class="highlight"style="font-size:12px; display:block;">(Sticklebacks)</span></div>
           </label>
 
-                      <input type="checkbox" class="filter-checkbox" id="key-round-tail" data-filter="key" data-value="round -tail">
+                      <input type="checkbox" class="filter-checkbox" id="key-round-tail" data-filter="key" data-value="round-tail">
           <label class="filter-chip" for="key-round-tail">
             <img src="img/Central Mudminnow Round Tail.jpg" alt="Round tail" border="0">
             <div class="label">
-              <span class="title"> Rounded tail fin</span><span class="highlight"style="font-size:12px; display:block;">(Central mudminnow and Sticklebacks)</span></div>
+              <span class="title"> Rounded tail fin</span><span class="highlight"style="font-size:12px; display:block;">(Central mudminnow, Banded Killifish, and Sticklebacks)</span></div>
           </label>
           
                     <input type="checkbox" class="filter-checkbox" id="key-silver-plates" data-filter="key" data-value="silver-plates">
@@ -2119,7 +2120,7 @@ html {
 </div>
 
 <div class="species-card"
-     data-key="tiny-caudal-peduncle"
+     data-key="tiny-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2141,7 +2142,7 @@ html {
 
 
 <div class="species-card"
-     data-key="tiny-caudal-peduncle"
+     data-key="tiny-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2163,7 +2164,7 @@ html {
 
 
 <div class="species-card"
-     data-key="tiny-caudal-peduncle"
+     data-key="tiny-caudal-peduncle round-tail"
      data-body="round"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2184,7 +2185,7 @@ html {
 </div>
 
 <div class="species-card"
-     data-key=""
+     data-key="round-tail"
      data-body="round compressed"
      data-mouth="superior"
      data-snout="pointed"
@@ -4103,6 +4104,7 @@ html {
 </body>
 </body>
 </html>
+
 
 
 
