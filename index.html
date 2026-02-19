@@ -644,6 +644,37 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
 #salmonid-form:has(#sal-black-mouth:checked) .species-card:not([data-sal-mouth*="black"]) { display: none; }
 #salmonid-form:has(#sal-fork-tail:checked) .species-card:not([data-sal-tail*="forked"]) { display: none; }
 
+
+/* Unique Colors for Salmonidae Section */
+#group-salmonidae > summary {
+  background: #3b5a45; /* Forest Green */
+}
+#group-salmonidae {
+  border-color: #3b5a45;
+}
+
+/* --- SALMONIDAE FILTER LOGIC --- */
+#salmonidae-form:has(.filter-checkbox:checked) .filter-checkbox:checked + .filter-chip {
+    background: var(--chip-active);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* Anal Fin Rays Logic */
+#salmonidae-form:has(#sal-anal-short:checked) .species-card:not([data-anal-range="short"]) { display: none; }
+#salmonidae-form:has(#sal-anal-long:checked) .species-card:not([data-anal-range="long"]) { display: none; }
+
+/* Mouth/Gums Logic */
+#salmonidae-form:has(#sal-gums-black:checked) .species-card:not([data-gums="black"]) { display: none; }
+#salmonidae-form:has(#sal-gums-white:checked) .species-card:not([data-gums="white"]) { display: none; }
+
+/* Marking Logic */
+#salmonidae-form:has(#sal-mark-parr:checked) .species-card:not([data-mark*="parr"]) { display: none; }
+#salmonidae-form:has(#sal-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
+#salmonidae-form:has(#sal-mark-dark:checked) .species-card:not([data-mark*="dark-spots"]) { display: none; }
+#salmonidae-form:has(#sal-mark-vermic:checked) .species-card:not([data-mark*="vermiculation"]) { display: none; }
+
+
 /* GROUP 4 CATFISH: Tail & Barbels */
 #catfish-form:has(#cat-forked:checked) .species-card:not([data-cat-tail*="forked"]) { display: none; }
 #catfish-form:has(#cat-white-chin:checked) .species-card:not([data-cat-chin*="white"]) { display: none; }
@@ -4200,6 +4231,220 @@ html {
            <h3>Chain Pickerel</h3>
            <div class="tag-list"><div class="tag-row"><strong>Trait:</strong> Chain pattern + Eye bar</div></div>
         </div>
+      </div>
+    </form>
+  </div>
+</details>
+
+<details class="project-accordion" id="group-salmonidae">
+  <summary>
+    <div class="summary-content-wrapper">
+      <span class="summary-text">Trout, Salmon, & Whitefish (Salmonidae)</span>
+    </div>
+  </summary>
+  <div class="project-content">
+    <form id="salmonidae-form">
+
+      <details class="filter-accordion">
+        <summary>Anal Fin Ray Count</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="sal-anal-short" data-filter="anal" data-value="short">
+            <label class="filter-chip" for="sal-anal-short">
+              <div class="label"><span class="title">8 to 12 Rays</span><span class="highlight" style="font-size:11px; display:block;">(Trout, Chars, Whitefish)</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="sal-anal-long" data-filter="anal" data-value="long">
+            <label class="filter-chip" for="sal-anal-long">
+              <div class="label"><span class="title">13 to 19 Rays</span><span class="highlight" style="font-size:11px; display:block;">(Pacific Salmon)</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <details class="filter-accordion">
+        <summary>Mouth & Gums</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="sal-gums-black" data-filter="gums" data-value="black">
+            <label class="filter-chip" for="sal-gums-black">
+              <div class="label"><span class="title">Black Gums</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="sal-gums-white" data-filter="gums" data-value="white">
+            <label class="filter-chip" for="sal-gums-white">
+              <div class="label"><span class="title">White Gums / Pale Mouth</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <details class="filter-accordion">
+        <summary>Markings & Life Stage</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="sal-mark-parr" data-filter="mark" data-value="parr">
+            <label class="filter-chip" for="sal-mark-parr">
+              <div class="label"><span class="title">Parr Marks (Vertical Bars)</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="sal-mark-light" data-filter="mark" data-value="light-spots">
+            <label class="filter-chip" for="sal-mark-light">
+              <div class="label"><span class="title">Light Spots on Dark Body</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="sal-mark-dark" data-filter="mark" data-value="dark-spots">
+            <label class="filter-chip" for="sal-mark-dark">
+              <div class="label"><span class="title">Dark Spots on Light Body</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="sal-mark-vermic" data-filter="mark" data-value="vermiculation">
+            <label class="filter-chip" for="sal-mark-vermic">
+              <div class="label"><span class="title">Worm-like (Vermiculation) Marks</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <div class="controls">
+        <input type="reset" class="btn-reset" value="Reset All Filters">
+      </div>
+
+      <div class="species-grid" id="salmonidaeGrid">
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="light-spots">
+          <h3>Lake Trout (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Light spots on dark back; deeply forked tail.</div></div>
+            <div class="tag-row"><div><strong>Anal Rays:</strong> 8–11</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="parr">
+          <h3>Lake Trout (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Forked tail and vertical parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="vermiculation light-spots">
+          <h3>Brook Trout (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Worm-like patterns on back; red spots with blue halos.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="parr vermiculation">
+          <h3>Brook Trout (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> White leading edges on fins; parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="none">
+          <h3>Lake Whitefish (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Subterminal mouth; silver sides; no spots.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="none">
+          <h3>Lake Whitefish (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Silvery, slender, lacks parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="none">
+          <h3>Cisco / Lake Herring (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Terminal mouth; silver; lower jaw extends to eye.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="none">
+          <h3>Cisco / Lake Herring (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Small, silvery, lacks parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="long" data-gums="black" data-mark="dark-spots">
+          <h3>Chinook Salmon (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Black gums; spots on both lobes of tail.</div></div>
+            <div class="tag-row"><div><strong>Anal Rays:</strong> 15–19</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="long" data-gums="black" data-mark="parr">
+          <h3>Chinook Salmon (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Parr marks wider than spaces; dark gums.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="long" data-gums="white" data-mark="dark-spots">
+          <h3>Coho Salmon (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> White gums; spots only on top lobe of tail.</div></div>
+            <div class="tag-row"><div><strong>Anal Rays:</strong> 13–15</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="long" data-gums="white" data-mark="parr">
+          <h3>Coho Salmon (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Long/narrow parr marks; white on anal fin.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="dark-spots">
+          <h3>Rainbow Trout (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Heavily spotted tail; pink lateral stripe.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="parr dark-spots">
+          <h3>Rainbow Trout (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Spotted dorsal fin; vertical parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="dark-spots">
+          <h3>Brown Trout (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Square tail with few spots; red spots with halos.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="parr">
+          <h3>Brown Trout (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Orange/red tip on adipose fin; parr marks.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="long" data-gums="white" data-mark="dark-spots">
+          <h3>Pink Salmon (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Large oval spots on back/tail; hump on back.</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="long" data-gums="white" data-mark="none">
+          <h3>Pink Salmon (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> No parr marks; small and silvery.</div></div>
+          </div>
+        </div>
+
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="dark-spots">
+          <h3>Atlantic Salmon (Adult)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> X-shaped spots; narrow tail base (peduncle).</div></div>
+          </div>
+        </div>
+        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="parr">
+          <h3>Atlantic Salmon (Juvenile)</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>ID:</strong> Single red spot between each parr mark.</div></div>
+          </div>
+        </div>
+
       </div>
     </form>
   </div>
