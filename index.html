@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+the<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -603,10 +603,42 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
 #sunfish-form:has(#sun-mark-red-flap:checked) .species-card:not([data-sun-mark*="red-flap"]) { display: none; }
 #sunfish-form:has(#sun-mark-black-flap:checked) .species-card:not([data-sun-mark*="black-flap"]) { display: none; }
 
-/* GROUP 2 PIKE: Snout & Markings */
-#pike-form:has(#pk-duck:checked) .species-card:not([data-pk-snout*="duck"]) { display: none; }
-#pk-duck:checked ~ .species-grid .species-card:not([data-pk-snout*="duck"]) { display: none; }
-#pike-form:has(#pk-chain:checked) .species-card:not([data-pk-mark*="chain"]) { display: none; }
+/* Unique Colors for Pike Section */
+#group-pike > summary {
+  background: #4A5D23; /* Dark Olive Green */
+}
+#group-pike {
+  border-color: #4A5D23;
+}
+
+/* --- PIKE FILTER LOGIC --- */
+/* Active Chip Highlighting */
+#pike-form:has(.filter-checkbox:checked) .filter-checkbox:checked + .filter-chip {
+    background: var(--chip-active);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* Submandibular Pores */
+#pike-form:has(#pike-pores-4:checked) .species-card:not([data-pores*="4"]) { display: none; }
+#pike-form:has(#pike-pores-5:checked) .species-card:not([data-pores*="5"]) { display: none; }
+#pike-form:has(#pike-pores-6:checked) .species-card:not([data-pores*="6-9"]) { display: none; }
+
+/* Scales (Cheek & Opercle) */
+#pike-form:has(#pike-scale-full:checked) .species-card:not([data-scales*="full-full"]) { display: none; }
+#pike-form:has(#pike-scale-half-op:checked) .species-card:not([data-scales*="full-half"]) { display: none; }
+#pike-form:has(#pike-scale-half-half:checked) .species-card:not([data-scales*="half-half"]) { display: none; }
+
+/* Markings */
+#pike-form:has(#pike-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
+#pike-form:has(#pike-mark-dark:checked) .species-card:not([data-mark*="dark-marks"]) { display: none; }
+#pike-form:has(#pike-mark-chain:checked) .species-card:not([data-mark*="chain"]) { display: none; }
+#pike-form:has(#pike-mark-mottled:checked) .species-card:not([data-mark*="mottled"]) { display: none; }
+
+/* Teardrop */
+#pike-form:has(#pike-teardrop-yes:checked) .species-card:not([data-teardrop*="present"]) { display: none; }
+#pike-form:has(#pike-teardrop-no:checked) .species-card:not([data-teardrop*="absent"]) { display: none; }
+
 
 /* GROUP 3 SALMONID: Adipose & Mouth */
 #salmonid-form:has(#sal-black-mouth:checked) .species-card:not([data-sal-mouth*="black"]) { display: none; }
@@ -3972,6 +4004,174 @@ html {
 
       </div> </form> </div>
 </details>
+
+<details class="project-accordion" id="group-pike">
+  <summary>
+    <div class="summary-content-wrapper">
+      <span class="summary-text">Pike & Pickerels (Esocidae)</span>
+    </div>
+  </summary>
+  <div class="project-content">
+    <form id="pike-form">
+
+      <details class="filter-accordion">
+        <summary>Submandibular Pores (Underneath Jaw)</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="pike-pores-4" data-filter="pores" data-value="4">
+            <label class="filter-chip" for="pike-pores-4">
+              <div class="label"><span class="title">4 Pores per side</span><span class="highlight" style="font-size:12px; display:block;">(Pickerels)</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-pores-5" data-filter="pores" data-value="5">
+            <label class="filter-chip" for="pike-pores-5">
+              <div class="label"><span class="title">5 Pores per side</span><span class="highlight" style="font-size:12px; display:block;">(Northern Pike)</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-pores-6" data-filter="pores" data-value="6">
+            <label class="filter-chip" for="pike-pores-6">
+              <div class="label"><span class="title">6 to 9 Pores per side</span><span class="highlight" style="font-size:12px; display:block;">(Muskellunge)</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <details class="filter-accordion">
+        <summary>Scales (Cheek & Opercle)</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="pike-scale-full" data-filter="scales" data-value="full-full">
+            <label class="filter-chip" for="pike-scale-full">
+              <div class="label"><span class="title">Cheek: Fully Scaled<br>Opercle: Fully Scaled</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-scale-half-op" data-filter="scales" data-value="full-half">
+            <label class="filter-chip" for="pike-scale-half-op">
+              <div class="label"><span class="title">Cheek: Fully Scaled<br>Opercle: Upper Half Scaled</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-scale-half-half" data-filter="scales" data-value="half-half">
+            <label class="filter-chip" for="pike-scale-half-half">
+              <div class="label"><span class="title">Cheek: Upper Half Scaled<br>Opercle: Upper Half Scaled</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <details class="filter-accordion">
+        <summary>Markings & Teardrop</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="pike-mark-light" data-filter="mark" data-value="light-spots">
+            <label class="filter-chip" for="pike-mark-light">
+              <div class="label"><span class="title">Light bean-shaped spots on dark background</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-mark-dark" data-filter="mark" data-value="dark-marks">
+            <label class="filter-chip" for="pike-mark-dark">
+              <div class="label"><span class="title">Dark spots or bars on light background</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-mark-chain" data-filter="mark" data-value="chain">
+            <label class="filter-chip" for="pike-mark-chain">
+              <div class="label"><span class="title">Chain-like / Lace pattern</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-mark-mottled" data-filter="mark" data-value="mottled">
+            <label class="filter-chip" for="pike-mark-mottled">
+              <div class="label"><span class="title">Mottled or wavy bars (Small fish)</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-teardrop-yes" data-filter="teardrop" data-value="present">
+            <label class="filter-chip" for="pike-teardrop-yes">
+              <div class="label"><span class="title">Distinct vertical teardrop under eye</span></div>
+            </label>
+
+            <input type="checkbox" class="filter-checkbox" id="pike-teardrop-no" data-filter="teardrop" data-value="absent">
+            <label class="filter-chip" for="pike-teardrop-no">
+              <div class="label"><span class="title">No distinct teardrop</span></div>
+            </label>
+          </div>
+        </div>
+      </details>
+
+      <div class="controls">
+        <input type="reset" class="btn-reset" value="Reset All Filters">
+      </div>
+
+      <div class="species-grid" id="pikeGrid">
+
+        <div class="species-card"
+             data-pores="6-9"
+             data-scales="half-half"
+             data-mark="dark-marks"
+             data-teardrop="absent">
+          <img class="extra" src="https://placehold.co/300x180/8FBC8F/FFF?text=Muskellunge" alt="Muskellunge">
+          <h3>Muskellunge</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>Key Features:</strong> Tail fin is deeply pointed/forked. Largest member of the pike family.</div></div>
+            <div class="tag-row"><div><strong>Pores:</strong> 6 to 9 submandibular pores on each side of the lower jaw.</div></div>
+            <div class="tag-row"><div><strong>Scales:</strong> Scaled ONLY on the upper half of the cheek and upper half of the opercle.</div></div>
+            <div class="tag-row"><div><strong>Markings:</strong> Dark spots, vertical bars, or clear (on a lighter greenish/silver background).</div></div>
+            <div class="tag-row"><div><strong>Teardrop:</strong> Absent.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card"
+             data-pores="5"
+             data-scales="full-half"
+             data-mark="light-spots"
+             data-teardrop="absent">
+          <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Northern+Pike" alt="Northern Pike">
+          <h3>Northern Pike</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>Key Features:</strong> Tail fin has rounded tips (more so than a musky).</div></div>
+            <div class="tag-row"><div><strong>Pores:</strong> Usually exactly 5 submandibular pores on each side of the lower jaw.</div></div>
+            <div class="tag-row"><div><strong>Scales:</strong> Cheek is FULLY scaled; opercle is ONLY scaled on the upper half.</div></div>
+            <div class="tag-row"><div><strong>Markings:</strong> Light, horizontal bean-shaped spots on a dark green background.</div></div>
+            <div class="tag-row"><div><strong>Teardrop:</strong> Absent or very faint.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card"
+             data-pores="4"
+             data-scales="full-full"
+             data-mark="chain"
+             data-teardrop="present">
+          <img class="extra" src="https://placehold.co/300x180/6B8E23/FFF?text=Chain+Pickerel" alt="Chain Pickerel">
+          <h3>Chain Pickerel</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>Key Features:</strong> Distinctive chain-link pattern on sides.</div></div>
+            <div class="tag-row"><div><strong>Pores:</strong> 4 submandibular pores on each side of the lower jaw.</div></div>
+            <div class="tag-row"><div><strong>Scales:</strong> Both cheek and opercle are FULLY scaled.</div></div>
+            <div class="tag-row"><div><strong>Markings:</strong> Dark, interconnected chain-like pattern over a yellowish/green background.</div></div>
+            <div class="tag-row"><div><strong>Teardrop:</strong> Very distinct dark vertical bar dropping down from the eye.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card"
+             data-pores="4"
+             data-scales="full-full"
+             data-mark="mottled"
+             data-teardrop="present">
+          <img class="extra" src="https://placehold.co/300x180/808000/FFF?text=Grass+Pickerel" alt="Grass Pickerel">
+          <h3>Grass Pickerel</h3>
+          <div class="tag-list">
+            <div class="tag-row"><div><strong>Key Features:</strong> Smallest of the esocids. Has a significantly shorter, thicker snout compared to other pike.</div></div>
+            <div class="tag-row"><div><strong>Pores:</strong> 4 submandibular pores on each side of the lower jaw.</div></div>
+            <div class="tag-row"><div><strong>Scales:</strong> Both cheek and opercle are FULLY scaled.</div></div>
+            <div class="tag-row"><div><strong>Markings:</strong> Mottled, wavy dark vertical bars or vermiculations on a brownish/green background.</div></div>
+            <div class="tag-row"><div><strong>Teardrop:</strong> Distinct dark vertical bar dropping backwards slightly from the eye.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</details>
+
+
+
 <details class="project-accordion">
   <summary>Pike, Pickerel (PLACE HOLDER)</summary>
   <div class="project-content">
