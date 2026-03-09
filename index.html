@@ -3843,10 +3843,18 @@ For internal use only currently. Some external photos pending citation</h1>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-mouth-white" data-filter="mouth" data-value="white">
-            <label class="filter-chip" for="salmon-mouth-white"><div class="label">White Gums</div></label>
+            <label class="filter-chip" for="salmon-mouth-white"><div class="label">Inside of mouth white</div></label>
 
             <input type="checkbox" class="filter-checkbox" id="salmon-mouth-black" data-filter="mouth" data-value="black">
-            <label class="filter-chip" for="salmon-mouth-black"><div class="label">Black Gums (Chinook Only)</div></label>
+            <label class="filter-chip" for="salmon-mouth-black"><div class="label">Inside of mouth black or gray</div></label>
+            
+                                    <input type="checkbox" class="filter-checkbox" id="salmon-gum-white" data-filter="mouth" data-value="white-gum">
+            <label class="filter-chip" for="salmon-gum-white"><div class="label">White Gums</div></label>
+            
+                        <input type="checkbox" class="filter-checkbox" id="salmon-gum-black" data-filter="mouth" data-value="black-gum">
+            <label class="filter-chip" for="salmon-mouth-black"><div class="label">Black Gums</div></label>
+            
+
           </div>
         </div>
       </details>
@@ -3908,18 +3916,18 @@ For internal use only currently. Some external photos pending citation</h1>
 
       <div class="species-grid" id="salmonGrid">
 
-<div class="species-card" data-stage="adult" data-mouth="white" data-tail="forked" data-mark="light-spots" data-curve="straight">
+<div class="species-card" data-stage="adult" data-mouth="white white-gum" data-tail="forked" data-mark="light-spots" data-curve="straight">
   <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout Adult">
   <h3>Lake Trout (Adult)</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Mouth/Gums:</strong> White gums.</div></div>
+    <div class="tag-row"><div><strong>Mouth/Gums:</strong> White mouth and gums.</div></div>
     <div class="tag-row"><div><strong>Tail:</strong> Deeply forked.</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Light cream spots on dark green/gray; worm-like marks on back.</div></div>
-    <div class="tag-row"><div><strong>Anal Fin:</strong> Straight margin.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Light cream spots on dark green/gray, worm-like marks on back (Vermiculations).</div></div>
+    <div class="tag-row"><div><strong>Anal Fin:</strong>KEEP? Straight margin.</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="forked" data-mark="parr-marks" data-curve="straight">
+<div class="species-card" data-stage="juvenile" data-mouth="white white-gum" data-tail="forked" data-mark="parr-marks" data-curve="straight">
   <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Parr)" alt="Lake Trout Juvenile">
   <h3>Lake Trout (Juvenile)</h3>
   <div class="tag-list">
@@ -3927,7 +3935,7 @@ For internal use only currently. Some external photos pending citation</h1>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" data-stage="adult" data-mouth="white" data-tail="square" data-mark="light-spots" data-curve="concave">
+<div class="species-card" data-stage="adult" data-mouth="black black-gum" data-tail="square" data-mark="light-spots" data-curve="concave">
   <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Adult)" alt="Brook Trout Adult">
   <h3>Brook Trout (Adult)</h3>
   <div class="tag-list">
@@ -4588,7 +4596,6 @@ For internal use only currently. Some external photos pending citation</h1>
 </body>
 </body>
 </html>
-
 
 
 
