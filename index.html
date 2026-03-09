@@ -675,6 +675,8 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
 /* Mouth/Gum Color */
 #salmon-form:has(#salmon-mouth-white:checked) .species-card:not([data-mouth*="white"]) { display: none; }
 #salmon-form:has(#salmon-mouth-black:checked) .species-card:not([data-mouth*="black"]) { display: none; }
+#salmon-form:has(#salmon-gum-white:checked) .species-card:not([data-mouth*="white-gum"]) { display: none; }
+#salmon-form:has(#salmon-gum-black:checked) .species-card:not([data-mouth*="black-gum"]) { display: none; }
 
 /* Tail Shape */
 #salmon-form:has(#salmon-tail-fork:checked) .species-card:not([data-tail*="forked"]) { display: none; }
@@ -684,6 +686,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
 /* Markings */
 #salmon-form:has(#salmon-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
 #salmon-form:has(#salmon-mark-dark:checked) .species-card:not([data-mark*="dark-spots"]) { display: none; }
+#salmon-form:has(#salmon-mark-worm:checked) .species-card:not([data-mark*="worm"]) { display: none; }
 #salmon-form:has(#salmon-mark-parr:checked) .species-card:not([data-mark*="parr-marks"]) { display: none; }
 #salmon-form:has(#salmon-mark-silver:checked) .species-card:not([data-mark*="silver"]) { display: none; }
 
@@ -3852,7 +3855,7 @@ For internal use only currently. Some external photos pending citation</h1>
             <label class="filter-chip" for="salmon-gum-white"><div class="label">White Gums</div></label>
             
                         <input type="checkbox" class="filter-checkbox" id="salmon-gum-black" data-filter="mouth" data-value="black-gum">
-            <label class="filter-chip" for="salmon-mouth-black"><div class="label">Black Gums</div></label>
+            <label class="filter-chip" for="salmon-gum-black"><div class="label">Black Gums</div></label>
             
 
           </div>
@@ -3885,11 +3888,18 @@ For internal use only currently. Some external photos pending citation</h1>
             <input type="checkbox" class="filter-checkbox" id="salmon-mark-dark" data-filter="mark" data-value="dark-spots">
             <label class="filter-chip" for="salmon-mark-dark"><div class="label">Dark spots on Light</div></label>
 
+            <input type="checkbox" class="filter-checkbox" id="salmon-mark-worm" data-filter="mark" data-value="worm">
+            <label class="filter-chip" for="salmon-mark-worm"><div class="label">worm-like marks on back (Vermiculations)</div></label>
+            
             <input type="checkbox" class="filter-checkbox" id="salmon-mark-parr" data-filter="mark" data-value="parr-marks">
             <label class="filter-chip" for="salmon-mark-parr"><div class="label">Vertical Parr Marks</div></label>
 
             <input type="checkbox" class="filter-checkbox" id="salmon-mark-silver" data-filter="mark" data-value="silver">
             <label class="filter-chip" for="salmon-mark-silver"><div class="label">Silvery / No Spots</div></label>
+            
+            
+            worm-like marks on back (Vermiculations)
+            
           </div>
         </div>
       </details>
@@ -3916,7 +3926,7 @@ For internal use only currently. Some external photos pending citation</h1>
 
       <div class="species-grid" id="salmonGrid">
 
-<div class="species-card" data-stage="adult" data-mouth="white white-gum" data-tail="forked" data-mark="light-spots" data-curve="straight">
+<div class="species-card" data-stage="adult" data-mouth="white white-gum" data-tail="forked" data-mark="light-spots worm" data-curve="straight">
   <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout Adult">
   <h3>Lake Trout (Adult)</h3>
   <div class="tag-list">
@@ -3935,13 +3945,13 @@ For internal use only currently. Some external photos pending citation</h1>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" data-stage="adult" data-mouth="black black-gum" data-tail="square" data-mark="light-spots" data-curve="concave">
+<div class="species-card" data-stage="adult" data-mouth="black black-gum" data-tail="square" data-mark="light-spots worm" data-curve="concave">
   <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Adult)" alt="Brook Trout Adult">
   <h3>Brook Trout (Adult)</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Mouth/Gums:</strong> White gums; white leading edges on lower fins.</div></div>
+    <div class="tag-row"><div><strong>Mouth/Gums:</strong> Dark gums and mouth</div></div>
     <div class="tag-row"><div><strong>Tail:</strong> Square or slightly notched.</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Red spots with blue halos; wavy light lines on back.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Red spots with blue halos, yellow dots, worm-like marks on back (Vermiculations).</div></div>
     <div class="tag-row"><div><strong>Anal Fin:</strong> Concave (curved inward).</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
