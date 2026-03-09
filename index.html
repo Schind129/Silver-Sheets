@@ -653,28 +653,44 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
   border-color: #3b5a45;
 }
 
-/* --- ONIDAE FILTER LOGIC --- */
-#onidae-form:has(.filter-checkbox:checked) .filter-checkbox:checked + .filter-chip {
+/* Unique Colors for Salmonidae Section */
+#group-salmonidae > summary {
+  background: #36516a; /* Deep Steel Blue */
+}
+#group-salmonidae {
+  border-color: #36516a;
+}
+
+/* --- SALMONIDAE FILTER LOGIC --- */
+#salmon-form:has(.filter-checkbox:checked) .filter-checkbox:checked + .filter-chip {
     background: var(--chip-active);
     border-color: var(--accent);
     box-shadow: 0 0 0 1px var(--accent);
 }
 
-/* Anal Fin Rays Logic */
-#onidae-form:has(#sal-anal-short:checked) .species-card:not([data-anal-range="short"]) { display: none; }
-#onidae-form:has(#sal-anal-long:checked) .species-card:not([data-anal-range="long"]) { display: none; }
+/* Life Stage */
+#salmon-form:has(#salmon-stage-adult:checked) .species-card:not([data-stage*="adult"]) { display: none; }
+#salmon-form:has(#salmon-stage-juv:checked) .species-card:not([data-stage*="juvenile"]) { display: none; }
 
-/* Mouth/Gums Logic */
-#onidae-form:has(#sal-gums-black:checked) .species-card:not([data-gums="black"]) { display: none; }
-#onidae-form:has(#sal-gums-white:checked) .species-card:not([data-gums="white"]) { display: none; }
+/* Mouth/Gum Color */
+#salmon-form:has(#salmon-mouth-white:checked) .species-card:not([data-mouth*="white"]) { display: none; }
+#salmon-form:has(#salmon-mouth-black:checked) .species-card:not([data-mouth*="black"]) { display: none; }
 
-/* Marking Logic */
-#onidae-form:has(#sal-mark-parr:checked) .species-card:not([data-mark*="parr"]) { display: none; }
-#onidae-form:has(#sal-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
-#onidae-form:has(#sal-mark-dark:checked) .species-card:not([data-mark*="dark-spots"]) { display: none; }
-#onidae-form:has(#sal-mark-vermic:checked) .species-card:not([data-mark*="vermiculation"]) { display: none; }
+/* Tail Shape */
+#salmon-form:has(#salmon-tail-fork:checked) .species-card:not([data-tail*="forked"]) { display: none; }
+#salmon-form:has(#salmon-tail-notch:checked) .species-card:not([data-tail*="notched"]) { display: none; }
+#salmon-form:has(#salmon-tail-square:checked) .species-card:not([data-tail*="square"]) { display: none; }
 
+/* Markings */
+#salmon-form:has(#salmon-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
+#salmon-form:has(#salmon-mark-dark:checked) .species-card:not([data-mark*="dark-spots"]) { display: none; }
+#salmon-form:has(#salmon-mark-parr:checked) .species-card:not([data-mark*="parr-marks"]) { display: none; }
+#salmon-form:has(#salmon-mark-silver:checked) .species-card:not([data-mark*="silver"]) { display: none; }
 
+/* Anal Fin Curve */
+#salmon-form:has(#salmon-curve-straight:checked) .species-card:not([data-curve*="straight"]) { display: none; }
+#salmon-form:has(#salmon-curve-concave:checked) .species-card:not([data-curve*="concave"]) { display: none; }
+#salmon-form:has(#salmon-curve-convex:checked) .species-card:not([data-curve*="convex"]) { display: none; }
 /* GROUP 4 CATFISH: Tail & Barbels */
 #catfish-form:has(#cat-forked:checked) .species-card:not([data-cat-tail*="forked"]) { display: none; }
 #catfish-form:has(#cat-white-chin:checked) .species-card:not([data-cat-chin*="white"]) { display: none; }
@@ -3803,69 +3819,85 @@ For internal use only currently. Some external photos pending citation</h1>
 <details class="project-accordion" id="group-salmonidae">
   <summary>
     <div class="summary-content-wrapper">
-      <span class="summary-text">Trout, Salmon, & Whitefish (Salmonidae)</span>
+      <span class="summary-text">Salmon, Trout & Whitefish (Salmonidae)</span>
     </div>
   </summary>
   <div class="project-content">
-    <form id="salmonidae-form">
+    <form id="salmon-form">
 
       <details class="filter-accordion">
-        <summary>Anal Fin Ray Count</summary>
+        <summary>Life Stage</summary>
         <div class="filter-body">
           <div class="chip-row">
-            <input type="checkbox" class="filter-checkbox" id="sal-anal-short" data-filter="anal" data-value="short">
-            <label class="filter-chip" for="sal-anal-short">
-              <div class="label"><span class="title">8 to 12 Rays</span><span class="highlight" style="font-size:11px; display:block;">(Trout, Chars, Whitefish)</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-stage-adult" data-filter="stage" data-value="adult">
+            <label class="filter-chip" for="salmon-stage-adult"><div class="label">Adult</div></label>
 
-            <input type="checkbox" class="filter-checkbox" id="sal-anal-long" data-filter="anal" data-value="long">
-            <label class="filter-chip" for="sal-anal-long">
-              <div class="label"><span class="title">13 to 19 Rays</span><span class="highlight" style="font-size:11px; display:block;">(Pacific Salmon)</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-stage-juv" data-filter="stage" data-value="juvenile">
+            <label class="filter-chip" for="salmon-stage-juv"><div class="label">Juvenile (Parr)</div></label>
           </div>
         </div>
       </details>
 
       <details class="filter-accordion">
-        <summary>Mouth & Gums</summary>
+        <summary>Mouth and Gum Color</summary>
         <div class="filter-body">
           <div class="chip-row">
-            <input type="checkbox" class="filter-checkbox" id="sal-gums-black" data-filter="gums" data-value="black">
-            <label class="filter-chip" for="sal-gums-black">
-              <div class="label"><span class="title">Black Gums</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-mouth-white" data-filter="mouth" data-value="white">
+            <label class="filter-chip" for="salmon-mouth-white"><div class="label">White Gums</div></label>
 
-            <input type="checkbox" class="filter-checkbox" id="sal-gums-white" data-filter="gums" data-value="white">
-            <label class="filter-chip" for="sal-gums-white">
-              <div class="label"><span class="title">White Gums / Pale Mouth</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-mouth-black" data-filter="mouth" data-value="black">
+            <label class="filter-chip" for="salmon-mouth-black"><div class="label">Black Gums (Chinook Only)</div></label>
           </div>
         </div>
       </details>
 
       <details class="filter-accordion">
-        <summary>Markings & Life Stage</summary>
+        <summary>Tail Shape</summary>
         <div class="filter-body">
           <div class="chip-row">
-            <input type="checkbox" class="filter-checkbox" id="sal-mark-parr" data-filter="mark" data-value="parr">
-            <label class="filter-chip" for="sal-mark-parr">
-              <div class="label"><span class="title">Parr Marks (Vertical Bars)</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-tail-fork" data-filter="tail" data-value="forked">
+            <label class="filter-chip" for="salmon-tail-fork"><div class="label">Deeply Forked</div></label>
 
-            <input type="checkbox" class="filter-checkbox" id="sal-mark-light" data-filter="mark" data-value="light-spots">
-            <label class="filter-chip" for="sal-mark-light">
-              <div class="label"><span class="title">Light Spots on Dark Body</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-tail-notch" data-filter="tail" data-value="notched">
+            <label class="filter-chip" for="salmon-tail-notch"><div class="label">Notched / Slightly Forked</div></label>
 
-            <input type="checkbox" class="filter-checkbox" id="sal-mark-dark" data-filter="mark" data-value="dark-spots">
-            <label class="filter-chip" for="sal-mark-dark">
-              <div class="label"><span class="title">Dark Spots on Light Body</span></div>
-            </label>
+            <input type="checkbox" class="filter-checkbox" id="salmon-tail-square" data-filter="tail" data-value="square">
+            <label class="filter-chip" for="salmon-tail-square"><div class="label">Square / Truncated</div></label>
+          </div>
+        </div>
+      </details>
 
-            <input type="checkbox" class="filter-checkbox" id="sal-mark-vermic" data-filter="mark" data-value="vermiculation">
-            <label class="filter-chip" for="sal-mark-vermic">
-              <div class="label"><span class="title">Worm-like (Vermiculation) Marks</span></div>
-            </label>
+      <details class="filter-accordion">
+        <summary>Markings</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="salmon-mark-light" data-filter="mark" data-value="light-spots">
+            <label class="filter-chip" for="salmon-mark-light"><div class="label">Light spots on Dark</div></label>
+
+            <input type="checkbox" class="filter-checkbox" id="salmon-mark-dark" data-filter="mark" data-value="dark-spots">
+            <label class="filter-chip" for="salmon-mark-dark"><div class="label">Dark spots on Light</div></label>
+
+            <input type="checkbox" class="filter-checkbox" id="salmon-mark-parr" data-filter="mark" data-value="parr-marks">
+            <label class="filter-chip" for="salmon-mark-parr"><div class="label">Vertical Parr Marks</div></label>
+
+            <input type="checkbox" class="filter-checkbox" id="salmon-mark-silver" data-filter="mark" data-value="silver">
+            <label class="filter-chip" for="salmon-mark-silver"><div class="label">Silvery / No Spots</div></label>
+          </div>
+        </div>
+      </details>
+
+      <details class="filter-accordion">
+        <summary>Anal Fin Curve</summary>
+        <div class="filter-body">
+          <div class="chip-row">
+            <input type="checkbox" class="filter-checkbox" id="salmon-curve-straight" data-filter="curve" data-value="straight">
+            <label class="filter-chip" for="salmon-curve-straight"><div class="label">Straight</div></label>
+
+            <input type="checkbox" class="filter-checkbox" id="salmon-curve-concave" data-filter="curve" data-value="concave">
+            <label class="filter-chip" for="salmon-curve-concave"><div class="label">Concave (Inward)</div></label>
+
+            <input type="checkbox" class="filter-checkbox" id="salmon-curve-convex" data-filter="curve" data-value="convex">
+            <label class="filter-chip" for="salmon-curve-convex"><div class="label">Convex (Outward)</div></label>
           </div>
         </div>
       </details>
@@ -3874,415 +3906,176 @@ For internal use only currently. Some external photos pending citation</h1>
         <input type="reset" class="btn-reset" value="Reset All Filters">
       </div>
 
-      <div class="species-grid" id="salmonidaeGrid">
+      <div class="species-grid" id="salmonGrid">
 
-        <div class="species-card" data-anal-range="short" data-gums="white" data-mark="light-spots">
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="forked" data-mark="light-spots" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout">
           <h3>Lake Trout (Adult)</h3>
           <div class="tag-list">
-            <div class="tag-row"><div><strong>ID:</strong> Light spots on dark back; deeply forked tail.</div></div>
-            <div class="tag-row"><div><strong>Anal Rays:</strong> 8–11</div></div>
-          </div>
+             <div class="tag-row"><div><strong>Mouth:</strong> White gums. <strong>Tail:</strong> Deeply forked.</div></div>
+             <div class="tag-row"><div><strong>Markings:</strong> Light spots on dark background; vermiculations on back.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Margin is straight.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
         </div>
-       <div class="species-card"
-     data-key="adipose-fin"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="mottled"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout Adult">
-  <h3>Lake Trout (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, deeply forked tail, white leading edges on lower fins</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round / cylindrical</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Light (creamy to yellow) irregular spots on a dark green to grayish background (mottled)</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="vertical-bars mottled"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Juvenile)" alt="Lake Trout Juvenile">
-  <h3>Lake Trout (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, deeply forked tail</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round / cylindrical</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Distinct vertical bars (parr marks) and faint light spots starting to form</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="mottled white-outline-caudal-fin"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Adult)" alt="Brook Trout Adult">
-  <h3>Brook Trout (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, worm-like markings (vermiculation) on back, white leading edge on lower fins followed by black</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round / cylindrical</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Red spots with blue halos, mottled dark green back</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="vertical-bars mottled"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Juvenile)" alt="Brook Trout Juvenile">
-  <h3>Brook Trout (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, dark edges on dorsal fin</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Wide, dark vertical bars (parr marks) and some early mottling/vermiculation on back</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="subterminal"
-     data-snout="blunt"
-     data-lateral="faint-lateral-line"
-     data-markings="bright-silver-sides dark-edged-scales"
-     data-anal="11 12 13">
-  <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Lake+Whitefish+(Adult)" alt="Lake Whitefish Adult">
-  <h3>Lake Whitefish (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, snout overhangs the mouth</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal (points down)</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt, somewhat rounded</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Bright silver sides, darker olive to brown back, dark edges on scales</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 11–13</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="subterminal"
-     data-snout="blunt"
-     data-lateral="faint-lateral-line"
-     data-markings="bright-silver-sides"
-     data-anal="11 12 13">
-  <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Lake+Whitefish+(Juvenile)" alt="Lake Whitefish Juvenile">
-  <h3>Lake Whitefish (Juvenile)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, inferior/subterminal mouth</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Bright silver sides (lacks distinct vertical parr marks seen in trout/salmon)</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 11–13</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral="faint-lateral-line"
-     data-markings="bright-silver-sides"
-     data-anal="11 12 13">
-  <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Adult)" alt="Cisco Adult">
-  <h3>Cisco / Lake Herring (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, lower jaw extends to or slightly beyond upper jaw</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed, torpedo-like</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Bright silver sides, lacks dark spots on back/fins</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 11–13</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral="faint-lateral-line"
-     data-markings="bright-silver-sides"
-     data-anal="11 12 13">
-  <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Juvenile)" alt="Cisco Juvenile">
-  <h3>Cisco / Lake Herring (Juvenile)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, lower jaw equal or longer than upper jaw</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Highly silvery (does not have vertical parr marks)</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 11–13</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="compressed round"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="spots-top bright-silver-sides"
-     data-anal="more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Adult)" alt="Chinook Salmon Adult">
-  <h3>Chinook Salmon (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, black pigment on gums and entire inside of mouth</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed to round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Dark spots on back and on BOTH lobes (top and bottom) of the tail fin</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 15–19 (Key Pacific Salmon trait)</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="vertical-bars bright-silver-sides"
-     data-anal="more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Juvenile)" alt="Chinook Salmon Juvenile">
-  <h3>Chinook Salmon (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin, leading edge of anal fin is NOT white</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Parr marks (vertical bars) are wider than the spaces between them</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 15–19</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="compressed round"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="spots-top bright-silver-sides"
-     data-anal="13 more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Adult)" alt="Coho Salmon Adult">
-  <h3>Coho Salmon (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, black mouth but with WHITE gums</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed to round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Dark spots on back and ONLY on the upper lobe of the tail fin</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 13–15</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin white-outline-caudal-fin"
-     data-body="compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="vertical-bars"
-     data-anal="13 more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Juvenile)" alt="Coho Salmon Juvenile">
-  <h3>Coho Salmon (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin, leading edge of anal fin has white followed by black</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Long, narrow vertical bars (parr marks); white leading edge on dorsal and anal fins</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 13–15</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top rosy-head-fins"
-     data-body="round compressed"
-     data-mouth="terminal"
-     data-snout="round pointed"
-     data-lateral=""
-     data-markings="spots-top bright-silver-sides rosy-head-fins"
-     data-anal="10 11 12">
-  <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+Trout+(Adult)" alt="Rainbow Trout Adult">
-  <h3>Rainbow Trout / Steelhead (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, entire tail is heavily spotted in radiating rows</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round to slightly compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round to pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Pink/rosy stripe along the lateral line (faint in lake-run "Steelhead"), heavy spotting on top half</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–12 (Distinguishes from Pacific Salmon)</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="vertical-bars spots-top"
-     data-anal="10 11 12">
-  <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+(Juvenile)" alt="Rainbow Trout Juvenile">
-  <h3>Rainbow Trout / Steelhead (Juvenile)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, dorsal fin has distinct spots</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> 5-10 short, oval vertical bars (parr marks); white tip on dorsal fin</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–12</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="round compressed"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="mottled spots-top"
-     data-anal="10 11 12">
-  <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Adult)" alt="Brown Trout Adult">
-  <h3>Brown Trout (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin often has reddish/orange hue; unspotted square tail</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round to compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Dark and sometimes red/orange spots with pale halos; very few or no spots on the tail fin</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–12</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="round"
-     data-lateral=""
-     data-markings="vertical-bars spots-top"
-     data-anal="10 11 12">
-  <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Juvenile)" alt="Brown Trout Juvenile">
-  <h3>Brown Trout (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present (orange/reddish tip)</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Vertical bars (parr marks) with red spots between the marks along the lateral line</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–12</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="compressed deep-bodied"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="spots-top bright-silver-sides"
-     data-anal="13 more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+Salmon+(Adult)" alt="Pink Salmon Adult">
-  <h3>Pink Salmon (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin, very large oval spots on the back and tail; males develop a massive hump on back when spawning</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed (Spawning males are deep-bodied)</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed (males develop extreme kype/hook)</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Extremely large, dark, oval-shaped spots on back and both lobes of tail</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 13–17</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin"
-     data-body="compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="bright-silver-sides"
-     data-anal="13 more-than-13">
-  <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+Salmon+(Juvenile)" alt="Pink Salmon Juvenile">
-  <h3>Pink Salmon (Juvenile)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, migrate to lake/ocean immediately after emerging</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> NO parr marks (vertical bars); purely bright silver sides</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 13–17</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="round compressed"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="spots-top bright-silver-sides"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+Salmon+(Adult)" alt="Atlantic Salmon Adult">
-  <h3>Atlantic Salmon (Adult)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin, narrow caudal peduncle, short upper jaw (doesn't extend past eye)</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round to compressed</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Dark X-shaped or Y-shaped spots mostly ABOVE the lateral line; silver sides</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11 (Unlike Pacific Salmon which have 13+)</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
-
-<div class="species-card"
-     data-key="adipose-fin spots-top"
-     data-body="round"
-     data-mouth="terminal"
-     data-snout="pointed"
-     data-lateral=""
-     data-markings="vertical-bars spots-top"
-     data-anal="9 10 11">
-  <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+Salmon+(Juvenile)" alt="Atlantic Salmon Juvenile">
-  <h3>Atlantic Salmon (Juvenile / Parr)</h3>
-  <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Adipose fin present, deeply forked tail</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> 8-11 vertical bars (parr marks) with a single red spot between each mark along the lateral line</div></div>
-    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
-  </div><a href="#top" class="card-top-btn">Back to top</a>
-</div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="forked" data-mark="parr-marks" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Parr)" alt="Lake Trout Juv">
+          <h3>Lake Trout (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Narrow vertical parr marks. <strong>Tail:</strong> Distinct fork.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
         </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="square" data-mark="light-spots" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Adult)" alt="Brook Trout">
+          <h3>Brook Trout (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Mouth:</strong> White gums; black/white trim on lower fins.</div></div>
+             <div class="tag-row"><div><strong>Tail:</strong> Square or slightly notched.</div></div>
+             <div class="tag-row"><div><strong>Markings:</strong> Red spots with blue halos; light spots on dark.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Slightly concave margin.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="square" data-mark="parr-marks" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Parr)" alt="Brook Trout Juv">
+          <h3>Brook Trout (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> 8-10 large vertical parr marks.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="black" data-tail="notched" data-mark="dark-spots" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Adult)" alt="Chinook">
+          <h3>Chinook Salmon (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Mouth:</strong> FULLY BLACK gums (The only one).</div></div>
+             <div class="tag-row"><div><strong>Tail:</strong> Spots on both lobes.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Margin is straight.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="black" data-tail="notched" data-mark="parr-marks" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Parr)" alt="Chinook Juv">
+          <h3>Chinook Salmon (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Parr marks wider than the spaces between them.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="notched" data-mark="dark-spots" data-curve="convex">
+          <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Adult)" alt="Coho">
+          <h3>Coho Salmon (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Mouth:</strong> WHITE gums (with black mouth).</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Distinct convex (outward) curve.</div></div>
+             <div class="tag-row"><div><strong>Tail:</strong> Spots only on the upper lobe.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="notched" data-mark="parr-marks" data-curve="convex">
+          <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Parr)" alt="Coho Juv">
+          <h3>Coho Salmon (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Narrow parr marks; white leading edge on anal fin.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="square" data-mark="dark-spots" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+Trout+(Adult)" alt="Rainbow">
+          <h3>Rainbow Trout (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Pink lateral stripe; spots in radiating rows on tail.</div></div>
+             <div class="tag-row"><div><strong>Tail:</strong> Square with spots.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Margin is straight.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="square" data-mark="parr-marks" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+(Parr)" alt="Rainbow Juv">
+          <h3>Rainbow Trout (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Small oval parr marks; heavily spotted dorsal.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="square" data-mark="dark-spots" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Adult)" alt="Brown Trout">
+          <h3>Brown Trout (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Large dark/red spots with halos.</div></div>
+             <div class="tag-row"><div><strong>Tail:</strong> Square; very few or no spots.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Margin is straight.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="square" data-mark="parr-marks" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Parr)" alt="Brown Trout Juv">
+          <h3>Brown Trout (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Red spot usually present on the adipose fin.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="forked" data-mark="silver" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Lake+Whitefish+(Adult)" alt="Whitefish">
+          <h3>Lake Whitefish (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Mouth:</strong> Subterminal (under snout).</div></div>
+             <div class="tag-row"><div><strong>Markings:</strong> Uniform silver with no spots.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Concave curve.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="forked" data-mark="silver" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Whitefish+(Juv)" alt="Whitefish Juv">
+          <h3>Lake Whitefish (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Note:</strong> Pure silver; lacks vertical parr marks.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="forked" data-mark="silver" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Adult)" alt="Cisco">
+          <h3>Cisco / Lake Herring (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Mouth:</strong> Terminal (pointed snout).</div></div>
+             <div class="tag-row"><div><strong>Markings:</strong> Silvery/no spots. <strong>Tail:</strong> Forked.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="forked" data-mark="silver" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Juv)" alt="Cisco Juv">
+          <h3>Cisco / Lake Herring (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Note:</strong> Lacks parr marks; looks like a small adult.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="notched" data-mark="dark-spots" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+Salmon+(Adult)" alt="Pink Salmon">
+          <h3>Pink Salmon (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Large dark oval spots on back and tail.</div></div>
+             <div class="tag-row"><div><strong>Shape:</strong> Spawning males have a massive hump.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="notched" data-mark="silver" data-curve="straight">
+          <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+(Juv)" alt="Pink Juv">
+          <h3>Pink Salmon (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Note:</strong> NO parr marks; purely silver from birth.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
+        <div class="species-card" data-stage="adult" data-mouth="white" data-tail="notched" data-mark="dark-spots" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+Salmon+(Adult)" alt="Atlantic Salmon">
+          <h3>Atlantic Salmon (Adult)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> X-shaped spots. <strong>Tail:</strong> Notched, narrow base.</div></div>
+             <div class="tag-row"><div><strong>Anal Fin:</strong> Concave.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+        <div class="species-card" data-stage="juvenile" data-mouth="white" data-tail="forked" data-mark="parr-marks" data-curve="concave">
+          <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+(Parr)" alt="Atlantic Juv">
+          <h3>Atlantic Salmon (Juvenile)</h3>
+          <div class="tag-list">
+             <div class="tag-row"><div><strong>Markings:</strong> Red spot between each parr mark.</div></div>
+          </div><a href="#top" class="card-top-btn">Back to top</a>
+        </div>
+
       </div>
     </form>
   </div>
@@ -4774,6 +4567,7 @@ For internal use only currently. Some external photos pending citation</h1>
 </body>
 </body>
 </html>
+
 
 
 
