@@ -956,10 +956,7 @@ For internal use only currently. Some external photos pending citation</h1>
  <details class="project-accordion" id="group-silver-sheets">
        <summary>
         <div class="summary-content-wrapper">
-            <span class="summary-text">Shiners, Minnows, Chubs, Dace, and miscellaneous other small fish. COntainains the following species: Emerald Shiner, Rosyface Shiner, Brook Silverside, Rainbow Smelt,	Blackchin Shiner,	Pugnose Shiner,	Blacknose Shiner,	Bluntnose Minnow,	Fathead Minnow,	Spottail Shiner,	
-Spotfin Shiner,Rudd, Golden Shiner,	Common Shiner,	Striped Shiner,	Sand Shiner,	Mimic Shiner,	Ghost Shiner, Redfin Shiner, Silverjaw Minnow, Suckermouth Minnow,
-Blacknose Dace, Longnose Dace, Northern Redbelly Dace, Northern Pearl Dace, Finescale Dace, Silver Chub,  Creek Chub, Hornyhead Chub, River Chub, Lake Chub, Bigeye Chub, Alewife, Gizzard Shad,
-Central Stoneroller, Central Mudminnow, Brook Stickleback, Ninespine Stickleback, Threespine Stickleback</span>
+            <span class="summary-text">One Dorsal Fin</span>
            <div class="header-images">
                 <img src="img/Emerald uniform.jpg" alt="Emerald-Shiner" border="0">
                 <img src="img/Creek chub uniform.jpg" alt="Creek Chub" border="0">
@@ -977,74 +974,13 @@ Central Stoneroller, Central Mudminnow, Brook Stickleback, Ninespine Stickleback
     
     <!-- KEY FEATURES -->
     <details class="filter-accordion" id="acc-key">
-      <summary>Key Features START HERE</summary>
+      <summary>Key Features</summary>
       <div class="filter-body">
         <div class="chip-row">
           <!-- Pattern: <input> + <label> -->
                                  <div class="chip-row">
   
- 
-    
-          <div class="chip-row">
-                      
-<a href="#group-darter" class="jump-chip filter-chip" style="background-color:#0096FF;">
-    <img class="extra" src="img/two dorsal fins.png" alt="two dorsal fins" border="0">
-    <div class="label">Two dorsal fins (Not Brook Silverside)</div>
-  </a>
-</div>   
-
-            <div class="chip-row">
-                      
-<a href="#group-salmonidae" class="jump-chip filter-chip" style="background-color: #FA8072;">
-    <img class="extra" src="img/twns.png" alt="two fins" border="0">
-    <div class="label">Adipose fin present (Not Rainbow Smelt or trout-perch)(Salmonids WIP)</div>
-  </a>
-</div>  
-
-                                                <a href="#group-sunfish" class="jump-chip filter-chip"style="background-color: #FFFF00;">
-    <img class="extra" src="img/3 anal spines.png" alt="3 anal spines" border="0">
-    <div class="label" style="color: black;">Three or more anal spines (Not White Bass/Perch)(Sunfish PLACEHOLDER)</div>
-  </a>
-</div>
-    
-          <div class="chip-row">
-                      
-           <a href="#group-suckers" class="jump-chip filter-chip"style="background-color: #C41513;">
-    <img class="extra" src="img/Sucker (shorthead).png" alt="Sucker (shorthead)" border="0">
-    <div class="label">Suckerlike mouth (Not a minnow) (Suckers and such PLACEHOLDER)</div>
-  </a>
-</div> 
-
-              
-          <div class="chip-row">
-                      
-           <a href="#group-pike" class="jump-chip filter-chip"style="background-color: #1fd16f;">
-    <img class="extra" src="img/Pike.png" alt="Suad)" border="0">
-    <div class="label">Duck-billed snout (PLACEHOLDER)</div>
-  </a>
-</div> 
-
-                    <div class="chip-row">
-                      
-           <a href="#group-catfish" class="jump-chip filter-chip"style="background-color: #bb6d3e;">
-    <img class="extra" src="img/catfish.png" alt="Suad)" border="0">
-    <div class="label">More than 2 chin barbels (PLACEHOLDER)</div>
-  </a>
-</div> 
-
-                                                   <input type="checkbox" class="filter-checkbox" id="key-two-dorsal-fins" data-filter="key" data-value="two-dorsal-fins">
-          <label class="filter-chip" for="key-two-dorsal-fins">
-            <img src="img/Brook Silverside dorsals.png" alt="brooksilverside dorsals full" border="0">
-            <div class="label">
-              <span class="title">Two dorsal fins</span><span class="highlight"style="font-size:12px; display:block;">(Brook Silverside)</span></div>
-          </label>  
-
-                                        <input type="checkbox" class="filter-checkbox" id="key-adipose-fin" data-filter="key" data-value="adipose-fin">
-          <label class="filter-chip" for="key-adipose-fin">
-            <img src="img/Adipose fin smelt.png" alt="Adipose-fin-smelt" border="0">
-            <div class="label"><span class="title">Adipose fin present<span class="highlight"style="font-size:12px; display:block;">(Rainbow Smelt or Trout-Perch)</span></span></div>
-          </label>
-          
+         
           <input type="checkbox" class="filter-checkbox" data-filter="mouth" data-value="sucker-like">
           <label class="filter-chip" for="mouth-sucker-like">
             <img src="img/Suckermouth.jpg" alt="Suckermouth" border="0">
@@ -2819,7 +2755,54 @@ Central Stoneroller, Central Mudminnow, Brook Stickleback, Ninespine Stickleback
     </div>
 
 <div class="species-grid" id="darterGrid">
-    
+
+<div class="species-card"
+     data-key=""
+     data-markings="silver horizontal"
+     data-tail="forked"
+     data-snout="pointed"
+     data-cheek="scaled"
+     data-opercle="scaled"
+     data-dorsal-spines="5 6 7 8"
+     data-dorsal-rays="8 9 10 11 12 13 14 15"
+     data-anal-spines="1">
+  <img class="extra" src="img/Brook Silverside uniform.jpg" alt="Brook-Silverside">
+  <h3>Brook Silverside NEED TO DO</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Very pointed, beak-like snout; long and slender translucent/silver body.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Bright silver lateral band.</div></div>
+    <div class="tag-row"><div><strong>Tail Shape:</strong> Forked</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed (Beak-like)</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
+    <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 4–8 Spines / 8–15 Rays</div></div>
+    <div class="tag-row"><div><strong>Anal Spines/Rays:</strong> 1 Spine / 20–26 Rays</div></div>
+  </div><a href="#group-darter" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" 
+     data-key="dorsal-spots teeth" 
+     data-markings="spots dark-blotches" 
+     data-tail="forked" 
+     data-snout="pointed" 
+     data-cheek="scaled" 
+     data-opercle="scaled" 
+     data-dorsal-spines="12 13 14" 
+     data-dorsal-rays="17 18 19 20" 
+     data-anal-rays="11 12 13 14" 
+     data-anal-spines="2">
+  <img class="extra" src="https://placehold.co/300x180/708090/FFF?text=Sauger" alt="Sauger">
+  <h3>Sauger NEED TO DO</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Rows of distinct black spots on the first dorsal fin; 3-4 dark saddles on back.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Dark blotches and spots; lacks the large white spot on the lower lobe of the tail fin.</div></div>
+    <div class="tag-row"><div><strong>Tail Shape:</strong> Forked</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
+    <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 12–14 Spines / 17–20 Rays</div></div>
+    <div class="tag-row"><div><strong>Anal Spines/Rays:</strong> 2 Spines / 11–14 Rays</div></div>
+  </div><a href="#group-darter" class="card-top-btn">Back to top</a>
+</div>
+  
     <div class="species-card"
          data-key="overhanging vertical-bars teardrop"
          data-markings="vertical"
