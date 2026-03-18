@@ -57,7 +57,7 @@ details.project-accordion {
   
 /* Unique Colors for Sunfish */
 #group-sunfish > summary {
-  background: #FFFF00; /* */
+  background: #FFFF00; /*  */
 }
 #group-sunfish {
   border-color: #9B870D;
@@ -214,7 +214,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0; backgr
   }
   details.filter-accordion summary::-webkit-details-marker{display:none}
   details.filter-accordion summary::after{content:"▸";float:right;transition:transform .18s}
-  details.filter-accordion[open summary::after{transform:rotate(90deg)}
+  details.filter-accordion[open] summary::after{transform:rotate(90deg)}
 
   .filter-body{
     background:var(--panel);
@@ -952,78 +952,11 @@ html {
 
 <h1> Fish Identification Tool
 This tool is meant to identify small fish species in Lake Erie and Lake Huron, plus potential invasive species. To start just click either the one or two dorsal fin sections and from there click through the filter categories. I recommend starting with Key Features. For internal use only currently. Some external photos pending citation. </h1>
+<h2>Species covered: Alewife, Banded Killifish, Bigeye Chub, Blackchin Shiner, Blacknose Dace, Blacknose Shiner, Blackside Darter, Blackstripe Topminnow, Bluntnose Minnow, Brook Silverside, Brook Stickleback, Central Mudminnow, Central Stoneroller, Channel Darter, Common Shiner, Creek Chub, Emerald Shiner, Fantail Darter, Fantail Darter, Fathead Minnow, Finescale Dace, Freshwater Drum, Ghost Shiner, Gizzard Shad, Golden Shiner, Greenside Darter, Hornyhead Chub, Iowa Darter, Johnny Darter, Lake Chub, Least Darter, Logperch, Longnose Dace, Mimic Shiner, Mooneye, Mottled Sculpin, Ninespine Stickleback, Northern Pearl Dace, Northern Redbelly Dace, Pirate Perch, Pugnose Shiner, Rainbow Darter, Redfin Shiner, River Chub, River Darter, Rosyface Shiner, Round Goby, Ruffe, Rudd, Sand Shiner, Silver Chub, Silverjaw Minnow, Slimy Sculpin, Spottail Shiner, Spotfin Shiner, Striped Shiner, Suckermouth Minnow, Threespine Stickleback, Trout-Perch, Tubenose Goby, Walleye, Western Mosquitofish, White Bass, White Perch, Yellow Perch</h2>
+
   
-<h2>Species covered:</h2>
-<div class="jump-chip-container">
-  <a href="#alewife" class="jump-chip"><span class="label">Alewife</span></a>
-  <a href="#banded-killifish" class="jump-chip"><span class="label">Banded Killifish</span></a>
-  <a href="#bigeye-chub" class="jump-chip"><span class="label">Bigeye Chub</span></a>
-  <a href="#blackchin-shiner" class="jump-chip"><span class="label">Blackchin Shiner</span></a>
-  <a href="#blacknose-dace" class="jump-chip"><span class="label">Blacknose Dace</span></a>
-  <a href="#blacknose-shiner" class="jump-chip"><span class="label">Blacknose Shiner</span></a>
-  <a href="#blackside-darter" class="jump-chip"><span class="label">Blackside Darter</span></a>
-  <a href="#blackstripe-topminnow" class="jump-chip"><span class="label">Blackstripe Topminnow</span></a>
-  <a href="#bluntnose-minnow" class="jump-chip"><span class="label">Bluntnose Minnow</span></a>
-  <a href="#brook-silverside" class="jump-chip"><span class="label">Brook Silverside</span></a>
-  <a href="#brook-stickleback" class="jump-chip"><span class="label">Brook Stickleback</span></a>
-  <a href="#central-mudminnow" class="jump-chip"><span class="label">Central Mudminnow</span></a>
-  <a href="#central-stoneroller" class="jump-chip"><span class="label">Central Stoneroller</span></a>
-  <a href="#channel-darter" class="jump-chip"><span class="label">Channel Darter</span></a>
-  <a href="#common-shiner" class="jump-chip"><span class="label">Common Shiner</span></a>
-  <a href="#creek-chub" class="jump-chip"><span class="label">Creek Chub</span></a>
-  <a href="#eastern-sand-darter" class="jump-chip"><span class="label">Eastern Sand Darter</span></a>
-  <a href="#emerald-shiner" class="jump-chip"><span class="label">Emerald Shiner</span></a>
-  <a href="#fantail-darter" class="jump-chip"><span class="label">Fantail Darter</span></a>
-  <a href="#fathead-minnow" class="jump-chip"><span class="label">Fathead Minnow</span></a>
-  <a href="#finescale-dace" class="jump-chip"><span class="label">Finescale Dace</span></a>
-  <a href="#freshwater-drum" class="jump-chip"><span class="label">Freshwater Drum</span></a>
-  <a href="#ghost-shiner" class="jump-chip"><span class="label">Ghost Shiner</span></a>
-  <a href="#gizzard-shad" class="jump-chip"><span class="label">Gizzard Shad</span></a>
-  <a href="#golden-shiner" class="jump-chip"><span class="label">Golden Shiner</span></a>
-  <a href="#greenside-darter" class="jump-chip"><span class="label">Greenside Darter</span></a>
-  <a href="#hornyhead-chub" class="jump-chip"><span class="label">Hornyhead Chub</span></a>
-  <a href="#iowa-darter" class="jump-chip"><span class="label">Iowa Darter</span></a>
-  <a href="#johnny-darter" class="jump-chip"><span class="label">Johnny Darter</span></a>
-  <a href="#lake-chub" class="jump-chip"><span class="label">Lake Chub</span></a>
-  <a href="#least-darter" class="jump-chip"><span class="label">Least Darter</span></a>
-  <a href="#logperch" class="jump-chip"><span class="label">Logperch</span></a>
-  <a href="#longnose-dace" class="jump-chip"><span class="label">Longnose Dace</span></a>
-  <a href="#mimic-shiner" class="jump-chip"><span class="label">Mimic Shiner</span></a>
-  <a href="#mooneye" class="jump-chip"><span class="label">Mooneye</span></a>
-  <a href="#mottled-sculpin" class="jump-chip"><span class="label">Mottled Sculpin</span></a>
-  <a href="#ninespine-stickleback" class="jump-chip"><span class="label">Ninespine Stickleback</span></a>
-  <a href="#northern-pearl-dace" class="jump-chip"><span class="label">Northern Pearl Dace</span></a>
-  <a href="#northern-redbelly-dace" class="jump-chip"><span class="label">Northern Redbelly Dace</span></a>
-  <a href="#pirate-perch" class="jump-chip"><span class="label">Pirate Perch</span></a>
-  <a href="#pugnose-shiner" class="jump-chip"><span class="label">Pugnose Shiner</span></a>
-  <a href="#rainbow-darter" class="jump-chip"><span class="label">Rainbow Darter</span></a>
-  <a href="#rainbow-smelt" class="jump-chip"><span class="label">Rainbow Smelt</span></a>
-  <a href="#redfin-shiner" class="jump-chip"><span class="label">Redfin Shiner</span></a>
-  <a href="#river-chub" class="jump-chip"><span class="label">River Chub</span></a>
-  <a href="#river-darter" class="jump-chip"><span class="label">River Darter</span></a>
-  <a href="#rosyface-shiner" class="jump-chip"><span class="label">Rosyface Shiner</span></a>
-  <a href="#round-goby" class="jump-chip"><span class="label">Round Goby</span></a>
-  <a href="#rudd" class="jump-chip"><span class="label">Rudd</span></a>
-  <a href="#ruffe" class="jump-chip"><span class="label">Ruffe</span></a>
-  <a href="#sand-shiner" class="jump-chip"><span class="label">Sand Shiner</span></a>
-  <a href="#silver-chub" class="jump-chip"><span class="label">Silver Chub</span></a>
-  <a href="#silverjaw-minnow" class="jump-chip"><span class="label">Silverjaw Minnow</span></a>
-  <a href="#slimy-sculpin" class="jump-chip"><span class="label">Slimy Sculpin</span></a>
-  <a href="#spotfin-shiner" class="jump-chip"><span class="label">Spotfin Shiner</span></a>
-  <a href="#spottail-shiner" class="jump-chip"><span class="label">Spottail Shiner</span></a>
-  <a href="#striped-shiner" class="jump-chip"><span class="label">Striped Shiner</span></a>
-  <a href="#suckermouth-minnow" class="jump-chip"><span class="label">Suckermouth Minnow</span></a>
-  <a href="#threespine-stickleback" class="jump-chip"><span class="label">Threespine Stickleback</span></a>
-  <a href="#trout-perch" class="jump-chip"><span class="label">Trout-Perch</span></a>
-  <a href="#tubenose-goby" class="jump-chip"><span class="label">Tubenose Goby</span></a>
-  <a href="#walleye" class="jump-chip"><span class="label">Walleye</span></a>
-  <a href="#western-mosquitofish" class="jump-chip"><span class="label">Western Mosquitofish</span></a>
-  <a href="#white-bass" class="jump-chip"><span class="label">White Bass</span></a>
-  <a href="#white-perch" class="jump-chip"><span class="label">White Perch</span></a>
-  <a href="#yellow-perch" class="jump-chip"><span class="label">Yellow Perch</span></a>
-</div>
-  
-  <details class="project-accordion" id="group-silver-sheets">
+  <!-- <div class="container">-->
+ <details class="project-accordion" id="group-silver-sheets">
        <summary>
         <div class="summary-content-wrapper">
             <span class="summary-text">One Dorsal Fin</span>
@@ -1042,11 +975,13 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 
       <form id="filter-form">
     
+    <!-- KEY FEATURES -->
     <details class="filter-accordion" id="acc-key">
       <summary>Key Features</summary>
       <div class="filter-body">
         <div class="chip-row">
-      
+          <!-- Pattern: <input> + <label> -->
+                                 <div class="chip-row">
   
          
           <input type="checkbox" class="filter-checkbox" data-filter="mouth" data-value="sucker-like">
@@ -1197,6 +1132,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
     </details>
 
+    <!-- BODY SHAPE -->
     <details class="filter-accordion" id="acc-body">
       <summary>Body Shape</summary>
       <div class="filter-body">
@@ -1360,6 +1296,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
     </details>
 
+    <!-- MARKINGS -->
     <details class="filter-accordion" id="acc-markings">
       <summary>Markings / Pigment</summary>
       <div class="filter-body">
@@ -1435,6 +1372,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
     </details>
 
+    <!-- ANAL FIN RAYS -->
     <details class="filter-accordion" id="acc-anal">
       <summary>Anal Fin Rays (ONLY USE IF YOU CAN BE ABSOLUTELY CERTAIN YOU COUNTED RIGHT)</summary>
       <div class="filter-body">
@@ -1451,11 +1389,13 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
     </details>
     
+    <!-- Reset button (now a standard form element) -->
     <div class="controls">
       <input type="reset" id="resetBtn" class="btn-reset" value="Reset All Filters">
     </div>
 
-   <div class="species-grid" id="speciesGrid">
+   <!-- Species grid -->
+    <div class="species-grid" id="speciesGrid">
 
 <div class="species-grid" id="speciesGrid">
 
@@ -1483,7 +1423,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="golden-shiner"
+      <div class="species-card"
            data-key="scaleless-keel pre-dorsal-similar"
            data-body="deep-bodied compressed"
            data-mouth="superior"
@@ -1510,7 +1450,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="common-shiner"
+      <div class="species-card"
            data-key="crowded-predorsal tubercles"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
@@ -1540,7 +1480,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="striped-shiner"
+      <div class="species-card"
            data-key="pre-dorsal-similar tubercles"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
@@ -1563,7 +1503,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="emerald-shiner"
+      <div class="species-card"
            data-key="pre-dorsal-similar"
            data-body="round compressed"
            data-mouth="terminal"
@@ -1585,7 +1525,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         <a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="rosyface-shiner"
+      <div class="species-card"
            data-key="rosy-head-fins pre-dorsal-similar"
            data-body="compressed round"
            data-mouth="terminal"
@@ -1607,7 +1547,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div> <a href="#top" class="card-top-btn">Back to top</a>
       </div>
       
-      <div class="species-card" id="brook-silverside"
+      <div class="species-card" 
            data-key="two-dorsal-fins pre-dorsal-similar very-pointed"
            data-body="round"
            data-mouth="terminal"
@@ -1629,7 +1569,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>      
       
    
-    <div class="species-card" id="rainbow-smelt"
+    <div class="species-card"
          data-key="adipose-fin very-pointed"
          data-body="round"
          data-mouth="terminal"
@@ -1650,7 +1590,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>    
 
-      <div class="species-card" id="blackchin-shiner"
+      <div class="species-card"
            data-key=" pre-dorsal-similar"
            data-body="deep-bodied compressed round"
            data-mouth="terminal slightly-subterminal"
@@ -1671,7 +1611,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="pugnose-shiner"
+      <div class="species-card"
            data-key="upturned-mouth pre-dorsal-similar"
            data-body="round compressed"
            data-mouth="superior"
@@ -1692,7 +1632,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="blacknose-shiner"
+      <div class="species-card"
            data-key="pre-dorsal-similar"
            data-body="round compressed"
            data-mouth="terminal subterminal"
@@ -1713,7 +1653,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="bluntnose-minnow"
+      <div class="species-card"
            data-key="crowded-predorsal tubercles blackspot-dorsal-front"
            data-body="round compressed"
            data-mouth="subterminal"
@@ -1734,7 +1674,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="fathead-minnow"
+      <div class="species-card"
            data-key="crowded-predorsal tubercles blackspot-dorsal-front"
            data-body="round compressed deep-bodied"
            data-mouth="terminal superior"
@@ -1755,7 +1695,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="spottail-shiner"
+      <div class="species-card"
            data-key=" pre-dorsal-similar"
            data-body="round slightly-compressed"
            data-mouth="terminal subterminal"
@@ -1775,7 +1715,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="spotfin-shiner"
+      <div class="species-card"
            data-key="blackspot-dorsal-backend pre-dorsal-similar"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
@@ -1797,7 +1737,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
 
       
-      <div class="species-card" id="sand-shiner"
+      <div class="species-card"
            data-key="pre-dorsal-similar"
            data-body="round deep-bodied compressed"
            data-mouth="terminal"
@@ -1818,7 +1758,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="mimic-shiner"
+      <div class="species-card" 
              data-key="pre-dorsal-similar" 
              data-body="round compressed" 
              data-mouth="terminal subterminal" 
@@ -1839,7 +1779,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="ghost-shiner"
+      <div class="species-card"
            data-key="pointed-falcate-fin pre-dorsal-similar"
            data-body="compressed deep-bodied"
            data-mouth="terminal"
@@ -1860,7 +1800,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="redfin-shiner"
+      <div class="species-card"
            data-key="crowded-predorsal rosy-head-fins blackspot-dorsal-front rosy-pigment-pigment tubercles"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
@@ -1881,7 +1821,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="silverjaw-minnow"
+      <div class="species-card"
            data-key="pre-dorsal-similar silver-plates"
            data-body="compressed round"
            data-mouth="subterminal"
@@ -1902,7 +1842,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="suckermouth-minnow"
+      <div class="species-card"
            data-key="pre-dorsal-similar sucker-like"
            data-body="round compressed"
            data-mouth="subterminal sucker-like"
@@ -1923,7 +1863,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="silver-chub"
+      <div class="species-card"
          data-key="barbels-present white-outline-caudal-fin"
          data-body="round compressed"
          data-mouth="subterminal"
@@ -1945,7 +1885,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
       
     
-      <div class="species-card" id="creek-chub"
+      <div class="species-card"
          data-key="tubercles crowded-predorsal blackspot-dorsal-front barbels-present"
          data-body="round compressed"
          data-mouth="terminal"
@@ -1972,7 +1912,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="hornyhead-chub"
+      <div class="species-card"
          data-key="tubercles barbels-present red-spot-head pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="terminal"
@@ -1999,7 +1939,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="river-chub"
+      <div class="species-card"
          data-key="tubercles barbels-present pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="subterminal"
@@ -2025,7 +1965,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="lake-chub"
+      <div class="species-card"
          data-key="pre-dorsal-similar barbels-present"
          data-body="round compressed"
          data-mouth="subterminal terminal"
@@ -2052,7 +1992,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
       
       
-      <div class="species-card" id="bigeye-chub"
+      <div class="species-card"
          data-key="pre-dorsal-similar barbels-present tubercles"
          data-body="round compressed"
          data-mouth="subterminal"
@@ -2074,7 +2014,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
     
 
-      <div class="species-card" id="blacknose-dace"
+      <div class="species-card"
          data-key="barbels-present scales-tiny pre-dorsal-similar"
          data-body="round deep"
          data-mouth="subterminal"
@@ -2097,7 +2037,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="longnose-dace"
+      <div class="species-card"
          data-key="barbels-present scales-tiny very-pointed pre-dorsal-similar"
          data-body="round"
          data-mouth="subterminal"
@@ -2120,7 +2060,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
       
-      <div class="species-card" id="northern-redbelly-dace"
+      <div class="species-card"
          data-key="scales-tiny"
          data-body="round"
          data-mouth="terminal superior"
@@ -2143,7 +2083,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
 
-      <div class="species-card" id="northern-pearl-dace"
+      <div class="species-card"
          data-key="barbels-present crowded-predorsal pre-dorsal-similar scales-tiny"
          data-body="round deep-bodied"
          data-mouth="terminal subterminal"
@@ -2167,7 +2107,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div>
       
       
-      <div class="species-card" id="finescale-dace"
+      <div class="species-card"
          data-key="scales-tiny pre-dorsal-similar"
          data-body="deep-bodied compressed round"
          data-mouth="terminal"
@@ -2190,7 +2130,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
           </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
       
-   <div class="species-card" id="gizzard-shad"
+   <div class="species-card"
      data-key="pre-dorsal-similar"
      data-body="deep-bodied compressed sharp-keel"
      data-mouth="subterminal"
@@ -2212,7 +2152,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 </div>
    
 
-<div class="species-card" id="alewife"
+<div class="species-card"
      data-key="sharp-keel pre-dorsal-similar"
      data-body="deep-bodied compressed sharp-keel"
      data-mouth="terminal superior"
@@ -2233,7 +2173,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="brook-stickleback"
+<div class="species-card"
      data-key="tiny-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
@@ -2255,7 +2195,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 </div>
 
 
-<div class="species-card" id="threespine-stickleback"
+<div class="species-card"
      data-key="tiny-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
@@ -2277,7 +2217,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 </div>
 
 
-<div class="species-card" id="ninespine-stickleback"
+<div class="species-card"
      data-key="tiny-caudal-peduncle round-tail"
      data-body="round"
      data-mouth="terminal"
@@ -2298,7 +2238,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="banded-killifish"
+<div class="species-card"
      data-key="round-tail"
      data-body="round compressed"
      data-mouth="superior"
@@ -2319,7 +2259,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="central-mudminnow"
+<div class="species-card"
      data-key="round-tail"
      data-body="round"
      data-mouth="subterminal"
@@ -2340,7 +2280,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="central-stoneroller"
+<div class="species-card"
      data-key="tubercles sucker-like"
      data-body="Round compressed"
      data-mouth="subterminal sucker-like"
@@ -2361,7 +2301,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="trout-perch"
+<div class="species-card"
            data-key="adipose-fin spots-top"
            data-body="round compressed"
            data-mouth="subterminal"
@@ -2384,7 +2324,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       
 
 
-<div class="species-card" id="mooneye"
+<div class="species-card"
      data-key="scaleless-keel"
      data-body="compressed deep-bodied sharp-keel"
      data-mouth="terminal"
@@ -2405,7 +2345,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="western-mosquitofish"
+<div class="species-card"
      data-key="upturned-mouth"
      data-body="round"
      data-mouth="superior"
@@ -2426,7 +2366,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-  <div class="species-card" id="blackstripe-topminnow"
+  <div class="species-card"
      data-key="black-stripe flattened-head"
      data-body="slender"
      data-mouth="superior"
@@ -2447,7 +2387,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
-<div class="species-card" id="pirate-perch"
+<div class="species-card"
      data-key=""
      data-body="deep-bodied compressed"
      data-mouth="terminal projecting-jaw"
@@ -2820,7 +2760,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 <div class="species-grid" id="darterGrid">
 
  
-    <div class="species-card" id="logperch"
+    <div class="species-card"
          data-key="overhanging vertical-bars teardrop"
          data-markings="vertical"
          data-tail="round squared"
@@ -2844,7 +2784,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="eastern-sand-darter"
+    <div class="species-card"
          data-key="rows-of-spots"
          data-markings="spots dark-blotches"
          data-tail="forked round squared"
@@ -2869,7 +2809,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       <a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="greenside-darter"
+    <div class="species-card"
          data-key="vertical-bars blotches teardrop xvwm"
          data-markings="xvwm dark-blotches vertical-bars black-spot-tail"
          data-tail=" round squared"
@@ -2895,7 +2835,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="johnny-darter"
+    <div class="species-card"
          data-key="xvwm"
          data-markings="xvwm"
          data-tail="round squared"
@@ -2921,7 +2861,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="least-darter"
+    <div class="species-card"
          data-key="teardrop"
          data-markings="horizontal mottled"
          data-tail="round squared"
@@ -2952,7 +2892,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="iowa-darter"
+    <div class="species-card"
          data-key="teardrop vertical-bars"
          data-markings="vertical BOB mottled"
          data-tail="round squared"
@@ -2978,7 +2918,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="rainbow-darter"
+    <div class="species-card"
          data-key="vertical-bars"
          data-markings="vertical bluetop mottled"
          data-tail="round"
@@ -3004,7 +2944,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="blackside-darter"
+    <div class="species-card"
          data-key="teardrop"
          data-markings="dark-blotches horizontal"
          data-tail="forked squared"
@@ -3028,7 +2968,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="channel-darter"
+    <div class="species-card"
          data-key="overhanging"
          data-markings="dark-blotches horizontal"
          data-tail="round forked"
@@ -3052,7 +2992,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="fantail-darter"
+    <div class="species-card"
          data-key="vertical-bars vw blotches teardrop"
          data-markings="dark-blotches vertical-bars"
          data-tail="round squared"
@@ -3078,7 +3018,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="river-darter"
+    <div class="species-card" 
          data-key="dorsal-spots teardrop blotches" 
          data-markings="blotches vertical-bars" 
          data-tail="squared" 
@@ -3102,7 +3042,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="white-bass"
+    <div class="species-card"
          data-key="stripes silver"
          data-markings="silver horizontal"
          data-tail="forked"
@@ -3127,7 +3067,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="white-perch"
+    <div class="species-card"
          data-key="silver"
          data-markings="silver horizontal"
          data-tail="forked"
@@ -3151,7 +3091,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
       </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="ruffe"
+    <div class="species-card"
          data-key="dorsal-spots"
          data-markings="silver mottled "
          data-tail="forked"
@@ -3176,7 +3116,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
     </div>
 
 
-    <div class="species-card" id="yellow-perch"
+    <div class="species-card"
          data-key="vertical-bars"
          data-markings="vertical"
          data-tail="forked"
@@ -3200,7 +3140,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-        <div class="species-card" id="walleye"
+        <div class="species-card"
          data-key="teeth white-tip black-blotch"
          data-markings="mottled"
          data-tail="forked"
@@ -3224,7 +3164,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="round-goby"
+    <div class="species-card"
          data-key="fused-pelvic black-spot"
          data-markings="mottled"
          data-tail="round"
@@ -3248,7 +3188,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="tubenose-goby"
+    <div class="species-card"
          data-key="fused-pelvic tube-nostrils"
          data-markings="mottled"
          data-tail="round"
@@ -3273,7 +3213,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="mottled-sculpin"
+    <div class="species-card"
          data-key="big-pectoral no-scales 4-pelvic"
          data-markings="mottled"
          data-tail="round"
@@ -3298,7 +3238,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
     
-        <div class="species-card" id="slimy-sculpin"
+        <div class="species-card"
          data-key="big-pectoral no-scales 3-pelvic"
          data-markings="mottled"
          data-tail="round"
@@ -3323,7 +3263,7 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
         </div><a href="#group-darter" class="card-top-btn">Back to top</a>
     </div>
 
-    <div class="species-card" id="freshwater-drum"
+    <div class="species-card"
          data-key="silver"
          data-markings="silver"
          data-tail="round square"
@@ -3358,3 +3298,93 @@ This tool is meant to identify small fish species in Lake Erie and Lake Huron, p
 </body>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
