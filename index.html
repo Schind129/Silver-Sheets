@@ -566,11 +566,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #darter-form:has(#darter-markings-dark-blotches:checked) #darterGrid .species-card:not([data-markings*="dark-blotches"]) { display: none; }
 #darter-form:has(#darter-markings-black-spot-tail:checked) #darterGrid .species-card:not([data-markings*="black-spot-tail"]) { display: none; }
 
-/* --- Filter Logic: Tail Shape --- */
-#darter-form:has(#darter-tail-forked:checked) #darterGrid .species-card:not([data-tail*="forked"]) { display: none; }
-#darter-form:has(#darter-tail-round:checked) #darterGrid .species-card:not([data-tail*="round"]) { display: none; }
-#darter-form:has(#darter-tail-squared:checked) #darterGrid .species-card:not([data-tail*="squared"]) { display: none; }
-
 /* --- Filter Logic: Snout Shape --- */
 #darter-form:has(#darter-snout-round:checked) #darterGrid .species-card:not([data-snout*="round"]) { display: none; }
 #darter-form:has(#darter-snout-pointed:checked) #darterGrid .species-card:not([data-snout*="pointed"]) { display: none; }
@@ -696,11 +691,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #salmon-form:has(#salmon-mouth-black:checked) .species-card:not([data-mouth*="black"]) { display: none; }
 #salmon-form:has(#salmon-gum-white:checked) .species-card:not([data-mouth*="white-gum"]) { display: none; }
 #salmon-form:has(#salmon-gum-black:checked) .species-card:not([data-mouth*="black-gum"]) { display: none; }
-
-/* Tail Shape */
-#salmon-form:has(#salmon-tail-fork:checked) .species-card:not([data-tail*="forked"]) { display: none; }
-#salmon-form:has(#salmon-tail-notch:checked) .species-card:not([data-tail*="notched"]) { display: none; }
-#salmon-form:has(#salmon-tail-square:checked) .species-card:not([data-tail*="square"]) { display: none; }
 
 /* Markings */
 #salmon-form:has(#salmon-mark-light:checked) .species-card:not([data-mark*="light-spots"]) { display: none; }
@@ -2573,28 +2563,7 @@ details.species-photo-accordion img.main {
         </div>
     </details>
 
-    <details class="filter-accordion">
-        <summary>Tail Shape</summary>
-        <div class="filter-body">
-            <div class="chip-row">
-                <input type="checkbox" class="filter-checkbox" id="darter-tail-forked" data-filter="tail" data-value="forked">
-                <label class="filter-chip" for="darter-tail-forked">
-                   <div class="label"><span class="title">Forked or lobed</span></div>
-                </label>
-                
-                <input type="checkbox" class="filter-checkbox" id="darter-tail-round" data-filter="tail" data-value="round">
-                <label class="filter-chip" for="darter-tail-round">
-                   <div class="label"><span class="title">Round</span></div>
-                </label>
-                
-                                <input type="checkbox" class="filter-checkbox" id="darter-tail-squared" data-filter="tail" data-value="Squared">
-                <label class="filter-chip" for="darter-tail-squared">
-                   <div class="label"><span class="title">Squared</span></div>
-                </label>
-                
-            </div>
-        </div>
-    </details>
+
 
     <details class="filter-accordion">
         <summary>Snout Shape</summary>
@@ -2789,7 +2758,6 @@ details.species-photo-accordion img.main {
 <div class="species-card" id="brook-silverside"
      data-key=""
      data-markings="silver horizontal"
-     data-tail="forked"
      data-snout="pointed"
      data-cheek="scaled"
      data-opercle="scaled"
@@ -2802,7 +2770,6 @@ details.species-photo-accordion img.main {
   <div class="tag-list">
     <div class="tag-row"><div><strong>Key Feature:</strong> Very pointed, beak-like snout, long and slender translucent/silver body.</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Bright silver scales, usually a lateral band, top of fish usually has green pigment</div></div>
-    <div class="tag-row"><div><strong>Tail Shape:</strong> Forked</div></div>
     <div class="tag-row"><div><strong>Snout Shape:</strong> Very pointed (Beak-like)</div></div>
     <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
     <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 3–8 Soft Spines / 8–13 Rays</div></div>
@@ -2814,8 +2781,7 @@ details.species-photo-accordion img.main {
   
     <div class="species-card" id="logperch"
          data-key="overhanging vertical-bars teardrop"
-         data-markings="vertical"
-         data-tail="round squared"
+         data-markings="vertical black-spot-tail"
          data-snout="pointed"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -2827,8 +2793,7 @@ details.species-photo-accordion img.main {
       <h3>Logperch</h3>
       <div class="tag-list">
         <div class="tag-row"><div><strong>Key Feature:</strong> Long overhanging snout, thin vertical bars, dark teardrop spot below eye</div></div>
-        <div class="tag-row"><div><strong>Markings:</strong> Thin, dark vertical bars (alternating long and short)</div></div>
-        <div class="tag-row"><div><strong>Tail Shape:</strong> Square with round edges, often has a dark spot at the base</div></div>
+        <div class="tag-row"><div><strong>Markings:</strong> Thin, dark vertical bars (alternating long and short), often has a dark spot at the base of caudal fin</div></div>
         <div class="tag-row"><div><strong>Snout Shape:</strong> Long and pointed</div></div>
         <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
         <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 13-16 Spines / 14-16 Rays</div></div>
@@ -2839,7 +2804,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="eastern-sand-darter"
          data-key="rows-of-spots"
          data-markings="spots dark-blotches"
-         data-tail="forked round squared"
          data-snout="pointed"
          data-cheek="absent"
          data-opercle="absent"
@@ -2852,7 +2816,6 @@ details.species-photo-accordion img.main {
       <div class="tag-list">
         <div class="tag-row"><div><strong>Key Feature:</strong> Spots instead of bars, slender, translucent body</div></div>
         <div class="tag-row"><div><strong>Markings:</strong> 10–14 small dark blotches along the lateral line</div></div>
-        <div class="tag-row"><div><strong>Tail Shape:</strong> Slightly forked or notched</div></div>
         <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
         <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Absent | Opercle: Absent</div></div>
         <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 8–11 Spines / 10–13 Rays</div></div>
@@ -2863,8 +2826,7 @@ details.species-photo-accordion img.main {
 
     <div class="species-card" id="greenside-darter"
          data-key="vertical-bars blotches teardrop xvwm"
-         data-markings="xvwm dark-blotches vertical-bars black-spot-tail"
-         data-tail=" round squared"
+         data-markings="xvwm dark-blotches vertical-bars"
          data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -2890,7 +2852,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="johnny-darter"
          data-key="xvwm"
          data-markings="xvwm"
-         data-tail="round squared"
          data-snout="pointed"
          data-cheek="absent"
          data-opercle="absent"
@@ -2916,7 +2877,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="least-darter"
          data-key="teardrop"
          data-markings="horizontal mottled"
-         data-tail="round squared"
          data-snout="pointed"
          data-cheek="absent"
          data-opercle="absent"
@@ -2947,7 +2907,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="iowa-darter"
          data-key="teardrop vertical-bars"
          data-markings="vertical BOB mottled"
-         data-tail="round squared"
          data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -2973,7 +2932,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="rainbow-darter"
          data-key="vertical-bars"
          data-markings="vertical bluetop mottled"
-         data-tail="round"
          data-snout="round pointed"
          data-cheek="absent"
          data-opercle="scaled"
@@ -2998,8 +2956,7 @@ details.species-photo-accordion img.main {
 
     <div class="species-card" id="blackside-darter"
          data-key="teardrop"
-         data-markings="dark-blotches horizontal"
-         data-tail="forked squared"
+         data-markings="dark-blotches horizontal black-spot-tail"
          data-snout="round pointed"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -3023,7 +2980,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="channel-darter"
          data-key="overhanging"
          data-markings="dark-blotches horizontal"
-         data-tail="round forked"
          data-snout="pointed round"
          data-cheek="absent"
          data-opercle="scaled"
@@ -3047,7 +3003,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="fantail-darter"
          data-key="vertical-bars vw blotches teardrop"
          data-markings="dark-blotches vertical-bars"
-         data-tail="round squared"
          data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
@@ -3073,7 +3028,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="river-darter"
          data-key="dorsal-spots teardrop blotches" 
          data-markings="blotches vertical-bars" 
-         data-tail="squared" 
          data-snout="round" 
          data-cheek="scaled" 
          data-opercle="scaled" 
@@ -3097,7 +3051,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="white-bass"
          data-key="stripes silver"
          data-markings="silver horizontal"
-         data-tail="forked"
          data-snout="pointed"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -3122,7 +3075,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="white-perch"
          data-key="silver"
          data-markings="silver horizontal"
-         data-tail="forked"
          data-snout="pointed"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -3146,7 +3098,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="ruffe"
          data-key="dorsal-spots"
          data-markings="silver mottled "
-         data-tail="forked"
          data-snout="round pointed"
          data-cheek="absent"
          data-opercle="absent"
@@ -3171,7 +3122,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="yellow-perch"
          data-key="vertical-bars"
          data-markings="vertical"
-         data-tail="forked"
          data-snout="pointed"
          data-cheek="scaled"
          data-opercle="scaled"
@@ -3195,7 +3145,6 @@ details.species-photo-accordion img.main {
         <div class="species-card" id="walleye"
          data-key="teeth white-tip black-blotch"
          data-markings="mottled"
-         data-tail="forked"
          data-snout="pointed"
          data-cheek="variable"
          data-opercle="scaled"
@@ -3219,7 +3168,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="round-goby"
          data-key="fused-pelvic black-spot"
          data-markings="mottled"
-         data-tail="round"
          data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
@@ -3243,7 +3191,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="tubenose-goby"
          data-key="fused-pelvic tube-nostrils"
          data-markings="mottled"
-         data-tail="round"
          data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
@@ -3268,7 +3215,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="mottled-sculpin"
          data-key="big-pectoral no-scales 4-pelvic"
          data-markings="mottled"
-         data-tail="round"
          data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
@@ -3293,7 +3239,6 @@ details.species-photo-accordion img.main {
         <div class="species-card" id="slimy-sculpin"
          data-key="big-pectoral no-scales 3-pelvic"
          data-markings="mottled"
-         data-tail="round"
          data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
@@ -3307,7 +3252,6 @@ details.species-photo-accordion img.main {
         <div class="tag-list">
             <div class="tag-row"><div><strong>Key Feature:</strong> Large fan-like pectoral fins, no scales, <strong>3 Pelvic fin rays</strong></div></div>
             <div class="tag-row"><div><strong>Markings:</strong> Dark mottling/blotches on brown background</div></div>
-            <div class="tag-row"><div><strong>Tail Shape:</strong> Rounded</div></div>
             <div class="tag-row"><div><strong>Snout Shape:</strong> Round, slightly blunt </div></div>
             <div class="tag-row"><div><strong>Scales:</strong> Absent (Entire body)</div></div>
             <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 7-10 Spines / 15-18 Rays</div></div>
@@ -3318,7 +3262,6 @@ details.species-photo-accordion img.main {
     <div class="species-card" id="freshwater-drum"
          data-key="silver"
          data-markings="silver"
-         data-tail="round square"
          data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
