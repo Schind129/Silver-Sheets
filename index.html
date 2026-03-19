@@ -406,6 +406,14 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   box-shadow: 0 0 0 1px var(--accent);
   color: #0f172a !important;
 }
+  /* --- Remote Chip Highlight Fix (Non-Adjacent Label) --- */
+/* Target the Key Features chip by its 'for' attribute when its linked input is checked */
+#filter-form:has(#darter-snout-very-pointed:checked) .filter-chip[for="darter-snout-very-pointed"] {
+  /* You must match the exact highlight styles used for other active chips */
+  background: var(--chip-active);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent); /* Include any shadow or border styles */
+}
 
 
 
@@ -589,7 +597,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   #darter-form:has(#darter-anal-rays-12:checked) #darterGrid .species-card:not([data-anal-rays*="12"]) { display: none; }
   #darter-form:has(#darter-anal-rays-13:checked) #darterGrid .species-card:not([data-anal-rays*="13"]) { display: none; }
   #darter-form:has(#darter-anal-rays-14:checked) #darterGrid .species-card:not([data-anal-rays*="14"]) { display: none; }
-  #darter-form:has(#darter-anal-rays-15:checked) #darterGrid .species-card:not([data-anal-rays*="15"]) { display: none; }
+  #darter-form:has(#darter-anal-rays-15+:checked) #darterGrid .species-card:not([data-anal-rays*="15+"]) { display: none; }
 
 
 /* Chip Highlighting for Project 2 */
@@ -1599,27 +1607,7 @@ details.species-photo-accordion img.main {
         </div> <a href="#top" class="card-top-btn">Back to top</a>
       </div>
       
-      <div class="species-card" id="brook-silverside"
-           data-key="two-dorsal-fins pre-dorsal-similar very-pointed"
-           data-body="round"
-           data-mouth="terminal"
-           data-snout="very-pointed"
-           data-lateral="dark-band faint-lateral-line"
-           data-markings=" bright-silver-sides"
-           data-anal="more-than-13">
-        <img class="extra" src="img/Brook Silverside uniform.jpg" alt="Brook-Silverside">
-        <h3>Brook Silverside</h3>
-        <div class="tag-list">
-          <div class="tag-row"><div><strong>Key Features:</strong> Very pointed beak-like snout, two dorsal fins</div></div>
-          <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-          <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal </div></div>
-          <div class="tag-row"><div><strong>Snout Shape:</strong> Very pointed snout</div></div>
-          <div class="tag-row"><div><strong>Lateral Line:</strong> Sometimes dark lateral band, faint lateral line</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong>  Bright silver sides</div></div>
-          <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 20-26</div></div>
-        </div><a href="#top" class="card-top-btn">Back to top</a>
-      </div>      
-      
+            
    
     <div class="species-card" id="rainbow-smelt"
          data-key="adipose-fin very-pointed"
@@ -2523,6 +2511,12 @@ details.species-photo-accordion img.main {
                     <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Skin" alt="No Scales" border="0">
                     <div class="label"><span class="title">No Scales</span><span class="highlight"style="font-size:12px; display:block;">(Sculpins)</span></div>
                 </label>
+
+                <input type="checkbox" class="filter-checkbox" id="darter-snout-very-pointed" data-filter="snout" data-value="very-pointed">
+          <label class="filter-chip" for="darter-snout-very-pointed">
+            <img src="img/very pointed snout.jpg" alt="very pointed snout" border="0">
+            <div class="label"><span class="title">Very long and pointed snout</span><span class="highlight"style="font-size:12px; display:block;">(Brook Silverside)</span></div>
+          </label>
                 
                 <input type="checkbox" class="filter-checkbox" id="darter-key-dorsal-spots" data-filter="key" data-value="dorsal-spots">
 <label class="filter-chip" for="darter-key-dorsal-spots">
@@ -2799,8 +2793,10 @@ details.species-photo-accordion img.main {
             <input type="checkbox" class="filter-checkbox" id="darter-anal-rays-14" data-filter="anal-rays" data-value="14">
             <label class="filter-chip" for="darter-anal-rays-14"><div class="label">14</div></label>
 
-            <input type="checkbox" class="filter-checkbox" id="darter-anal-rays-15" data-filter="anal-rays" data-value="15">
-            <label class="filter-chip" for="darter-anal-rays-15"><div class="label">15</div></label>
+            <input type="checkbox" class="filter-checkbox" id="darter-anal-rays-15+" data-filter="anal-rays" data-value="15+">
+            <label class="filter-chip" for="darter-anal-rays-15+"><div class="label">15 or more</div></label>
+          
+          
         </div>
     </div>
 </details>
@@ -2811,7 +2807,32 @@ details.species-photo-accordion img.main {
 
 <div class="species-grid" id="darterGrid">
 
- 
+<div class="species-card" id="brook-silverside"
+     data-key=""
+     data-markings="silver horizontal"
+     data-tail="forked"
+     data-snout="pointed"
+     data-cheek="scaled"
+     data-opercle="scaled"
+     data-dorsal-spines="3 4 5 6 7 "
+     data-dorsal-rays="8 9 10 11 12 13"
+     data-anal-spines="1"
+     data-anal-rays="15+">
+  <img class="extra" src="img/Brook Silverside uniform.jpg" alt="Brook-Silverside">
+  <h3>Brook Silverside</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Very pointed, beak-like snout, long and slender translucent/silver body.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Bright silver scales, usually a lateral band. top of fish usually has green pigment</div></div>
+    <div class="tag-row"><div><strong>Tail Shape:</strong> Forked</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Very pointed (Beak-like)</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
+    <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 3–8 Soft Spines / 8–13 Rays</div></div>
+    <div class="tag-row"><div><strong>Anal Spines/Rays:</strong> 1 Soft Spine / 20–26 Rays</div></div>
+  </div><a href="#group-darter" class="card-top-btn">Back to top</a>
+</div>    
+
+
+  
     <div class="species-card" id="logperch"
          data-key="overhanging vertical-bars teardrop"
          data-markings="vertical"
@@ -3274,7 +3295,7 @@ details.species-photo-accordion img.main {
          data-opercle="absent"
          data-dorsal-spines="6 7 8 9"
          data-dorsal-rays="16 17 18 19"
-         data-anal-rays="11 12 13 14 15"
+         data-anal-rays="11 12 13 14 15+"
          data-anal-spines="0">
         <img class="extra" src="img/Mottled Sculpin Uniform.jpg" alt="Mottled Sculpin side view" border="0">
       <img class="extra" src="img/Mottled Sculpin Pelvic 3.png" alt="Mottled Sculpin pelvic rays" border="0">
