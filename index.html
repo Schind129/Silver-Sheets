@@ -575,10 +575,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 /* --- Filter Logic: Snout Shape --- */
 #darter-form:has(#darter-snout-round:checked) #darterGrid .species-card:not([data-snout*="round"]) { display: none; }
 #darter-form:has(#darter-snout-pointed:checked) #darterGrid .species-card:not([data-snout*="pointed"]) { display: none; }
-#darter-form:has(#darter-snout-blunt:checked) #darterGrid .species-card:not([data-snout*="blunt"]) { display: none; }
-  #darter-form:has(#darter-snout-very-pointed:checked) #darterGrid .species-card:not([data-snout*="very-pointed"]) { display: none; } 
-#darter-form:has(#darter-snout-very-pointed:checked) #darterGrid .species-card:not([data-key*="very-pointed"]) { display: none; } 
-/* NEW: Combined Key Features filter: targets data-key, but is controlled by the same checkbox ID */
+
 
 /* --- Filter Logic: Scales --- */
 #darter-form:has(#darter-cheek-scaled:checked) #darterGrid .species-card:not([data-cheek*="scaled"]) { display: none; }
@@ -1275,7 +1272,7 @@ details.species-photo-accordion img.main {
           </label>
 
           <input type="checkbox" class="filter-checkbox" id="snout-pointed" data-filter="snout" data-value="pointed">
-          <label class="filter-chip" for="snout-pointed">
+          <label class="filter-chip" for="snout-       pointed">
             <img src="img/pointed snout rosy.png" alt="pointed-snout-rosy" border="0">
             <div class="label"><span class="title">Pointed</span></div>
           </label>
@@ -2515,11 +2512,6 @@ details.species-photo-accordion img.main {
                     <div class="label"><span class="title">No Scales</span><span class="highlight"style="font-size:12px; display:block;">(Sculpins)</span></div>
                 </label>
 
-                <input type="checkbox" class="filter-checkbox" id="darter-snout-very-pointed" data-filter="snout" data-value="very-pointed">
-          <label class="filter-chip" for="darter-snout-very-pointed">
-            <img src="img/very pointed snout.jpg" alt="very pointed snout" border="0">
-            <div class="label"><span class="title">Very long and pointed snout</span><span class="highlight"style="font-size:12px; display:block;">(Brook Silverside)</span></div>
-          </label>
                 
                 <input type="checkbox" class="filter-checkbox" id="darter-key-dorsal-spots" data-filter="key" data-value="dorsal-spots">
 <label class="filter-chip" for="darter-key-dorsal-spots">
@@ -2624,7 +2616,7 @@ details.species-photo-accordion img.main {
             <div class="chip-row">
                  <input type="checkbox" class="filter-checkbox" id="darter-snout-round" data-filter="snout" data-value="round">
                 <label class="filter-chip" for="darter-snout-round">
-                   <div class="label"><span class="title">Rounded / Conical</span></div>
+                   <div class="label"><span class="title">Rounded / Blunt</span></div>
                 </label>
 
                 <input type="checkbox" class="filter-checkbox" id="darter-snout-pointed" data-filter="snout" data-value="pointed">
@@ -2632,16 +2624,7 @@ details.species-photo-accordion img.main {
                    <div class="label"><span class="title">Pointed</span></div>
                 </label>
                 
-                <input type="checkbox" class="filter-checkbox" id="darter-snout-blunt" data-filter="snout" data-value="blunt">
-                <label class="filter-chip" for="darter-snout-blunt">
-                   <div class="label"><span class="title">Short & Blunt</span></div>
-                </label>
 
-                              <input type="checkbox" class="filter-checkbox" id="darter-snout-very-pointed" data-filter="snout" data-value="very-pointed">
-          <label class="filter-chip" for="darter-snout-very-pointed">
-            <img src="img/very pointed snout.jpg" alt="very pointed snout" border="0">
-            <div class="label"><span class="title">Very long and pointed snout</span><span class="highlight"style="font-size:12px; display:block;">(Brook Silverside)</span></div>
-          </label>
               
             </div>
         </div>
@@ -2818,10 +2801,10 @@ details.species-photo-accordion img.main {
 <div class="species-grid" id="darterGrid">
 
 <div class="species-card" id="brook-silverside"
-     data-key="very-pointed"
+     data-key=""
      data-markings="silver horizontal"
      data-tail="forked"
-     data-snout="pointed very-pointed"
+     data-snout="pointed"
      data-cheek="scaled"
      data-opercle="scaled"
      data-dorsal-spines="3 4 5 6 7 "
@@ -2844,10 +2827,10 @@ details.species-photo-accordion img.main {
 
   
     <div class="species-card" id="logperch"
-         data-key="overhanging vertical-bars teardrop very-pointed"
+         data-key="overhanging vertical-bars teardrop"
          data-markings="vertical"
          data-tail="round squared"
-         data-snout="pointed very-pointed"
+         data-snout="pointed"
          data-cheek="scaled"
          data-opercle="scaled"
          data-dorsal-spines="13 14 15 16"
@@ -2896,7 +2879,7 @@ details.species-photo-accordion img.main {
          data-key="vertical-bars blotches teardrop xvwm"
          data-markings="xvwm dark-blotches vertical-bars black-spot-tail"
          data-tail=" round squared"
-         data-snout="blunt round"
+         data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
          data-dorsal-spines="12 13 14"
@@ -2979,7 +2962,7 @@ details.species-photo-accordion img.main {
          data-key="teardrop vertical-bars"
          data-markings="vertical BOB mottled"
          data-tail="round squared"
-         data-snout="blunt round"
+         data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
          data-dorsal-spines="8 9 10 11 12"
@@ -3031,7 +3014,7 @@ details.species-photo-accordion img.main {
          data-key="teardrop"
          data-markings="dark-blotches horizontal"
          data-tail="forked squared"
-         data-snout="round blunt pointed"
+         data-snout="round pointed"
          data-cheek="scaled"
          data-opercle="scaled"
          data-dorsal-spines="13 14 15"
@@ -3079,7 +3062,7 @@ details.species-photo-accordion img.main {
          data-key="vertical-bars vw blotches teardrop"
          data-markings="dark-blotches vertical-bars"
          data-tail="round squared"
-         data-snout="short blunt"
+         data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="7 8"
@@ -3178,7 +3161,7 @@ details.species-photo-accordion img.main {
          data-key="dorsal-spots"
          data-markings="silver mottled "
          data-tail="forked"
-         data-snout="blunt pointed"
+         data-snout="round pointed"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="11 12 13 14 15 16 17 18"
@@ -3251,7 +3234,7 @@ details.species-photo-accordion img.main {
          data-key="fused-pelvic black-spot"
          data-markings="mottled"
          data-tail="round"
-         data-snout="blunt"
+         data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="5 6 7"
@@ -3275,7 +3258,7 @@ details.species-photo-accordion img.main {
          data-key="fused-pelvic tube-nostrils"
          data-markings="mottled"
          data-tail="round"
-         data-snout="blunt"
+         data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="5 6 7"
@@ -3300,7 +3283,7 @@ details.species-photo-accordion img.main {
          data-key="big-pectoral no-scales 4-pelvic"
          data-markings="mottled"
          data-tail="round"
-         data-snout="blunt"
+         data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="6 7 8 9"
@@ -3325,7 +3308,7 @@ details.species-photo-accordion img.main {
          data-key="big-pectoral no-scales 3-pelvic"
          data-markings="mottled"
          data-tail="round"
-         data-snout="blunt"
+         data-snout="round"
          data-cheek="absent"
          data-opercle="absent"
          data-dorsal-spines="7 8 9 10"
@@ -3350,7 +3333,7 @@ details.species-photo-accordion img.main {
          data-key="silver"
          data-markings="silver"
          data-tail="round square"
-         data-snout="blunt round"
+         data-snout="round"
          data-cheek="scaled"
          data-opercle="scaled"
          data-dorsal-spines="8 9"
