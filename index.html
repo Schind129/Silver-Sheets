@@ -467,7 +467,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 
 
   /* --- Lateral Line --- */
-  #filter-form:has(#lateral-faint-lateral-line:checked) .species-card:not([data-lateral*="faint-lateral-line"]) { display: none; }
+ 
   #filter-form:has(#lateral-strongly-decurved:checked) .species-card:not([data-lateral*="strongly-decurved"]) { display: none; }
   #filter-form:has(#lateral-dark-band:checked) .species-card:not([data-lateral*="dark-band"]) { display: none; }
   #filter-form:has(#lateral-double-dark-band:checked) .species-card:not([data-lateral*="double-dark-band"]) { display: none; }
@@ -1292,15 +1292,6 @@ details.species-photo-accordion img.main {
       <div class="filter-body">
         <div class="chip-row">
           
-                        
-
-          
-          <input type="checkbox" class="filter-checkbox" id="lateral-faint-lateral-line" data-filter="lateral" data-value="faint-lateral-line">
-          <label class="filter-chip" for="lateral-faint-lateral-line">
-            <img src="img/faint lateral line spotfin.jpg" alt="faint lateral line spotfin" border="0">
-            <div class="label"><span class="title">Faint or absent lateral line</span></div>
-          </label>
-          
     
           <input type="checkbox" class="filter-checkbox" id="lateral-strongly-decurved" data-filter="lateral" data-value="strongly-decurved">
           <label class="filter-chip" for="lateral-strongly-decurved">
@@ -1563,7 +1554,7 @@ details.species-photo-accordion img.main {
            data-body="round compressed"
            data-mouth="terminal"
            data-snout="round pointed"
-           data-lateral="faint-lateral-line"
+           data-lateral=""
            data-markings="bright-silver-sides"
            data-anal="9 10 11 12 13">
         <img class="extra" src="img/Emerald uniform.jpg" alt="Emerald-Shiner" border="0">
@@ -1585,7 +1576,7 @@ details.species-photo-accordion img.main {
            data-body="compressed round"
            data-mouth="terminal"
            data-snout="round pointed"
-           data-lateral="faint-lateral-line"
+           data-lateral=""
            data-markings="rosy-head-fins bright-silver-sides"
            data-anal="10 11 12 13">
         <img class="extra" src="img/rosyface.jpg" alt="Rosyface-Shiner" border="0">
@@ -1609,7 +1600,7 @@ details.species-photo-accordion img.main {
          data-body="round"
          data-mouth="terminal"
          data-snout="very-pointed pointed"
-         data-lateral="faint-lateral-line"
+         data-lateral=""
          data-markings="bright-silver-sides"
          data-anal="12 13 more-than-13">
       <img class="extra" src="img/Rainbow Smelt uniform.jpg" alt="Rainbow-Smelt" border="0">
@@ -1714,7 +1705,7 @@ details.species-photo-accordion img.main {
            data-body="round compressed deep-bodied"
            data-mouth="terminal superior"
            data-snout="rounded pointed"
-           data-lateral="dark-band faint-lateral-line"
+           data-lateral="dark-band "
            data-markings="dark-edged-scales black-spot-tail blackspot-dorsal-front"
            data-anal="7">
         <img class="extra" src="img/Fathead minnow uniform.jpg" alt="Fathead-Minnow" border="0">
@@ -1735,7 +1726,7 @@ details.species-photo-accordion img.main {
            data-body="round slightly-compressed"
            data-mouth="terminal subterminal"
            data-snout="rounded"
-           data-lateral="faint-lateral-line"
+           data-lateral=""
            data-markings="bright-silver-sides black-spot-tail "
            data-anal="7 8">
         <img class="extra" src="img/Spottail uniform.jpg" alt="Spottail-Shiner" border="0">
@@ -1755,7 +1746,7 @@ details.species-photo-accordion img.main {
            data-body="deep-bodied compressed"
            data-mouth="terminal"
            data-snout="rounded pointed"
-           data-lateral="tall-scales-lateral faint-lateral-line"
+           data-lateral="tall-scales-lateral "
            data-markings="black-spot-dorsal-backend black-spot-tail bright-silver-sides"
            data-anal="7 8">
         <img class="extra" src="img/Spotfin uniform.jpg" alt="Spotfin Shiner" border="0">
@@ -1819,7 +1810,7 @@ details.species-photo-accordion img.main {
            data-body="compressed deep-bodied"
            data-mouth="terminal"
            data-snout="pointed rounded"
-           data-lateral="faint-lateral-line tall-scales-lateral"
+           data-lateral=" tall-scales-lateral"
            data-markings="dark-edged-scales"
            data-anal="8">
         <img class="extra" src="img/Ghost shiner uniform.jpg" alt="Ghost Shiner" border="0">
@@ -1840,7 +1831,7 @@ details.species-photo-accordion img.main {
            data-body="deep-bodied compressed"
            data-mouth="terminal"
            data-snout="round"
-           data-lateral="strongly-decurved faint-lateral-line"
+           data-lateral="strongly-decurved "
            data-markings="dark-edged-scales rosy-head-fins black-spot-tail bright-silver-sides"
            data-anal="10 11">
         <img class="extra" src="img/Redfin Shiner uniform.jpg" alt="Redfin Shiner" border="0">
@@ -1861,7 +1852,7 @@ details.species-photo-accordion img.main {
            data-body="compressed round"
            data-mouth="subterminal"
            data-snout="pointed"
-           data-lateral="faint-lateral-line"
+           data-lateral=""
            data-markings="bright-silver-sides black-spot-tail dark-edged-scales dark_band"
            data-anal="7 8 9">
         <img class="extra" src="img/Silverjaw Minnow uniform.png" alt="Silverjaw Minnow" border="0">
@@ -1882,7 +1873,7 @@ details.species-photo-accordion img.main {
            data-body="round compressed"
            data-mouth="subterminal sucker-like"
            data-snout="rounded"
-           data-lateral="faint-lateral-line dark_band"
+           data-lateral=" dark_band"
            data-markings="black-spot-tail"
            data-anal="6 7">
         <img class="extra" src="img/Suckermouth minnow uniform.png" alt="Suckermouth Minnow" border="0">
@@ -1903,7 +1894,7 @@ details.species-photo-accordion img.main {
          data-body="round compressed"
          data-mouth="subterminal"
          data-snout="rounded"
-         data-lateral="faint-lateral-line"
+         data-lateral=""
          data-markings="bright-silver-sides white-outline-caudal-fin"
          data-anal="7 8">
       <img class="extra" src="img/Silver chub uniform.jpg" alt="Silver Chub">
@@ -1925,7 +1916,7 @@ details.species-photo-accordion img.main {
          data-body="round compressed"
          data-mouth="terminal"
          data-snout="round"
-         data-lateral="faint-lateral-line dark_band"
+         data-lateral=" dark_band"
          data-markings="black-spot-tail blackspot-dorsal-front"
          data-anal="8">
       <img class="extra" src="img/Creek chub uniform.jpg" alt="Creek Chub" border="0">
@@ -1952,7 +1943,7 @@ details.species-photo-accordion img.main {
          data-body="round compressed"
          data-mouth="terminal"
          data-snout="round"
-         data-lateral="dark-band faint-lateral-line"
+         data-lateral="dark-band "
          data-markings="black-spot-tail red-spot-head dark-edged-scales"
          data-anal="7">
       <img class="extra" src="img/Hornyhead chub uniform.jpg" alt="Hornyhead Chub" border="0">
@@ -1979,7 +1970,7 @@ details.species-photo-accordion img.main {
          data-body="round compressed"
          data-mouth="subterminal"
          data-snout="rounded pointed"
-         data-lateral="faint-lateral-line dark-band"
+         data-lateral=" dark-band"
          data-markings="dark-edged-scales black-spot-tail"
          data-anal="7">
       <img class="extra" src="img/River Chub uniform.jpg" alt="River Chub" border="0">
@@ -2005,7 +1996,7 @@ details.species-photo-accordion img.main {
          data-body="round compressed"
          data-mouth="subterminal terminal"
          data-snout="round"
-         data-lateral="faint-lateral-line dark-band"
+         data-lateral=" dark-band"
          data-markings="dark-edged-scales"
          data-anal="8">
       <img class="extra" src="img/Lake Chub Uniform.png" alt="Lake Chub" border="0">
@@ -2077,7 +2068,7 @@ details.species-photo-accordion img.main {
          data-body="round"
          data-mouth="subterminal"
          data-snout="pointed very-pointed"
-         data-lateral="faint-lateral-line"
+         data-lateral=""
          data-markings="mottled black-spot-tail"
          data-anal="7">
       <img class="extra" src="img/Longnose Dace Uniform.jpg" alt="Longnose Dace Uniform" border="0">
@@ -2123,7 +2114,7 @@ details.species-photo-accordion img.main {
          data-body="round deep-bodied"
          data-mouth="terminal subterminal"
          data-snout="round"
-         data-lateral="dark-band faint-lateral-line"
+         data-lateral="dark-band "
          data-markings="black-spot-tail mottled dark-edged-scales"
          data-anal="8">
       <img class="extra" src="img/Northern Pearl Dace Uniform.png" alt="Northern Pearl Dace" border="0">
@@ -2147,7 +2138,7 @@ details.species-photo-accordion img.main {
          data-body="deep-bodied compressed round"
          data-mouth="terminal"
          data-snout="round pointed"
-         data-lateral="faint-lateral-line dark-band"
+         data-lateral=" dark-band"
          data-markings="black-spot-tail dark-edged-scales"
          data-anal="8">
       <img class="extra" src="img/Finescale Dace uniform NOT OURS.png" alt="Finescale Dace uniform NOT OURS" border="0">
@@ -2170,7 +2161,7 @@ details.species-photo-accordion img.main {
      data-body="deep-bodied compressed sharp-keel"
      data-mouth="subterminal"
      data-snout="rounded"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="bright-silver-sides"
      data-anal="more-than-13">
   <img class="extra" src="img/Gizzard Shad uniform.jpg" alt="Gizzard Shad uniform" border="0">
@@ -2192,7 +2183,7 @@ details.species-photo-accordion img.main {
      data-body="deep-bodied compressed sharp-keel"
      data-mouth="terminal superior"
      data-snout="rounded pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="bright-silver-sides"
      data-anal="more-than-13">
   <img class="extra" src="img/Alewife uniform.jpg" alt="Alewife uniform" border="0">
@@ -2235,7 +2226,7 @@ details.species-photo-accordion img.main {
      data-body="compressed deep-bodied"
      data-mouth="terminal"
      data-snout="pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="vertical-bars"
      data-anal="7 8 9 10">
   <img class="extra" src="img/Threespine Stickleback uniform.jpg" alt="Threespine Stickleback" border="0">
@@ -2257,7 +2248,7 @@ details.species-photo-accordion img.main {
      data-body="round"
      data-mouth="terminal"
      data-snout="pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="vertical-bars mottled"
      data-anal="6 7 8 9">
   <img class="extra" src="img/Ninespine Stickleback uniform.png" alt="Ninespine Stickleback uniform" border="0">
@@ -2278,7 +2269,7 @@ details.species-photo-accordion img.main {
      data-body="round compressed"
      data-mouth="superior"
      data-snout="pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="vertical-bars"
      data-anal="9 10 11">
   <img class="extra" src="img/Banded Kilifish uniform.jpg" alt="Banded Killifish uniform" border="0">
@@ -2299,7 +2290,7 @@ details.species-photo-accordion img.main {
      data-body="round"
      data-mouth="subterminal"
      data-snout="rounded"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="vertical-bars"
      data-anal="9 10 11">
   <img class="extra" src="img/Central Mudminnow also uniform.jpg" alt="Central Mudminnow also uniform" border="0">
@@ -2320,7 +2311,7 @@ details.species-photo-accordion img.main {
      data-body="Round compressed"
      data-mouth="subterminal sucker-like"
      data-snout="round"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="mottled"
      data-anal="7">
   <img class="extra" src="img/Central Stoneroller uniform.jpg" alt="Central Stoneroller uniform" border="0">
@@ -2341,7 +2332,7 @@ details.species-photo-accordion img.main {
            data-body="round compressed"
            data-mouth="subterminal"
            data-snout="pointed"
-           data-lateral="faint-lateral-line"
+           data-lateral=""
            data-markings="spots silver mottled"
            data-anal="6 7">
         <img class="extra" src="img/troutperch uniform.jpg" alt="troutperch uniform" border="0">
@@ -2364,7 +2355,7 @@ details.species-photo-accordion img.main {
      data-body="compressed deep-bodied sharp-keel"
      data-mouth="terminal"
      data-snout="rounded pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="bright-silver-sides"
      data-anal="more-than-13">
   <img class="extra" src="img/Mooneye uniform NOT OURS.png" alt="Mooneye">
@@ -2385,7 +2376,7 @@ details.species-photo-accordion img.main {
      data-body="round"
      data-mouth="superior"
      data-snout="flattened pointed very-pointed"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings="dark-edged-scales"
      data-anal="9">
   <img class="extra" src="img/Western Mosquitofish uniform.jpg" alt="Western Mosquitofish uniform" border="0">
@@ -2427,7 +2418,7 @@ details.species-photo-accordion img.main {
      data-body="deep-bodied compressed"
      data-mouth="terminal projecting-jaw"
      data-snout="round"
-     data-lateral="faint-lateral-line"
+     data-lateral=""
      data-markings=""
      data-anal="6 7">
   <img class="extra" src="img/Pirate Perch Uniform.jpg" alt="Pirate Perch">
