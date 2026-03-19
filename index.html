@@ -458,6 +458,11 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 /* --- Snout Shape --- */
 #filter-form:has(#snout-round:checked) .species-card:not([data-snout*="round"]) { display: none; }
 #filter-form:has(#snout-pointed:checked) .species-card:not([data-snout*="pointed"]) { display: none; }
+  /* Original Snout Shape filter: targets data-snout */
+#filter-form:has(#snout-very-pointed:checked) .species-card:not([data-snout*="very-pointed"]) { display: none; } 
+
+/* NEW: Combined Key Features filter: targets data-key, but is controlled by the same checkbox ID */
+#filter-form:has(#snout-very-pointed:checked) .species-card:not([data-key*="very-pointed"]) { display: none; } 
 
 
 
@@ -1265,6 +1270,7 @@ details.species-photo-accordion img.main {
             <div class="label"><span class="title">Rounded or blunt</span></div>
           </label>
 
+         
           <input type="checkbox" class="filter-checkbox" id="snout-pointed" data-filter="snout" data-value="pointed">
           <label class="filter-chip" for="snout-pointed">
             <img src="img/pointed snout rosy.png" alt="pointed-snout-rosy" border="0">
@@ -1602,7 +1608,7 @@ details.species-photo-accordion img.main {
          data-key="adipose-fin very-pointed"
          data-body="round"
          data-mouth="terminal"
-         data-snout="very-pointed"
+         data-snout="very-pointed pointed"
          data-lateral="faint-lateral-line"
          data-markings="bright-silver-sides"
          data-anal="12 13 more-than-13">
