@@ -459,13 +459,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #filter-form:has(#snout-round:checked) .species-card:not([data-snout*="round"]) { display: none; }
 #filter-form:has(#snout-pointed:checked) .species-card:not([data-snout*="pointed"]) { display: none; }
 
-/* Original Snout Shape filter: targets data-snout */
-#filter-form:has(#snout-very-pointed:checked) .species-card:not([data-snout*="very-pointed"]) { display: none; } 
 
-/* NEW: Combined Key Features filter: targets data-key, but is controlled by the same checkbox ID */
-#filter-form:has(#snout-very-pointed:checked) .species-card:not([data-key*="very-pointed"]) { display: none; } 
-
-#filter-form:has(#snout-blunt:checked) .species-card:not([data-snout*="blunt"]) { display: none; }
 
   /* --- Lateral Line --- */
   #filter-form:has(#lateral-faint-lateral-line:checked) .species-card:not([data-lateral*="faint-lateral-line"]) { display: none; }
@@ -1268,11 +1262,11 @@ details.species-photo-accordion img.main {
           <input type="checkbox" class="filter-checkbox" id="snout-round" data-filter="snout" data-value="round">
           <label class="filter-chip" for="snout-round">
             <img src="img/Spottail rounded snout.jpg" alt="Spottail-rounded-snout" border="0">
-            <div class="label"><span class="title">Rounded</span></div>
+            <div class="label"><span class="title">Rounded or blunt</span></div>
           </label>
 
           <input type="checkbox" class="filter-checkbox" id="snout-pointed" data-filter="snout" data-value="pointed">
-          <label class="filter-chip" for="snout-       pointed">
+          <label class="filter-chip" for="snout-pointed">
             <img src="img/pointed snout rosy.png" alt="pointed-snout-rosy" border="0">
             <div class="label"><span class="title">Pointed</span></div>
           </label>
@@ -1280,14 +1274,9 @@ details.species-photo-accordion img.main {
                     <input type="checkbox" class="filter-checkbox" id="snout-very-pointed" data-filter="snout" data-value="very-pointed">
           <label class="filter-chip" for="snout-very-pointed">
             <img src="img/very pointed snout Longnose dace.jpg" alt="very pointed snout Longnose dace" border="0">
-            <div class="label"><span class="title">Very pointed</span></div>
+            <div class="label"><span class="title">Very pointed</span><span class="highlight"style="font-size:12px; display:block;">(Longnose Dace or Rainbow Smelt)</span></div>
           </label>
 
-          <input type="checkbox" class="filter-checkbox" id="snout-blunt" data-filter="snout" data-value="blunt">
-          <label class="filter-chip" for="snout-blunt">
-            <img src="img/Bluntnose Face.jpg" alt="Bluntnose-Face" border="0">
-            <div class="label"><span class="title">Blunt / slightly rounded</span></div>
-          </label>
         </div>
       </div>
     </details>
@@ -1514,7 +1503,7 @@ details.species-photo-accordion img.main {
            data-key="crowded-predorsal tubercles"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
-           data-snout="rounded blunt"
+           data-snout="rounded"
            data-lateral="tall-scales-lateral"
            data-markings="dusky-lateral-stripes bright-silver-sides rosy-head-fins"
            data-anal="8 9 10">
@@ -1544,7 +1533,7 @@ details.species-photo-accordion img.main {
            data-key="pre-dorsal-similar tubercles"
            data-body="deep-bodied compressed"
            data-mouth="terminal"
-           data-snout="blunt round"
+           data-snout="round"
            data-lateral="tall-scales-lateral"
            data-markings="crescent-moon dusky-lateral-stripes bright-silver-sides black-spot-tail rosy-head-fins"
            data-anal="9 10 11">
@@ -1634,7 +1623,7 @@ details.species-photo-accordion img.main {
            data-key=" pre-dorsal-similar"
            data-body="deep-bodied compressed round"
            data-mouth="terminal slightly-subterminal"
-           data-snout="round blunt"
+           data-snout="round"
            data-lateral="dark-band-zigzag dark-band"
            data-markings=" dark-edged-scales dark-anal-base"
            data-anal="8">
@@ -1655,7 +1644,7 @@ details.species-photo-accordion img.main {
            data-key="upturned-mouth pre-dorsal-similar"
            data-body="round compressed"
            data-mouth="superior"
-           data-snout="blunt"
+           data-snout="blunt round"
            data-lateral=" dark-band"
            data-markings=""
            data-anal="7 8">
@@ -1676,7 +1665,7 @@ details.species-photo-accordion img.main {
            data-key="pre-dorsal-similar"
            data-body="round compressed"
            data-mouth="terminal subterminal"
-           data-snout="blunt pointed round"
+           data-snout="pointed round"
            data-lateral="crescent-moon dark-band"
            data-markings="dark-edged-scales black-spot-tail"
            data-anal="7 8">
@@ -1697,7 +1686,7 @@ details.species-photo-accordion img.main {
            data-key="crowded-predorsal tubercles blackspot-dorsal-front"
            data-body="round compressed"
            data-mouth="subterminal"
-           data-snout="blunt rounded"
+           data-snout="round"
            data-lateral="dark-band"
            data-markings="black-spot-tail dark-edged-scales dark-anal-base blackspot-dorsal-front"
            data-anal="7">
@@ -1718,7 +1707,7 @@ details.species-photo-accordion img.main {
            data-key="crowded-predorsal tubercles blackspot-dorsal-front"
            data-body="round compressed deep-bodied"
            data-mouth="terminal superior"
-           data-snout="rounded  blunt pointed"
+           data-snout="rounded pointed"
            data-lateral="dark-band faint-lateral-line"
            data-markings="dark-edged-scales black-spot-tail blackspot-dorsal-front"
            data-anal="7">
@@ -1886,7 +1875,7 @@ details.species-photo-accordion img.main {
            data-key="pre-dorsal-similar sucker-like"
            data-body="round compressed"
            data-mouth="subterminal sucker-like"
-           data-snout="blunt rounded"
+           data-snout="rounded"
            data-lateral="faint-lateral-line dark_band"
            data-markings="black-spot-tail"
            data-anal="6 7">
@@ -1907,7 +1896,7 @@ details.species-photo-accordion img.main {
          data-key="barbels-present white-outline-caudal-fin"
          data-body="round compressed"
          data-mouth="subterminal"
-         data-snout="blunt rounded"
+         data-snout="rounded"
          data-lateral="faint-lateral-line"
          data-markings="bright-silver-sides white-outline-caudal-fin"
          data-anal="7 8">
@@ -1929,7 +1918,7 @@ details.species-photo-accordion img.main {
          data-key="tubercles crowded-predorsal blackspot-dorsal-front barbels-present"
          data-body="round compressed"
          data-mouth="terminal"
-         data-snout="blunt"
+         data-snout="round"
          data-lateral="faint-lateral-line dark_band"
          data-markings="black-spot-tail blackspot-dorsal-front"
          data-anal="8">
@@ -1956,7 +1945,7 @@ details.species-photo-accordion img.main {
          data-key="tubercles barbels-present red-spot-head pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="terminal"
-         data-snout="blunt"
+         data-snout="round"
          data-lateral="dark-band faint-lateral-line"
          data-markings="black-spot-tail red-spot-head dark-edged-scales"
          data-anal="7">
@@ -1983,7 +1972,7 @@ details.species-photo-accordion img.main {
          data-key="tubercles barbels-present pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="subterminal"
-         data-snout="blunt rounded pointed"
+         data-snout="rounded pointed"
          data-lateral="faint-lateral-line dark-band"
          data-markings="dark-edged-scales black-spot-tail"
          data-anal="7">
@@ -2104,7 +2093,7 @@ details.species-photo-accordion img.main {
          data-key="scales-tiny"
          data-body="round"
          data-mouth="terminal superior"
-         data-snout="round blunt"
+         data-snout="round"
          data-lateral="double-dark-band dark-band"
          data-markings=""
          data-anal="8">
@@ -2127,7 +2116,7 @@ details.species-photo-accordion img.main {
          data-key="barbels-present crowded-predorsal pre-dorsal-similar scales-tiny"
          data-body="round deep-bodied"
          data-mouth="terminal subterminal"
-         data-snout="blunt round"
+         data-snout="round"
          data-lateral="dark-band faint-lateral-line"
          data-markings="black-spot-tail mottled dark-edged-scales"
          data-anal="8">
@@ -2174,7 +2163,7 @@ details.species-photo-accordion img.main {
      data-key="pre-dorsal-similar"
      data-body="deep-bodied compressed sharp-keel"
      data-mouth="subterminal"
-     data-snout="blunt rounded"
+     data-snout="rounded"
      data-lateral="faint-lateral-line"
      data-markings="bright-silver-sides"
      data-anal="more-than-13">
@@ -2303,7 +2292,7 @@ details.species-photo-accordion img.main {
      data-key="round-tail"
      data-body="round"
      data-mouth="subterminal"
-     data-snout="blunt rounded"
+     data-snout="rounded"
      data-lateral="faint-lateral-line"
      data-markings="vertical-bars"
      data-anal="9 10 11">
@@ -2324,7 +2313,7 @@ details.species-photo-accordion img.main {
      data-key="tubercles sucker-like"
      data-body="Round compressed"
      data-mouth="subterminal sucker-like"
-     data-snout="blunt round"
+     data-snout="round"
      data-lateral="faint-lateral-line"
      data-markings="mottled"
      data-anal="7">
@@ -2368,7 +2357,7 @@ details.species-photo-accordion img.main {
      data-key="scaleless-keel"
      data-body="compressed deep-bodied sharp-keel"
      data-mouth="terminal"
-     data-snout="blunt rounded pointed"
+     data-snout="rounded pointed"
      data-lateral="faint-lateral-line"
      data-markings="bright-silver-sides"
      data-anal="more-than-13">
@@ -2410,7 +2399,7 @@ details.species-photo-accordion img.main {
      data-key="black-stripe flattened-head"
      data-body="slender"
      data-mouth="superior"
-     data-snout="pointed-flat"
+     data-snout="pointed"
      data-lateral="no-lateral-line"
      data-markings="bold-black-lateral-stripe"
      data-anal="12">
@@ -2431,7 +2420,7 @@ details.species-photo-accordion img.main {
      data-key=""
      data-body="deep-bodied compressed"
      data-mouth="terminal projecting-jaw"
-     data-snout="blunt round"
+     data-snout="round"
      data-lateral="faint-lateral-line"
      data-markings=""
      data-anal="6 7">
