@@ -881,67 +881,47 @@ details.species-photo-accordion img.main {
   color: white; /* Ensures text is readable on green */
 }
 
-/* Navigation Chip (Identical to Filter Chip) */
-.jump-chip {
-  /* Inherit look from .filter-chip */
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
-  border-radius: 10px;
-  text-decoration: none;
-  user-select: none;
-  font-size: 13px;
-  line-height: 1.25;
-  
-  /* Distinct "Link" Styling using your theme colors */
-  background: var(--accent); /* Uses your #2b8ed6 blue */
-  color: white !important;
-  border: 1px solid var(--accent);
-  font-weight: 700;
-  transition: opacity 0.2s;
-}
-
-.jump-chip:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
-}
-
-.jump-chip::after {
-  content: " →";
-  font-weight: 800;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.jump-chip .label {
-  color: white;
-}
-
-/* Container for the jump chips */
+/* Container for the chips */
 .jump-chip-container {
   display: flex;
-  flex-wrap: nowrap;      /* Prevents chips from wrapping to the next line */
-  overflow-x: auto;       /* Enables horizontal scrolling */
-  gap: 10px;              /* Space between chips */
-  padding: 10px 5px;      /* Prevents chips from hitting the screen edges */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  flex-wrap: wrap;       /* Allows chips to move to the next line */
+  gap: 8px;              /* Space between chips */
+  margin-bottom: 12px;
+  justify-content: flex-start; /* Aligns them to the left */
 }
 
-/* Hide scrollbar for a cleaner look (optional) */
-.jump-chip-container::-webkit-scrollbar {
-  display: none;
-}
-.jump-chip-container {
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
-}
-
-/* Ensure chips don't shrink to fit */
+/* Individual Chip Styling */
 .jump-chip {
-  flex: 0 0 auto;         /* Prevents chips from squishing */
-  white-space: nowrap;    /* Keeps text on one line inside the chip */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--chip);
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid #dae1e7;
+  
+  /* Layout Logic */
+  flex: 0 1 auto;        /* Don't force them to grow, but allow them to shrink if needed */
+  min-width: 0;          /* Allows content to dictate width */
+  max-width: 100%;       /* Prevents overflow on very small screens */
+  user-select: none;
+}
+
+/* Ensure images don't get squished */
+.jump-chip img {
+  height: 40px;          /* Slightly smaller to help fit more per row */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Adjust the label text for better wrapping */
+.jump-chip .label {
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: normal;   /* Allows text to wrap inside the chip if long */
+  overflow: hidden;
 }
 
 
