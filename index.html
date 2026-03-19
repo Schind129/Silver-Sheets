@@ -576,6 +576,9 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #darter-form:has(#darter-snout-round:checked) #darterGrid .species-card:not([data-snout*="round"]) { display: none; }
 #darter-form:has(#darter-snout-pointed:checked) #darterGrid .species-card:not([data-snout*="pointed"]) { display: none; }
 #darter-form:has(#darter-snout-blunt:checked) #darterGrid .species-card:not([data-snout*="blunt"]) { display: none; }
+  #darter-form:has(#darter-snout-very-pointed:checked) #darterGrid .species-card:not([data-snout*="very-pointed"]) { display: none; } 
+#darter-form:has(#darter-snout-very-pointed:checked) #darterGrid .species-card:not([data-key*="very-pointed"]) { display: none; } 
+/* NEW: Combined Key Features filter: targets data-key, but is controlled by the same checkbox ID */
 
 /* --- Filter Logic: Scales --- */
 #darter-form:has(#darter-cheek-scaled:checked) #darterGrid .species-card:not([data-cheek*="scaled"]) { display: none; }
