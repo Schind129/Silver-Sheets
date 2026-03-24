@@ -431,6 +431,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     #filter-form:has(#key-white-outline-caudal-fin:checked) .species-card:not([data-key*="white-outline-caudal-fin"]) { display: none; }
   #filter-form:has(#key-crowded-predorsal:checked) .species-card:not([data-key*="crowded-predorsal"]) { display: none; }
   #filter-form:has(#key-tubercles:checked) .species-card:not([data-key*="tubercles"]) { display: none; }
+   #filter-form:has(#key-flattened:checked) .species-card:not([data-key*="flattened"]) { display: none; }
   #filter-form:has(#key-blackspot-dorsal-backend:checked) .species-card:not([data-key*="blackspot-dorsal-backend"]) { display: none; }
     #filter-form:has(#key-blackspot-dorsal-front:checked) .species-card:not([data-key*="blackspot-dorsal-front"]) { display: none; }
   #filter-form:has(#key-scaleless-keel:checked) .species-card:not([data-key*="scaleless-keel"]) { display: none; }
@@ -475,15 +476,17 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   /* --- Lateral Line --- */
  
   #filter-form:has(#lateral-strongly-decurved:checked) .species-card:not([data-lateral*="strongly-decurved"]) { display: none; }
-  #filter-form:has(#lateral-dark-band:checked) .species-card:not([data-lateral*="dark-band"]) { display: none; }
-  #filter-form:has(#lateral-double-dark-band:checked) .species-card:not([data-lateral*="double-dark-band"]) { display: none; }
-  #filter-form:has(#key-double-dark-band:checked) .species-card:not([data-key*="double-dark-band"]) { display: none; }
-  #filter-form:has(#lateral-zigzag:checked) .species-card:not([data-lateral*="zigzag"]) { display: none; }
-  #filter-form:has(#lateral-crescent-moon:checked) .species-card:not([data-lateral*="crescent-moon"]) { display: none; }
-  #filter-form:has(#lateral-tall-scales-lateral:checked) .species-card:not([data-lateral*="tall-scales-lateral"]) { display: none; }
-  #filter-form:has(#lateral-mouse-tracks:checked) .species-card:not([data-lateral*="mouse-tracks"]) { display: none; }
+    #filter-form:has(#lateral-tall-scales-lateral:checked) .species-card:not([data-lateral*="tall-scales-lateral"]) { display: none; }
 
-  /* --- Markings --- */
+  
+   /* --- Markings --- */
+  #filter-form:has(#markings-mouse-tracks:checked) .species-card:not([data-markings*="mouse-tracks"]) { display: none; }
+#filter-form:has(#markings-dark-band:checked) .species-card:not([data-markings*="dark-band"]) { display: none; }
+  #filter-form:has(#markings-double-dark-band:checked) .species-card:not([data-markings*="double-dark-band"]) { display: none; }
+  #filter-form:has(#key-double-dark-band:checked) .species-card:not([data-key*="double-dark-band"]) { display: none; }
+  #filter-form:has(#markings-zigzag:checked) .species-card:not([data-markings*="zigzag"]) { display: none; }
+  #filter-form:has(#markings-crescent-moon:checked) .species-card:not([data-markings*="crescent-moon"]) { display: none; }
+
   #filter-form:has(#markings-bright-silver-sides:checked) .species-card:not([data-markings*="bright-silver-sides"]) { display: none; }
   #filter-form:has(#markings-rosy-head-fins:checked) .species-card:not([data-markings*="rosy-head-fins"]) { display: none; }
   #filter-form:has(#key-rosy-pigment-head:checked) .species-card:not([data-key*="rosy-head-fins"]) { display: none; } 
@@ -1071,7 +1074,11 @@ details.species-photo-accordion img.main {
             </div>
           </label>
           
-
+<input type="checkbox" class="filter-checkbox" id="key-flattened" data-filter="key" data-value="flattened">
+          <label class="filter-chip" for="key-flattened">
+            <img src="img/Blackstripe Topminnow flattened.png" alt="Blackstripe Topminnow Flattened" border="0">
+            <div class="label"><span class="title">Top of head is flattened</span><span class="highlight"style="font-size:12px; display:block;">(mosquitofish)</span></div>
+          </label> 
 
           
              
@@ -1335,20 +1342,20 @@ details.species-photo-accordion img.main {
             <div class="label"><span class="title">White outline on the bottom of the caudal fin</span><span class="highlight"style="font-size:12px; display:block;">(Silver Chub)</span></div>
           </label>
 
-                              <input type="checkbox" class="filter-checkbox" id="lateral-double-dark-band" data-filter="lateral" data-value="double-dark-band">
-          <label class="filter-chip" for="lateral-double-dark-band">
+                              <input type="checkbox" class="filter-checkbox" id="markings-double-dark-band" data-filter="markings" data-value="double-dark-band">
+          <label class="filter-chip" for="markings-double-dark-band">
             <img src="img/Northern Redbelly Dace yellow.jpg" alt="Northern Redbelly Dace yellow" border="0">
             <div class="label"><span class="title">Two dark bands on lateral line</span><span class="highlight"style="font-size:12px; display:block;">(Northern Redbelly Dace)</span></div>
           </label>
           
-               <input type="checkbox" class="filter-checkbox" id="lateral-crescent-moon" data-filter="lateral" data-value="crescent-moon">
-          <label class="filter-chip" for="lateral-crescent-moon">
+               <input type="checkbox" class="filter-checkbox" id="markings-crescent-moon" data-filter="markings" data-value="crescent-moon">
+          <label class="filter-chip" for="markings-crescent-moon">
             <img src="img/Blacknose Shiner lateral line Cresent moon.jpg" alt="Blacknose-Shiner-lateral-line-Cresent-moon" border="0">
             <div class="label"><span class="title">Lateral band in crescent-moon pattern</span><span class="highlight"style="font-size:12px; display:block;">(Blacknose Shiner)</span></div>
           </label>
 
-                            <input type="checkbox" class="filter-checkbox" id="lateral-zigzag" data-filter="lateral" data-value="zigzag">
-          <label class="filter-chip" for="lateral-zigzag">
+                            <input type="checkbox" class="filter-checkbox" id="markings-zigzag" data-filter="markings" data-value="zigzag">
+          <label class="filter-chip" for="markings-zigzag">
             <img src="img/blackchin zigzag lateral line.jpg" alt="blackchin-zigzag-lateral-line" border="0">
             <div class="label"><span class="title">Dark lateral band in zig zag pattern</span><span class="highlight"style="font-size:12px; display:block;">(Blackchin Shiner)</span></div>
           </label>
@@ -1359,14 +1366,14 @@ details.species-photo-accordion img.main {
             <div class="label"><span class="title">Bright silver sides</span></div>
           </label>
           
-                    <input type="checkbox" class="filter-checkbox" id="lateral-dark-band" data-filter="lateral" data-value="dark-band">
-          <label class="filter-chip" for="lateral-dark-band">
+                    <input type="checkbox" class="filter-checkbox" id="markings-dark-band" data-filter="markings" data-value="dark-band">
+          <label class="filter-chip" for="markings-dark-band">
             <img src="img/Black band pugnose.png" alt="Black band pugnose" border="0">
             <div class="label"><span class="title">Dark band on lateral line</span></div>
           </label>
 
-                    <input type="checkbox" class="filter-checkbox" id="lateral-mouse-tracks" data-filter="lateral" data-value="mouse-tracks">
-          <label class="filter-chip" for="lateral-mouse-tracks">
+                    <input type="checkbox" class="filter-checkbox" id="markings-mouse-tracks" data-filter="markings" data-value="mouse-tracks">
+          <label class="filter-chip" for="markings-mouse-tracks">
             <img src="img/Mouse tracks mimic.jpg" alt="Mouse tracks mimic" border="0">
             <div class="label"><span class="title">Fine pigment blotches above and below each lateral-line pore (mouse tracks)</span></div>
           </label>
@@ -1471,8 +1478,8 @@ details.species-photo-accordion img.main {
            data-body="deep-bodied compressed"
            data-mouth="superior"
            data-snout="pointed"
-           data-lateral="strongly-decurved tall-scales-lateral dark_band"
-           data-markings="bright-silver-sides"
+           data-lateral="strongly-decurved tall-scales-lateral dark-band"
+           data-markings="bright-silver-sides dark-band"
            data-anal="11 12 13 14"> 
         <img class="extra" src="img/Golden Shiner uniform.jpg" alt="Golden-Shiner" border="0">
         <h3>Golden Shiner</h3>    
@@ -1625,7 +1632,7 @@ details.species-photo-accordion img.main {
            data-mouth="terminal slightly-subterminal"
            data-snout="rounded pointed"
            data-lateral="dark-band-zigzag dark-band"
-           data-markings=" dark-edged-scales dark-anal-base"
+           data-markings=" dark-edged-scales dark-anal-base dark-band-zigzag dark-band"
            data-anal="8">
         <img class="extra" src="img/Blackchin uniform.jpg" alt="Blackchin-Shiner">
         <h3>Blackchin Shiner</h3>
@@ -1645,8 +1652,8 @@ details.species-photo-accordion img.main {
            data-body="round compressed"
            data-mouth="superior"
            data-snout="rounded pointed"
-           data-lateral=" dark-band"
-           data-markings=""
+           data-lateral="dark-band"
+           data-markings="dark-band dark-edged-scales dark-band-zigzag"
            data-anal="7 8">
         <img class="extra" src="img/Pugnose uniform.jpg" alt="Pugnose-Shiner" border="0">
         <h3>Pugnose Shiner<span class="Endangered"style="font-size:12px; display:block;">Endangered in Michigan</span></h3>
@@ -1655,8 +1662,8 @@ details.species-photo-accordion img.main {
           <div class="tag-row"><div><strong>Body Shape:</strong> Round, slightly compressed</div></div>
           <div class="tag-row"><div><strong>Mouth Position:</strong> Superior </div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt</div></div>
-          <div class="tag-row"><div><strong>Lateral Line:</strong> Dark lateral band</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong> Pigment on both upper lip & chin, dark-edged scales on back and upper sides</div></div>
+          <div class="tag-row"><div><strong>Lateral Line:</strong> Dark lateral band, scales </div></div>
+          <div class="tag-row"><div><strong>Markings:</strong> Pigment on both upper lip & chin, dark-edged scales on back and upper sides, occasionally has dark lateral band in a zip-zag pattern</div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7–8</div></div>
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
@@ -1667,7 +1674,7 @@ details.species-photo-accordion img.main {
            data-mouth="terminal subterminal"
            data-snout="pointed rounded"
            data-lateral="crescent-moon dark-band"
-           data-markings="dark-edged-scales black-spot-tail"
+           data-markings="dark-edged-scales black-spot-tail crescent-moon dark-band"
            data-anal="7 8">
         <img class="extra" src="img/Blacknose shiner uniform.jpg" alt="Blacknose-Shiner" border="0">
         <h3>Blacknose Shiner<span class="Endangered"style="font-size:12px; display:block;">Endangered in Ohio</span></h3>
@@ -1677,7 +1684,7 @@ details.species-photo-accordion img.main {
           <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal, slightly subterminal</div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Round, slightly pointed</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Lateral band in crescent-moon pattern</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong> Pigment only on upper lip, dark-edged scales on back and upper sides</div></div>
+          <div class="tag-row"><div><strong>Markings:</strong> Pigment only on upper lip, dark-edged scales on back and upper sides, occasionally has black spot on base of caudal fin</div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7–8 (rarely 7)</div></div>
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
@@ -2303,7 +2310,7 @@ details.species-photo-accordion img.main {
      data-mouth="subterminal"
      data-snout="rounded"
      data-lateral=""
-     data-markings="vertical-bars"
+     data-markings="vertical-bars mottled"
      data-anal="9 10 11">
   <img class="extra" src="img/Central Mudminnow also uniform.jpg" alt="Central Mudminnow also uniform" border="0">
   <h3>Central Mudminnow</h3>
@@ -2313,7 +2320,7 @@ details.species-photo-accordion img.main {
     <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal</div></div>
     <div class="tag-row"><div><strong>Snout Type:</strong> Blunt, slightly round</div></div>
     <div class="tag-row"><div><strong>Lateral Line:</strong> Absent</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Vertical bars</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Vertical bars, mottled</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
@@ -2387,17 +2394,17 @@ details.species-photo-accordion img.main {
      data-key="upturned-mouth flattened"
      data-body="round"
      data-mouth="superior"
-     data-snout="pointed very-pointed"
+     data-snout="pointed rounded"
      data-lateral=""
      data-markings="dark-edged-scales"
      data-anal="9">
   <img class="extra" src="img/Western Mosquitofish uniform.jpg" alt="Western Mosquitofish uniform" border="0">
-  <h3>Western Mosquitofish WIP</h3>
+  <h3>Western Mosquitofish</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Dorsal fin originates well behind the anal fin origin</div></div>
+    <div class="tag-row"><div><strong>Key Features:</strong> Flattened head, dorsal fin originates well behind the anal fin origin</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Superior</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt and flattened on top</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Silghtly pointed, flattened on top</div></div>
     <div class="tag-row"><div><strong>Lateral Line:</strong> Faint or absent</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Dark "teardrop" under eye, small spots on dorsal and tail fin.</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9</div></div>
@@ -2406,21 +2413,21 @@ details.species-photo-accordion img.main {
 
   <div class="species-card" id="blackstripe-topminnow"
      data-key="black-stripe flattened-head"
-     data-body="slender"
-     data-mouth="superior"
+     data-body="round"
+     data-mouth="superior terminal"
      data-snout="pointed"
      data-lateral="no-lateral-line"
-     data-markings="bold-black-lateral-stripe"
-     data-anal="12">
+     data-markings="black-lateral-stripe"
+     data-anal="10 11 12 13">
   <img class="extra" src="img/Blackstripe Topminnow uniform.jpg" alt="Blackstripe Topminnow">
-  <h3>Blackstripe Topminnow WIP</h3>
+  <h3>Blackstripe Topminnow</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Bold black stripe from snout to tail; flattened head</div></div>
-    <div class="tag-row"><div><strong>Body Shape:</strong> Slender and cylindrical</div></div>
+    <div class="tag-row"><div><strong>Key Features:</strong> Bold black stripe from snout to tail, flattened head</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Round and slender</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Small and upturned (superior)</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed; flat on top</div></div>
-    <div class="tag-row"><div><strong>Lateral Line:</strong> Lacks a visible lateral line or is incomplete</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Distinct black lateral stripe; males have vertical bars</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed, flat on top</div></div>
+    <div class="tag-row"><div><strong>Lateral Line:</strong> Faint or absent</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Distinct black lateral stripe, males have vertical bars</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–13 (typically 12)</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
