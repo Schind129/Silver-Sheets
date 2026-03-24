@@ -450,6 +450,10 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   #filter-form:has(#key-spots-top:checked) .species-card:not([data-key*="spots-top"]) { display: none;}
   #filter-form:has#key-pre-dorsal-similar:checked ~ .species-grid .species-card[data-key*="crowded-predorsal"] {
     display: none !important;
+    /* --- Carp Additions to Silver Sheets --- */
+  #filter-form:has(#key-eye-low:checked) .species-card:not([data-key*="eye-low"]) { display: none; }
+  #filter-form:has(#key-serrated-spine:checked) .species-card:not([data-key*="serrated-spine"]) { display: none; }
+  #filter-form:has(#key-large-scales:checked) .species-card:not([data-key*="large-scales"]) { display: none; }
 }
   
   
@@ -1186,7 +1190,7 @@ details.species-photo-accordion img.main {
           <input type="checkbox" class="filter-checkbox" id="key-barbels-present" data-filter="key" data-value="barbels-present">
           <label class="filter-chip" for="key-barbels-present">
             <img src="img/Creek chub barbel square.jpg" alt="Creek chub barbel square" border="0">
-            <div class="label"><span class="title">Small lip barbels present</span><span style="font-size:11px; opacity:0.8; display:block;">Small bumps at corner of mouth (can be very hard to see)</span></div>
+            <div class="label"><span class="title">Lip barbels present</span><span style="font-size:11px; opacity:0.8; display:block;">Ranging from small bumps at corner of mouth (can be very hard to see), to long "wiskers" hanging down</span></div>
           </label>
 
           <input type="checkbox" class="filter-checkbox" id="key-scales-tiny" data-filter="key" data-value="scales-tiny">
@@ -1194,6 +1198,30 @@ details.species-photo-accordion img.main {
             <img src="img/Dace scales.jpg" alt="Dace-scales" border="0">
             <div class="label"><span class="title">Tiny scales</span></div>
           </label>
+
+            <input type="checkbox" class="filter-checkbox" id="key-eye-low" data-filter="key" data-value="eye-low">
+<label class="filter-chip" for="key-eye-low">
+  <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Eye" alt="Eye Low" border="0">
+  <div class="label">
+    <span class="title">Eyes below midline</span><span class="highlight" style="font-size:12px; display:block;">(Bighead/Silver Carp)</span>
+  </div>
+</label>
+
+<input type="checkbox" class="filter-checkbox" id="key-serrated-spine" data-filter="key" data-value="serrated-spine">
+<label class="filter-chip" for="key-serrated-spine">
+  <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Spine" alt="Serrated Spine" border="0">
+  <div class="label">
+    <span class="title">Stiff, serrated dorsal spine</span><span class="highlight" style="font-size:12px; display:block;">(Carp/Goldfish)</span>
+  </div>
+</label>
+
+<input type="checkbox" class="filter-checkbox" id="key-large-scales" data-filter="key" data-value="large-scales">
+<label class="filter-chip" for="key-large-scales">
+  <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Scales" alt="Large Scales" border="0">
+  <div class="label">
+    <span class="title">Very large scales</span>
+  </div>
+</label>
         
         </div>
       </div>
@@ -2459,6 +2487,114 @@ details.species-photo-accordion img.main {
     <div class="tag-row"><div><strong>Markings:</strong> Dark olive to black colored scales, Dark "teardrop" pigment underneath eye, dark vertical bars at the base of the tail</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6–7</div></div>
     <div class="tag-row"><div><strong>Fun Fact:</strong> It's anus is located on it's throat!</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+  <div class="species-card" id="common-carp"
+     data-key="barbels-present serrated-spine large-scales"
+     data-body="deep-bodied compressed"
+     data-mouth="terminal subterminal"
+     data-snout="rounded"
+     data-lateral=""
+     data-markings="dark-edged-scales"
+     data-anal="5 6">
+  <img class="extra" src="https://placehold.co/300x180/8B4513/FFF?text=Common+Carp" alt="Common Carp">
+  <h3>Common Carp<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> Two pairs of barbels at the corners of mouth, stout serrated spine on dorsal and anal fins.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Deep-bodied, robust, and laterally compressed.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal to slightly subterminal.</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Large, thick scales, often dark-edged.</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" id="goldfish"
+     data-key="serrated-spine large-scales"
+     data-body="deep-bodied compressed"
+     data-mouth="terminal"
+     data-snout="rounded"
+     data-lateral=""
+     data-markings=""
+     data-anal="5 6">
+  <img class="extra" src="https://placehold.co/300x180/FF8C00/FFF?text=Goldfish" alt="Goldfish">
+  <h3>Goldfish<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> NO barbels (unlike common carp), stiff serrated ray on dorsal and anal fins.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Deep-bodied and laterally compressed.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal.</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Large, heavy scales.</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" id="grass-carp"
+     data-key="large-scales"
+     data-body="round"
+     data-mouth="terminal"
+     data-snout="rounded blunt"
+     data-lateral=""
+     data-markings="dark-edged-scales"
+     data-anal="8">
+  <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Grass+Carp" alt="Grass Carp">
+  <h3>Grass Carp<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> Very large scales with dark edges, NO barbels.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Long, torpedo-shaped, and round in cross-section.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal.</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt and rounded.</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" id="silver-carp"
+     data-key="eye-low scales-tiny scaleless-keel"
+     data-body="compressed sharp-keel"
+     data-mouth="superior"
+     data-snout="pointed"
+     data-lateral=""
+     data-markings="bright-silver-sides"
+     data-anal="more-than-13">
+  <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Silver+Carp" alt="Silver Carp">
+  <h3>Silver Carp<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> Eyes sit very low on the head (below the midline), scaleless keel running from throat to vent.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed with a sharp belly keel.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Superior (strongly upturned).</div></div>
+    <div class="tag-row"><div><strong>Scales:</strong> Very tiny scales.</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" id="bighead-carp"
+     data-key="eye-low scales-tiny scaleless-keel"
+     data-body="compressed sharp-keel"
+     data-mouth="superior"
+     data-snout="pointed"
+     data-lateral=""
+     data-markings="mottled"
+     data-anal="more-than-13">
+  <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Bighead+Carp" alt="Bighead Carp">
+  <h3>Bighead Carp<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> Eyes sit very low on the head (below the midline), very large head. Keel extends only from pelvic fins to vent.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Compressed.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Superior (upturned).</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Dark blotchy mottling on sides.</div></div>
+  </div><a href="#top" class="card-top-btn">Back to top</a>
+</div>
+
+<div class="species-card" id="black-carp"
+     data-key="large-scales"
+     data-body="round"
+     data-mouth="terminal subterminal"
+     data-snout="pointed rounded"
+     data-lateral=""
+     data-markings="dark-edged-scales"
+     data-anal="8">
+  <img class="extra" src="https://placehold.co/300x180/000000/FFF?text=Black+Carp" alt="Black Carp">
+  <h3>Black Carp<span class="invasive" style="font-size:12px; display:block;">INVASIVE</span></h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Features:</strong> Very dark, almost black fins, no barbels.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Long and round/cylindrical (looks similar to a Grass Carp but much darker).</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal to slightly subterminal.</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Scales outlined heavily in black, giving a distinct cross-hatch look.</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 </div>
