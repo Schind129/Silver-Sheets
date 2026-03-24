@@ -744,17 +744,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 /* Update to include color filtering */
 #sucker-form:has(#sc-color-dark:checked) .species-card:not([data-sc-color="dark"]) { display: none; }
 
-/* --- CARP FILTER LOGIC --- */
-/* Barbels */
-#carp-form:has(#cp-barbel:checked) .species-card:not([data-cp-barbel="yes"]) { display: none; }
-#carp-form:has(#cp-no-barbel:checked) .species-card:not([data-cp-barbel="no"]) { display: none; }
-
-/* Eye Position */
-#carp-form:has(#cp-eye-low:checked) .species-card:not([data-cp-eye="low"]) { display: none; }
-
-/* Body Texture */
-#carp-form:has(#cp-scaled:checked) .species-card:not([data-cp-scales="large"]) { display: none; }
-
 
   /* Species Card Styling */
   .species-card img.main {
@@ -1193,13 +1182,11 @@ details.species-photo-accordion img.main {
               <span class="title">Tubercles on breeding males</span>
             </div>
           </label>
-
-
           
           <input type="checkbox" class="filter-checkbox" id="key-barbels-present" data-filter="key" data-value="barbels-present">
           <label class="filter-chip" for="key-barbels-present">
             <img src="img/Creek chub barbel square.jpg" alt="Creek chub barbel square" border="0">
-            <div class="label"><span class="title">Lip barbels present</span><span style="font-size:11px; opacity:0.8; display:block;">Ranging from small bumps at corner of mouth (can be very hard to see), to long "wiskers" hanging down</span></div>
+            <div class="label"><span class="title">Lip barbels present</span><span style="font-size:11px; opacity:0.8; display:block;">Small bumps at corner of mouth (can be very hard to see), or long "wiskers"</span></div>
           </label>
 
           <input type="checkbox" class="filter-checkbox" id="key-scales-tiny" data-filter="key" data-value="scales-tiny">
@@ -1677,6 +1664,7 @@ details.species-photo-accordion img.main {
            data-lateral="dark-band-zigzag dark-band"
            data-markings=" dark-edged-scales dark-anal-base dark-band-zigzag dark-band"
            data-anal="8">
+        <img class="extra" src="img/Blackchin Shiner 1.jpg" alt="Blackchin-Shiner">
         <img class="extra" src="img/Blackchin uniform.jpg" alt="Blackchin-Shiner">
         <h3>Blackchin Shiner</h3>
         <div class="tag-list">
@@ -4421,92 +4409,7 @@ Least Darter 1.jpg
   </div>
 </details>
 
-<details class="project-accordion" id="group-carp">
-  <summary>Carp Identification (PLACE HOLDER DON'T USE)</summary>
-  <div class="project-content">
-    <form id="carp-form">
-      
-      <details class="filter-accordion" open>
-        <summary>Field Marks</summary>
-        <div class="filter-body">
-          <div class="chip-row">
-            <input type="checkbox" class="filter-checkbox" id="cp-barbel">
-            <label class="filter-chip" for="cp-barbel">
-              <div class="label"><span class="title">Visible Barbels</span><span style="font-size:10px">Whiskers at mouth corners</span></div>
-            </label>
 
-            <input type="checkbox" class="filter-checkbox" id="cp-eye-low">
-            <label class="filter-chip" for="cp-eye-low">
-              <div class="label"><span class="title">Eyes Below Midline</span><span style="font-size:10px">Bighead/Silver Carp</span></div>
-            </label>
-
-            <input type="checkbox" class="filter-checkbox" id="cp-scaled">
-            <label class="filter-chip" for="cp-scaled">
-              <div class="label"><span class="title">Large/Heavy Scales</span></div>
-            </label>
-          </div>
-        </div>
-      </details>
-
-      <div class="species-grid">
-        
-        <div class="species-card" data-cp-barbel="yes" data-cp-eye="mid" data-cp-scales="large">
-           <img class="extra" src="https://placehold.co/300x180/8B4513/FFF?text=Common+Carp" alt="Common Carp">
-           <h3>Common Carp</h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Barbels:</strong> Two pairs at corners of mouth</div>
-             <div class="tag-row"><strong>Scales:</strong> Large, thick, dark-edged</div>
-           </div>
-        </div>
-
-        <div class="species-card" data-cp-barbel="no" data-cp-eye="mid" data-cp-scales="large">
-           <img class="extra" src="https://placehold.co/300x180/FF8C00/FFF?text=Goldfish" alt="Goldfish">
-           <h3>Goldfish<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Barbels:</strong> None (Distinguishes from Carp)</div>
-             <div class="tag-row"><strong>Dorsal Fin:</strong> Long base with a stiff serrated ray</div>
-           </div>
-        </div>
-
-        <div class="species-card" data-cp-barbel="no" data-cp-eye="mid" data-cp-scales="large">
-           <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Grass+Carp" alt="Grass Carp">
-           <h3>Grass Carp<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Mouth:</strong> Terminal, no barbels</div>
-             <div class="tag-row"><strong>Body:</strong> Long, torpedo-shaped; very large scales</div>
-           </div>
-        </div>
-
-        <div class="species-card" data-cp-barbel="no" data-cp-eye="low" data-cp-scales="tiny">
-           <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Silver+Carp" alt="Silver Carp">
-           <h3>Silver Carp<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Eyes:</strong> Sit very low on the head</div>
-             <div class="tag-row"><strong>Keel:</strong> Sharp midline on belly from throat to vent</div>
-           </div>
-        </div>
-
-        <div class="species-card" data-cp-barbel="no" data-cp-eye="low" data-cp-scales="tiny">
-           <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Bighead+Carp" alt="Bighead Carp">
-           <h3>Bighead Carp<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Mouth:</strong> Very large, upturned (no barbels)</div>
-             <div class="tag-row"><strong>Body:</strong> Dark blotchy mottling on sides</div>
-           </div>
-        </div>
-
-        <div class="species-card" data-cp-barbel="no" data-cp-eye="mid" data-cp-scales="large">
-           <img class="extra" src="https://placehold.co/300x180/000000/FFF?text=Black+Carp" alt="Black Carp">
-           <h3>Black Carp<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
-           <div class="tag-list">
-             <div class="tag-row"><strong>Color:</strong> Very dark, almost black fins</div>
-             <div class="tag-row"><strong>Scales:</strong> Outlined in black, giving cross-hatch look</div>
-           </div>
-        </div>
-
-      </div> </form>
-  </div>
-</details>
 <details class="project-accordion">
   <summary>Sturgeon, Longnose Gar, Spotted Gar, Bowfin, and of course Burbot (PLACE HOLDER DON'T USE)</summary>
   <div class="project-content">
