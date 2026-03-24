@@ -420,7 +420,12 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent); /* Include any shadow or border styles */
 }
-
+#darter-form:has(#darter-markings-white-tip:checked) label[for="darter-markings-white-tip"] {
+  background: var(--chip-active) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 1px var(--accent);
+  color: #0f172a !important;
+}
 
 
   /* --- Key Features --- */
@@ -525,6 +530,8 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #darter-form:has(#darter-key-pelvic:checked) #darterGrid .species-card:not([data-key*="fused-pelvic"]) { display: none; }
 #darter-form:has(#darter-key-pectoral:checked) #darterGrid .species-card:not([data-key*="big-pectoral"]) { display: none; }
 #darter-form:has(#darter-key-teeth:checked) #darterGrid .species-card:not([data-key*="teeth"]) { display: none; }
+#darter-form:has(#darter-key-white-tip:checked) #darterGrid .species-card:not([data-key*="white-tip"]) { display: none; }
+  #darter-form:has(#darter-key-white-tip:checked) #darterGrid .species-card:not([data-markings*="white-tip"]) { display: none; }
 #darter-form:has(#darter-key-noscales:checked) #darterGrid .species-card:not([data-key*="no-scales"]) { display: none; }
 #darter-form:has(#darter-key-dorsal-spots:checked) #darterGrid .species-card:not([data-key*="dorsal-spots"]) { display: none; }
 
