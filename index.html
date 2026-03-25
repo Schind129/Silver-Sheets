@@ -866,6 +866,58 @@ details.species-photo-accordion img.main {
   border: 1px solid #e2e8f0;
   display: block;
 }
+
+      /* Container for the accordion */
+details.invasive-accordion {
+  margin-bottom: 4px;
+}
+
+/* Make the tag-row behave like a button to have extra info/photos*/
+details.invasive-accordion summary.tag-row {
+  list-style: none; /* Hide default arrow */
+  cursor: pointer;
+  padding: 6px 8px;
+  background-color: #FF0000; /* Light highlight */
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  display: flex; /* Keeps your icon/text alignment */
+  align-items: center;
+}
+
+/* Hover effect to show it is clickable */
+details.invasive-accordion summary.tag-row:hover {
+  background: #eef6fc;
+  border-color: var(--accent);
+}
+
+/* Remove default Safari/Chrome arrows */
+details.invasive-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add a custom "+" or arrow indicator */
+details.invasive-accordion summary.tag-row::after {
+  content: "+";
+  font-weight: bold;
+  color: var(--accent);
+  margin-left: auto; /* Push to the right */
+  font-size: 16px;
+}
+
+/* Change icon when open */
+details.invasive-accordion[open] summary.tag-row::after {
+  content: "−"; /* Minus sign when open */
+}
+
+/* Style the image when it appears */
+details.invasive-accordion img.main {
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: block;
+}
 /* The "Highlighter" Look ( background) */
 .highlight {
   background-color: #fef08a; /* Soft  */
@@ -1484,7 +1536,28 @@ details.species-photo-accordion img.main {
 <div class="species-grid" id="speciesGrid">
 
 
-
+<div class="species-card" id="roach" 
+     data-key="red-pigment-eye" 
+     data-body="compressed" 
+     data-mouth="terminal" 
+     data-markings="silver" 
+     data-anal="9 10 11">
+  <img class="extra" src="https://placehold.co/300x180/A9A9A9/333?text=Roach" alt="Roach">
+  <h3>Roach WIP</h3>
+          <details class="invasive-accordion">
+    <summary class="tag-row"><div><strong>Invasive</strong></div>
+        </summary>
+       <h3>Take multiple detailed photos of the fish and contact Mike Rucinski (989)200-8613</h3>
+            </details>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Iris is distinctly orange to blood-red, dorsal fin starts directly above the pelvic fin base.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Deep and compressed</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly pointed</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Silver sides with a bluish-green back; pelvic and anal fins have a red/orange tint.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
 
 <div class="species-card" id="rudd"
            data-key="pre-dorsal-similar rosy-head-fins red-pigment-eye"
