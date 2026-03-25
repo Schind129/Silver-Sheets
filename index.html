@@ -867,7 +867,7 @@ details.species-photo-accordion img.main {
   display: block;
 }
 
-      /* Container for the accordion */
+      /*INVASIVE Container for the accordion */
 details.invasive-accordion {
   margin-bottom: 4px;
 }
@@ -876,13 +876,16 @@ details.invasive-accordion {
 details.invasive-accordion summary.tag-row {
   list-style: none; /* Hide default arrow */
   cursor: pointer;
-  padding: 6px 8px;
+  padding: 0px 4px;
   background-color: #FF0000; /* Light highlight */
-  border-radius: 6px;
-  border: 1px solid transparent;
+  border-radius: 5px;
+  border: 2px solid orange;
   transition: all 0.2s;
   display: flex; /* Keeps your icon/text alignment */
   align-items: center;
+  text-align: center;
+  color:  #FFFF00;
+  
 }
 
 /* Hover effect to show it is clickable */
@@ -900,7 +903,7 @@ details.invasive-accordion summary::-webkit-details-marker {
 details.invasive-accordion summary.tag-row::after {
   content: "+";
   font-weight: bold;
-  color: var(--accent);
+  color:  #FFFF00(--accent);
   margin-left: auto; /* Push to the right */
   font-size: 16px;
 }
