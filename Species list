@@ -1,0 +1,285 @@
+One dorsal group : Alewife, Banded Killifish, Bigeye Chub, Blackchin Shiner, Blacknose Dace, Blacknose Shiner, Blackstripe Topminnow, Bleak, Bluntnose Minnow, Brook Stickleback, Central Mudminnow, Central Stoneroller, Common Shiner, Creek Chub, Emerald Shiner, Fathead Minnow, Finescale Dace, Ghost Shiner, Gizzard Shad, Golden Shiner, Hornyhead Chub, Lake Chub, Longnose Dace, Mimic Shiner, Mooneye, Ninespine Stickleback, Northern Pearl Dace, Northern Redbelly Dace, Pirate Perch, Pugnose Shiner, Redfin Shiner, River Chub, Roach, Rosyface Shiner, Rudd, Sand Shiner, Silver Chub, Silverjaw Minnow, Spottail Shiner, Spotfin Shiner, Striped Shiner, Suckermouth Minnow, Threespine Stickleback, Trout-Perch, Western Mosquitofish, Grass Carp, Common Carp, Grass Carp, Goldfish, Bighead Carp, Black Carp, Silver Carp
+
+Two Dorsal group: Brook Silverside, Blackside Darter, Channel Darter, Eastern Sand Darter, Fantail Darter, Freshwater Drum, Greenside Darter, Iowa Darter, Johnny Darter, Least Darter, Logperch, Mottled Sculpin, Rainbow Darter, River Darter, Round Goby, Ruffe, Slimy Sculpin, Tubenose Goby, Walleye, White Bass, White Perch, Yellow Perch
+
+
+Watch list Species Lake Huron  (:  
+X      Alver, bleak 
+Amur sleeper
+Babka goby (Monkey)
+X    Bighead Carp
+Black and Caspian Sea sprat
+X    Black Carp
+Blue catfish
+Caucasian dwarf goby
+Common minnow (Eurasian)
+Crucian carp
+Eurasian dace
+Eurasian perch
+European smelt
+Fourspine Stickleback
+X    Grass Carp
+Ide
+Northern snakehead
+Oriental Weatherfish
+Racer goby
+Red shiner
+Redear Sunfish
+X      Roach
+X    Rudd
+X    Ruffe
+X    Silver Carp
+Steelcolor Shiner
+Stone moroko
+Tench
+X    Tubenose Goby - Notify if found in Saginaw bay, SMR, Eastern UP, Au Sable, Presque Isle, or Au Gres   (FWCO only?)
+Wels Catfish
+X    Zander
+
+
+
+
+
+
+### 1. Black and Caspian Sea Sprat
+```html
+<div class="species-card" 
+     data-key="belly-scutes" 
+     data-body="compressed" 
+     data-mouth="upturned" 
+     data-snout="pointed"
+     data-markings="silver" 
+     data-anal="17 18 19 20 21">
+  <img class="extra" src="https://placehold.co/300x180/708090/FFF?text=Caspian+Sprat" alt="Caspian Sprat">
+  <h3>Black & Caspian Sea Sprat</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Strong, jagged "saw-tooth" scutes (scales) along the belly midline.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Extremely compressed (knife-like)</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Upturned (superior); lower jaw heavy</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Lateral Line:</strong> Absent (typical of Clupeids)</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Uniformly silver; easily detached scales</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 17–21</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 2. Common Minnow (Eurasian)
+```html
+<div class="species-card" 
+     data-key="" 
+     data-body="torpedo" 
+     data-mouth="terminal" 
+     data-snout="blunt-rounded"
+     data-markings="blotches dark-mid-dorsal-stripe" 
+     data-anal="7 8">
+  <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Common+Minnow" alt="Common Minnow">
+  <h3>Common Minnow (Eurasian)</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Very small scales; lateral line often incomplete or interrupted.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Torpedo-shaped (cylindrical)</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal to slightly subterminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Dark vertical blotches or "bars" along the side; dark mid-dorsal stripe.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7–8</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 3. Crucian Carp
+```html
+<div class="species-card" 
+     data-key="long-dorsal" 
+     data-body="compressed" 
+     data-mouth="terminal" 
+     data-snout="blunt-rounded"
+     data-markings="plain" 
+     data-anal="6 7 8">
+  <img class="extra" src="https://placehold.co/300x180/8B4513/FFF?text=Crucian+Carp" alt="Crucian Carp">
+  <h3>Crucian Carp</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> High, convex (rounded) dorsal fin; lacks barbels.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Very deep and compressed</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Small, terminal mouth</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Generally plain brownish-gold; lacks the dark spot at the base of the tail found in young Goldfish.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6–8</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 4. Eurasian Dace
+```html
+<div class="species-card" 
+     data-key="" 
+     data-body="torpedo" 
+     data-mouth="subterminal" 
+     data-snout="pointed"
+     data-markings="silver plain" 
+     data-anal="7 8 9">
+  <img class="extra" src="https://placehold.co/300x180/C0C0C0/333?text=Eurasian+Dace" alt="Eurasian Dace">
+  <h3>Eurasian Dace</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Anal fin margin is distinctly concave (curved inward).</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Slender, torpedo-like</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Slightly subterminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Silver sides with a dark olive/grey back; fins are pale or yellowish.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7–9</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 5. European Smelt
+```html
+<div class="species-card" 
+     data-key="adipose-fin" 
+     data-body="torpedo" 
+     data-mouth="terminal" 
+     data-snout="pointed"
+     data-markings="silver" 
+     data-anal="12 13 14 15 16">
+  <img class="extra" src="https://placehold.co/300x180/B0C4DE/333?text=European+Smelt" alt="European Smelt">
+  <h3>European Smelt</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Adipose fin present; prominent fangs on the tongue.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Slender, elongated torpedo</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Large, terminal mouth</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Translucent silver with a bright lateral band.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 12–16</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 6. Ide (Orfe)
+```html
+<div class="species-card" 
+     data-key="" 
+     data-body="compressed" 
+     data-mouth="terminal" 
+     data-snout="blunt-rounded"
+     data-markings="silver" 
+     data-anal="9 10 11">
+  <img class="extra" src="https://placehold.co/300x180/D3D3D3/333?text=Ide" alt="Ide">
+  <h3>Ide (Orfe)</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> High lateral line scale count (55-65); fins often reddish.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Deeply compressed</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal, angled upward</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Silver-grey; wild types have dark fins, domestic "Orfe" are orange.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 7. Oriental Weatherfish
+```html
+<div class="species-card" 
+     data-key="barbels" 
+     data-body="round" 
+     data-mouth="subterminal" 
+     data-snout="blunt-rounded"
+     data-markings="blotches" 
+     data-anal="6 7 8">
+  <img class="extra" src="https://placehold.co/300x180/6B4226/FFF?text=Weatherfish" alt="Oriental Weatherfish">
+  <h3>Oriental Weatherfish</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> 10 barbels around the mouth; capable of gulping air.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Long, eel-like (round in cross-section)</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Small, subterminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded with numerous barbels</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Intricate brown mottling/blotches over a tan body.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6–8</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 8. Red Shiner
+```html
+<div class="species-card" 
+     data-key="" 
+     data-body="compressed" 
+     data-mouth="terminal" 
+     data-snout="pointed"
+     data-markings="silver" 
+     data-anal="9">
+  <img class="extra" src="https://placehold.co/300x180/B22222/FFF?text=Red+Shiner" alt="Red Shiner">
+  <h3>Red Shiner</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Deep, diamond-shaped body; high-set dorsal fin.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Deeply compressed</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal, oblique (angled)</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Silver with bluish tint; "diamond" scale pattern visible.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 9. Steelcolor Shiner
+```html
+<div class="species-card" 
+     data-key="" 
+     data-body="compressed" 
+     data-mouth="terminal" 
+     data-snout="pointed"
+     data-markings="silver" 
+     data-anal="9">
+  <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Steelcolor+Shiner" alt="Steelcolor Shiner">
+  <h3>Steelcolor Shiner</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Distinct dark pigment on the posterior membranes of the dorsal fin.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Moderately compressed</div></div>
+    <div class="tag-row)<div><strong>Mouth Position:</strong> Terminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Steel-blue silver sides; dark edges on scales form a diamond pattern.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 10. Stone Moroko
+```html
+<div class="species-card" 
+     data-key="transverse-mouth" 
+     data-body="torpedo" 
+     data-mouth="upturned" 
+     data-snout="blunt-rounded"
+     data-markings="horizontal" 
+     data-anal="6">
+  <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Stone+Moroko" alt="Stone Moroko">
+  <h3>Stone Moroko</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> Very small mouth that opens upward (transverse).</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Torpedo-shaped</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Strongly upturned (superior)</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> A dark, prominent horizontal stripe runs from snout to tail.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
+
+### 11. Tench
+```html
+<div class="species-card" 
+     data-key="barbels" 
+     data-body="round" 
+     data-mouth="terminal" 
+     data-snout="blunt-rounded"
+     data-markings="plain" 
+     data-anal="6 7 8">
+  <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Tench" alt="Tench">
+  <h3>Tench</h3>
+  <div class="tag-list">
+    <div class="tag-row"><div><strong>Key Feature:</strong> One pair of very small barbels; all fins are distinctly rounded.</div></div>
+    <div class="tag-row"><div><strong>Body Shape:</strong> Thick and round; skin feels slimy/smooth.</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Bluntly rounded</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Dark olive to golden; no distinct stripes or spots.</div></div>
+    <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6–8</div></div>
+  </div><a href="#group-silver-sheets" class="card-top-btn">Back to top</a>
+</div>
+```
