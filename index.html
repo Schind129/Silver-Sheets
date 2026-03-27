@@ -453,7 +453,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     /* --- Carp Additions to Silver Sheets --- */
   #filter-form:has(#key-eye-low:checked) .species-card:not([data-key*="eye-low"]) { display: none; }
   #filter-form:has(#key-serrated-spine:checked) .species-card:not([data-key*="serrated-spine"]) { display: none; }
-  #filter-form:has(#key-large-scales:checked) .species-card:not([data-key*="large-scales"]) { display: none; }
 }
   
   
@@ -1204,13 +1203,7 @@ details.invasive-accordion img.main {
             </div>
           </label>
             
-/*                    <input type="checkbox" class="filter-checkbox" id="key-long-dorsal" data-filter="key" data-value="long-dorsal">
-          <label class="filter-chip" for="key-long-dorsal">
-            <img src="img/Crowded Predord Bluntnose.jpg" alt="Long Dorsal Fin" border="0">
-            <div class="label">
-              <span class="title">Long dorsal fin</span>
-            </div>
-          </label> */
+
             
                     <input type="checkbox" class="filter-checkbox" data-filter="markings" data-value="rosy-head-fins">
           <label class="filter-chip" for="markings-rosy-head-fins">
@@ -1276,13 +1269,6 @@ details.invasive-accordion img.main {
   </div>
 </label>
 
-<input type="checkbox" class="filter-checkbox" id="key-large-scales" data-filter="key" data-value="large-scales">
-<label class="filter-chip" for="key-large-scales">
-  <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Scales" alt="Large Scales" border="0">
-  <div class="label">
-    <span class="title">Very large scales</span>
-  </div>
-</label>
         
         </div>
       </div>
@@ -2614,7 +2600,7 @@ details.invasive-accordion img.main {
 </div>
 
   <div class="species-card" id="common-carp"
-     data-key="barbels-present serrated-spine large-scales"
+     data-key="barbels-present serrated-spine"
      data-body="deep-bodied compressed"
      data-mouth="terminal subterminal"
      data-snout="rounded"
@@ -2655,7 +2641,7 @@ details.invasive-accordion img.main {
 
 
 <div class="species-card" id="grass-carp"
-     data-key="large-scales eye-low"
+     data-key="eye-low"
      data-body="round compressed"
      data-mouth="terminal"
      data-snout="rounded"
@@ -2715,6 +2701,11 @@ details.invasive-accordion img.main {
     <div class="tag-row"><div><strong>Lateral Line:</strong> Decurved</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Silver sides</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 12-14</div></div>
+        <details class="species-photo-accordion">
+    <summary class="tag-row"><div><strong>Similar Species:</strong>Bighead Carp</div>
+        </summary>
+        <img class="extra" src="Bighead and Silver Carp similar.png" alt="Bighead and Silver similar" border="0">
+            </details>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
@@ -2741,32 +2732,49 @@ details.invasive-accordion img.main {
     <div class="tag-row"><div><strong>Lateral Line:</strong> Decurved</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Dark blotchy mottling on sides.</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 13-14</div></div>
+            <details class="species-photo-accordion">
+    <summary class="tag-row"><div><strong>Similar Species:</strong>Bighead Carp</div>
+        </summary>
+        <img class="extra" src="Bighead and Silver Carp similar.png" alt="Bighead and Silver similar" border="0">
+            </details>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
 <div class="species-card" id="black-carp"
-     data-key="large-scales"
+     data-key=""
      data-body="round"
      data-mouth="terminal subterminal"
      data-snout="pointed rounded"
      data-lateral="tall-scales-lateral"
      data-markings="dark-edged-scales"
      data-anal="8">
-  <img class="extra" src="https://placehold.co/300x180/000000/FFF?text=Black+Carp" alt="Black Carp">
+ 
+  <img class="extra" src="img/Black Carp Uniform.png" alt="Grass carp" border="0">
   <h3>Black Carp</h3>
             <details class="invasive-accordion">
     <summary class="tag-row"><div><strong>INVASIVE</strong></div>
         </summary>
        <h3>Take multiple detailed photos from multiple angles of the fish and contact Mike Rucinski (989)200-8613</h3>
             </details>
+     <details class="species-photo-accordion">
+    <summary class="tag-row"><div><strong>More Photos</strong></div>
+       <img class="extra" src="img/Black Carp1.png" alt="Black Carp">
+        </summary>
+        
+            </details>
   <div class="tag-list">
     <div class="tag-row"><div><strong>Key Features:</strong> Very dark, almost black fins, no barbels</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Long and round (looks similar to a Grass Carp but much darker).</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal to slightly subterminal.</div></div>
     <div class="tag-row"><div><strong>Snout Shape:</strong> Slightly pointed</div></div>
-    <div class="tag-row"><div><strong>Lateral Line:</strong> Straight, </div></div>
+    <div class="tag-row"><div><strong>Lateral Line:</strong> Straight</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Scales outlined heavily in black</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 8</div></div>
+        <details class="species-photo-accordion">
+    <summary class="tag-row"><div><strong>Similar Species:</strong>Grass Carp</div>
+        </summary>
+        <img class="extra" src="img/Grass and Black similar.png" alt="Grass and Black similar" border="0">
+            </details>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 </div>
@@ -4065,7 +4073,7 @@ details.invasive-accordion img.main {
 
 
   <details class="project-accordion" id="group-sunfish">
-  <summary>Sunfish & Bass (Centrarchids) Identification (PLACE HOLDER DON'T USE)</summary>
+  <summary>Sunfish & Bass (Centrarchids) Identification long dorsal fin?(PLACE HOLDER DON'T USE)</summary>
   <div class="project-content">
     
     <form id="sunfish-form">
