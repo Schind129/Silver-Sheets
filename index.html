@@ -396,7 +396,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent); /* Include any shadow or border styles */
 }
-#filter-form:has(#lateral-double-dark-band:checked)  .filter-chip[for="lateral-double-dark-band"] {
+#filter-form:has(#markings-double-dark-band:checked)  .filter-chip[for="markings-double-dark-band"] {
   /* You must match the exact highlight styles used for other active chips */
   background: var(--chip-active);
   border-color: var(--accent);
@@ -1057,6 +1057,7 @@ details.invasive-accordion img.main {
   <a href="#rudd" class="jump-chip"><span class="label">Rudd</span></a>
   <a href="#ruffe" class="jump-chip"><span class="label">Ruffe</span></a>
   <a href="#sand-shiner" class="jump-chip"><span class="label">Sand Shiner</span></a>
+   <a href="#sauger" class="jump-chip"><span class="label">Sauger</span></a>
     <a href="#silver-carp" class="jump-chip"><span class="label">Silver Carp</span></a>
   <a href="#silver-chub" class="jump-chip"><span class="label">Silver Chub</span></a>
   <a href="#silverjaw-minnow" class="jump-chip"><span class="label">Silverjaw Minnow</span></a>
@@ -1069,12 +1070,11 @@ details.invasive-accordion img.main {
   <a href="#trout-perch" class="jump-chip"><span class="label">Trout-Perch</span></a>
   <a href="#tubenose-goby" class="jump-chip"><span class="label">Tubenose Goby</span></a>
   <a href="#walleye" class="jump-chip"><span class="label">Walleye</span></a>
-    <a href="#sauger" class="jump-chip"><span class="label">Sauger</span></a>
-  <a href="#zander" class="jump-chip"><span class="label">Zander</span></a>
   <a href="#western-mosquitofish" class="jump-chip"><span class="label">Western Mosquitofish</span></a>
   <a href="#white-bass" class="jump-chip"><span class="label">White Bass</span></a>
   <a href="#white-perch" class="jump-chip"><span class="label">White Perch</span></a>
   <a href="#yellow-perch" class="jump-chip"><span class="label">Yellow Perch</span></a>
+   <a href="#zander" class="jump-chip"><span class="label">Zander</span></a>
 </div></h2>
 
   <!-- <div class="container">-->
@@ -1112,8 +1112,8 @@ details.invasive-accordion img.main {
             <div class="label"><span class="title">Sucker-like Mouth</span><span class="highlight"style="font-size:12px; display:block;">(Suckermouth Minnow)</span></div>
           </label>
                                         
-                              <input type="checkbox" class="filter-checkbox" id="lateral-double-dark-band" data-filter="lateral" data-value="double-dark-band">
-          <label class="filter-chip" for="lateral-double-dark-band">
+                              <input type="checkbox" class="filter-checkbox" id="markings-double-dark-band" data-filter="lateral" data-value="double-dark-band">
+          <label class="filter-chip" for="markings-double-dark-band">
             <img src="img/Northern Redbelly Dace yellow.jpg" alt="Northern Redbelly Dace" border="0">
             <div class="label"><span class="title">Two dark bands on lateral line</span><span class="highlight"style="font-size:12px; display:block;">(Northern Redbelly Dace)</span></div>
           </label>
@@ -2211,8 +2211,8 @@ details.invasive-accordion img.main {
          data-body="round deep"
          data-mouth="subterminal"
          data-snout="rounded pointed"
-         data-lateral="dark-band"
-         data-markings="dusky-lateral-stripes mottled black-spot-tail"
+         data-lateral=""
+         data-markings="dusky-lateral-stripes mottled black-spot-tail dark-band"
          data-anal="7">
       <img class="extra" src="img/Blacknose Dace Uniform.jpg" alt="Blacknose Dace" border="0">
         <img class="extra" src="img/Blacknose Dace Uniform Breeding.jpg" alt="Blacknose Dace Uniform Breeding" border="0">
@@ -2257,8 +2257,8 @@ details.invasive-accordion img.main {
          data-body="round"
          data-mouth="terminal superior"
          data-snout="rounded pointed"
-         data-lateral="double-dark-band dark-band"
-         data-markings=""
+         data-lateral=""
+         data-markings="double-dark-band dark-band"
          data-anal="8">
       <img class="extra" src="img/Northern Redbelly Dace Uniform.jpg" alt="Northern Redbelly Dace" border="0">
         <img class="extra" src="img/Northern Redbelly Dace Uniform Breeding.jpg" alt="Northern Redbelly Dace Uniform Breeding" border="0">
