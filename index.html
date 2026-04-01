@@ -572,7 +572,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #darter-form:has(#darter-key-adipose:checked) #darterGrid .species-card:not([data-key*="adipose-fin"]) { display: none; }
 #darter-form:has(#darter-key-pelvic:checked) #darterGrid .species-card:not([data-key*="fused-pelvic"]) { display: none; }
 #darter-form:has(#darter-key-pectoral:checked) #darterGrid .species-card:not([data-key*="big-pectoral"]) { display: none; }
-#darter-form:has(#darter-key-teeth:checked) #darterGrid .species-card:not([data-key*="teeth"]) { display: none; }
 #darter-form:has(#darter-key-white-tip:checked) #darterGrid .species-card:not([data-key*="white-tip"]) { display: none; }
   #darter-form:has(#darter-key-white-tip:checked) #darterGrid .species-card:not([data-markings*="white-tip"]) { display: none; }
 #darter-form:has(#darter-key-noscales:checked) #darterGrid .species-card:not([data-key*="no-scales"]) { display: none; }
@@ -2951,13 +2950,6 @@ details.invasive-accordion img.main {
                     <img src="img/Sculpin Fins.jpg" alt="Pectoral" border="0">
                     <div class="label"><span class="title">Large Fan-like Pectoral Fins</span><span class="highlight"style="font-size:12px; display:block;">(Worth keeping?)Sculpins, goby)</span></div>
                 </label>
-
-                <input type="checkbox" class="filter-checkbox" id="darter-key-teeth" data-filter="key" data-value="teeth">
-                <label class="filter-chip" for="darter-key-teeth">
-                                     <img src="img/Walleye Mouth.jpg" alt="Teeth" border="0">
-                    <div class="label"><span class="title">Visible relatively large teeth (KEEP?)</span><span class="highlight"style="font-size:12px; display:block;">(Walleye)</span></div>
-                </label>
-
               
                 <input type="checkbox" class="filter-checkbox" id="darter-key-white-tip" data-filter="key" data-value="white-tip">
                 <label class="filter-chip" for="darter-key-white-tip">
@@ -3679,7 +3671,7 @@ details.invasive-accordion img.main {
     </div>
 
         <div class="species-card" id="walleye"
-         data-key="teeth white-tip black-blotch"
+         data-key="white-tip black-blotch"
          data-markings="mottled vertical-bars"
          data-snout="pointed"
          data-cheek="scaled absent"
@@ -3694,7 +3686,7 @@ details.invasive-accordion img.main {
         <div class="tag-list">
             <div class="tag-row"><div><strong>Key Feature:</strong> White tip on lower tail lobe, black blotch at the end of the base of the first dorsal fin</div></div>
             <div class="tag-row"><div><strong>Markings:</strong> Golden/Olive with faint mottling, occasionally vertical black bars</div></div>
-            <div class="tag-row"><div><strong>Snout Shape:</strong> Long, pointed with teeth</div></div>
+            <div class="tag-row"><div><strong>Snout Shape:</strong> Long, pointed with large teeth</div></div>
             <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Sparsely scaled/smooth | Opercle: Scaled</div></div>
             <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 12-16 Spines / 18-22 Rays</div></div>
             <div class="tag-row"><div><strong>Anal Spines/Rays:</strong> 2 Spines / 12-14 Rays</div></div>
@@ -3702,7 +3694,7 @@ details.invasive-accordion img.main {
     </div>
 
   <div class="species-card" 
-     data-key="dorsal-spots teeth" 
+     data-key="dorsal-spots" 
      data-markings="spots dark-blotches mottled" 
      data-tail="forked" 
      data-snout="pointed" 
@@ -3718,7 +3710,7 @@ details.invasive-accordion img.main {
     <div class="tag-row"><div><strong>Key Feature:</strong> Rows of distinct black spots on the first dorsal fin, 3-4 dark saddles on back.</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Large dark blotches and spots, lacks the large white spot on the lower lobe of the tail fin.</div></div>
     <div class="tag-row"><div><strong>Tail Shape:</strong> Forked</div></div>
-    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed with teeth</div></div>
+    <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed with large teeth</div></div>
     <div class="tag-row"><div><strong>Scales:</strong> Cheeks: Scaled | Opercle: Scaled</div></div>
     <div class="tag-row"><div><strong>Dorsal Spines/Rays:</strong> 12–14 Spines / 16–21 Rays</div></div>
     <div class="tag-row"><div><strong>Anal Spines/Rays:</strong> 2 Spines / 11–14 Rays</div></div>
@@ -3726,7 +3718,7 @@ details.invasive-accordion img.main {
 </div>
 
   <div class="species-card"
-     data-key="teeth dorsal-spots"
+     data-key="dorsal-spots"
      data-markings="vertical-bars mottled"
      data-tail="forked"
      data-snout="pointed"
