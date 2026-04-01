@@ -2932,9 +2932,10 @@ details.invasive-accordion img.main {
   
 <form id="darter-form">
     
-    <details class="filter-accordion" >
-        <summary>Key Features</summary>
-        <div class="filter-body">
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-key" class="accordion-toggle">
+  <label for="acc-darter-key" class="accordion-header">Key Features</label>
+  <div class="filter-body">
             <div class="chip-row">
 
                               <input type="checkbox" class="filter-checkbox" id="darter-key-pelvic" data-filter="key" data-value="fused-pelvic">
@@ -2994,11 +2995,12 @@ details.invasive-accordion img.main {
  
             </div>
         </div>
-    </details>
+    
 
-    <details class="filter-accordion">
-        <summary>Markings</summary>
-        <div class="filter-body">
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-markings" class="accordion-toggle">
+  <label for="acc-darter-markings" class="accordion-header">Markings</label>
+  <div class="filter-body">
             <div class="chip-row">
               
                               <input type="checkbox" class="filter-checkbox" id="darter-markings-bluetop" data-filter="markings" data-value="bluetop">
@@ -3053,13 +3055,14 @@ details.invasive-accordion img.main {
           
             </div>
         </div>
-    </details>
+    
 
 
 
-    <details class="filter-accordion">
-        <summary>Snout Shape</summary>
-        <div class="filter-body">
+ <div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-snout" class="accordion-toggle">
+  <label for="acc-darter-snout" class="accordion-header">Snout Shape</label>
+  <div class="filter-body">
             <div class="chip-row">
                  <input type="checkbox" class="filter-checkbox" id="darter-snout-rounded" data-filter="snout" data-value="rounded">
                 <label class="filter-chip" for="darter-snout-rounded">
@@ -3075,11 +3078,12 @@ details.invasive-accordion img.main {
               
             </div>
         </div>
-    </details>
+    
 
-    <details class="filter-accordion">
-        <summary>Scales (Cheek & Opercle)</summary>
-        <div class="filter-body">
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-scales" class="accordion-toggle">
+  <label for="acc-darter-scales" class="accordion-header">Scales (Cheek & Opercle)</label>
+  <div class="filter-body">
             <div class="chip-row">
                 <input type="checkbox" class="filter-checkbox" id="darter-cheek-scaled" data-filter="cheek" data-value="scaled">
                 <label class="filter-chip" for="darter-cheek-scaled">
@@ -3103,11 +3107,12 @@ details.invasive-accordion img.main {
                 </label>
             </div>
         </div>
-    </details>
     
-<details class="filter-accordion">
-    <summary>Dorsal Fin Counts (Spines & Rays)</summary>
-    <div class="filter-body">
+    
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-dorsal" class="accordion-toggle">
+  <label for="acc-darter-dorsal" class="accordion-header">Dorsal Fin Counts (Spines & Rays)</label>
+  <div class="filter-body">
         
         <div style="font-weight:bold; margin: 0 0 8px; color:#2b8ed6;">Hard Spines (ONLY USE IF YOU CAN BE ABSOLUTELY CERTAIN YOU COUNTED RIGHT)</div>
         <div class="chip-row">
@@ -3203,11 +3208,12 @@ details.invasive-accordion img.main {
             <label class="filter-chip" for="dorsal-rays-20-plus"><div class="label">20-plus</div></label>
         </div>
     </div>
-</details>
 
-<details class="filter-accordion">
-    <summary>Anal Fin Counts (Spines & Rays)</summary>
-    <div class="filter-body">
+
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-darter-anal" class="accordion-toggle">
+  <label for="acc-darter-anal" class="accordion-header">Anal Fin Counts (Spines & Rays)</label>
+  <div class="filter-body">
         
         <div style="font-weight:bold; margin: 0 0 8px; color:#2b8ed6;">Hard Spines</div>
         <div class="chip-row">
@@ -3264,7 +3270,7 @@ details.invasive-accordion img.main {
           
         </div>
     </div>
-</details>
+
 
     <div class="controls">
       <input type="reset" class="btn-reset" value="Reset All Filters">
