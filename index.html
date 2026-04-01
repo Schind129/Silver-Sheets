@@ -490,7 +490,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     display: none !important;
     /* --- Carp Additions to Silver Sheets --- */
   #filter-form:has(#key-eye-low:checked) .species-card:not([data-key*="eye-low"]) { display: none; }
-  #filter-form:has(#key-serrated-spine:checked) .species-card:not([data-key*="serrated-spine"]) { display: none; }
 }
   
   
@@ -1296,17 +1295,9 @@ details.invasive-accordion img.main {
 
             <input type="checkbox" class="filter-checkbox" id="key-eye-low" data-filter="key" data-value="eye-low">
 <label class="filter-chip" for="key-eye-low">
-  <img src="https://placehold.co/56x56/e6f3fb/2b8ed6?text=Eye" alt="Eye Low" border="0">
+  <img src="img/Silver Carp eye.png" alt="Eye Low" border="0">
   <div class="label">
     <span class="title">Eyes below midline</span><span class="highlight" style="font-size:12px; display:block;">(Bighead/Silver Carp)</span>
-  </div>
-</label>
-
-<input type="checkbox" class="filter-checkbox" id="key-serrated-spine" data-filter="key" data-value="serrated-spine">
-<label class="filter-chip" for="key-serrated-spine">
-  <img src="img/Dorsal spine.jpg" alt="Serrated Spine" border="0">
-  <div class="label">
-    <span class="title">Stiff, serrated dorsal spine</span><span class="highlight" style="font-size:12px; display:block;">(Carp/Goldfish)</span>
   </div>
 </label>
 
@@ -2724,7 +2715,7 @@ details.invasive-accordion img.main {
 </div>
 
   <div class="species-card" id="common-carp"
-     data-key="barbels-present serrated-spine"
+     data-key="barbels-present"
      data-body="deep-bodied compressed"
      data-mouth="terminal subterminal"
      data-snout="rounded"
@@ -2746,7 +2737,7 @@ details.invasive-accordion img.main {
 </div>
 
 <div class="species-card" id="goldfish"
-     data-key="serrated-spine"
+     data-key=""
      data-body="deep-bodied compressed"
      data-mouth="terminal"
      data-snout="rounded"
