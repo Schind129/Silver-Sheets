@@ -12,7 +12,45 @@
     --chip:#f3f7fa;
     --chip-active:#d7ecff;
   }
+/* 1. Hide the accordion toggle checkbox */
+.accordion-toggle {
+  display: none;
+}
 
+/* 2. Style the Label to look like your old Summary */
+.accordion-header {
+  display: block;
+  padding: 12px 14px;
+  background: #e6f3fb;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid #cfeaf9;
+  font-size: 15px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+/* 3. The Arrow Icon */
+.accordion-header::after {
+  content: "▸";
+  float: right;
+  transition: transform .18s;
+}
+
+/* 4. Rotate arrow and show body when checked */
+.accordion-toggle:checked + .accordion-header::after {
+  transform: rotate(90deg);
+}
+
+.filter-body {
+  display: none; /* Collapsed by default */
+}
+
+.accordion-toggle:checked ~ .filter-body {
+  display: block; /* Expanded when checkbox is checked */
+}
+  
   /* Hide all project accordions starting from the 3rd one */
 details.project-accordion:nth-of-type(n+3) {
   display: none;
@@ -1309,10 +1347,12 @@ details.invasive-accordion img.main {
       </div>
     </details>
 
-    <details class="filter-accordion" id="acc-mouth">
-      <summary>Mouth Position</summary>
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-mouth" class="accordion-toggle">
+  <label for="acc-mouth" class="accordion-header">Mouth Position</label>
       <div class="filter-body">
         <div class="chip-row">
+          
           <input type="checkbox" class="filter-checkbox" id="mouth-terminal" data-filter="mouth" data-value="terminal">
           <label class="filter-chip" for="mouth-terminal">
             <img src="img/emerald terminalmouth.png" alt="emerald-terminalmouth" border="0">
