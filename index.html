@@ -518,6 +518,10 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 /* NEW: Combined Key Features filter: targets data-key, but is controlled by the same checkbox ID */
 #filter-form:has(#snout-very-pointed:checked) .species-card:not([data-key*="very-pointed"]) { display: none; } 
 
+  #filter-form:has(#snout-flattened:checked) .species-card:not([data-snout*="flattened"]) { display: none; }
+  #filter-form:has(#snout-flattened:checked) .species-card:not([data-key*="flattened"]) { display: none; }
+  
+
 
 
   /* --- Lateral Line --- */
@@ -1154,13 +1158,13 @@ details.invasive-accordion img.main {
             <div class="label"><span class="title">Sucker-like Mouth</span><span class="highlight"style="font-size:12px; display:block;">(Suckermouth Minnow)</span></div>
           </label>
                                         
-                              <input type="checkbox" class="filter-checkbox" id="markings-double-dark-band" data-filter="lateral" data-value="double-dark-band">
+                              <input type="checkbox" class="filter-checkbox" id="markings-double-dark-band" data-filter="markings" data-value="double-dark-band">
           <label class="filter-chip" for="markings-double-dark-band">
             <img src="img/Northern Redbelly Dace yellow.jpg" alt="Northern Redbelly Dace" border="0">
             <div class="label"><span class="title">Two dark bands on lateral line</span><span class="highlight"style="font-size:12px; display:block;">(Northern Redbelly Dace)</span></div>
           </label>
           
-            <input type="checkbox" class="filter-checkbox" id="key-tiny-caudal-peduncle" data-filter="key" data-value="tiny-caudal-peduncle">
+            <input type="checkbox" class="filter-checkbox" id="key-tiny-caudal-peduncle" data-filter="" data-value="tiny-caudal-peduncle">
           <label class="filter-chip" for="key-tiny-caudal-peduncle">
             <img src="img/Caudal Peduncle.png" alt="Caudal Peduncle" border="0">
             <div class="label">
@@ -1176,10 +1180,10 @@ details.invasive-accordion img.main {
             </div>
           </label>
           
-<input type="checkbox" class="filter-checkbox" id="key-flattened" data-filter="key" data-value="flattened">
-          <label class="filter-chip" for="key-flattened">
+<input type="checkbox" class="filter-checkbox" id="snout-flattened" data-filter="snout" data-value="flattened">
+          <label class="filter-chip" for="snout-flattened">
             <img src="img/Blackstripe Topminnow flattened.png" alt="Blackstripe Topminnow Flattened" border="0">
-            <div class="label"><span class="title">Top of head is flattened</span><span class="highlight"style="font-size:12px; display:block;">(Western Mosquitofish or Blackstripe Topminnow)</span></div>
+            <div class="label"><span class="title">Top of head is flattened</span><span class="highlight"style="font-size:12px; display:block;">(Western Mosquitofish, Northern Snakehead or Blackstripe Topminnow)</span></div>
           </label> 
 
                        
@@ -1412,6 +1416,12 @@ details.invasive-accordion img.main {
             <img src="img/very pointed snout Longnose dace.jpg" alt="very pointed snout Longnose dace" border="0">
             <div class="label"><span class="title">Very pointed</span><span class="highlight"style="font-size:12px; display:block;">(Longnose Dace or Rainbow Smelt)</span></div>
           </label>
+
+          <input type="checkbox" class="filter-checkbox" id="snout-flattened" data-filter="snout" data-value="flattened">
+          <label class="filter-chip" for="snout-flattened">
+            <img src="img/Blackstripe Topminnow flattened.png" alt="Blackstripe Topminnow Flattened" border="0">
+            <div class="label"><span class="title">Top of head is flattened</span><span class="highlight"style="font-size:12px; display:block;">(Western Mosquitofish, Northern Snakehead or Blackstripe Topminnow)</span></div>
+          </label> 
 
         </div>
       </div>
