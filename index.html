@@ -464,7 +464,11 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   box-shadow: 0 0 0 1px var(--accent);
   color: #0f172a !important;
 }
-
+#filter-form:has(#snout-flattened:checked) .filter-chip[for="snout-flattened"] {
+  /* You must match the exact highlight styles used for other active chips */
+  background: var(--chip-active);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent); /* Include any shadow or border styles */
 
   /* --- Key Features --- */
    #filter-form:has(#key-two-dorsal-fins:checked) .species-card:not([data-key*="two-dorsal-fins"]) { display: none; }
@@ -2674,7 +2678,7 @@ details.invasive-accordion img.main {
      data-key="upturned-mouth flattened"
      data-body="round"
      data-mouth="superior"
-     data-snout="pointed rounded"
+     data-snout="pointed rounded flattened"
      data-lateral=""
      data-markings="dark-edged-scales"
      data-anal="9">
@@ -2699,7 +2703,7 @@ details.invasive-accordion img.main {
   <div class="species-card" id="blackstripe-topminnow"
      data-key="dark-band flattened"
      data-body="round"
-     data-mouth="superior terminal"
+     data-mouth="superior terminal flattened"
      data-snout="pointed"
      data-lateral=""
      data-markings="black-band"
