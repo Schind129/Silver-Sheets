@@ -637,12 +637,6 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #darter-form:has(#darter-snout-pointed:checked) #darterGrid .species-card:not([data-snout*="pointed"]) { display: none; }
 
 
-/* --- Filter Logic: Scales --- */
-#darter-form:has(#darter-cheek-scaled:checked) #darterGrid .species-card:not([data-cheek*="scaled"]) { display: none; }
-#darter-form:has(#darter-cheek-absent:checked) #darterGrid .species-card:not([data-cheek*="absent"]) { display: none; }
-#darter-form:has(#darter-opercle-scaled:checked) #darterGrid .species-card:not([data-opercle*="scaled"]) { display: none; }
-#darter-form:has(#darter-opercle-absent:checked) #darterGrid .species-card:not([data-opercle*="absent"]) { display: none; }
-
 /* --- Filter Logic: Anal Spines --- */
 #darter-form:has(#darter-anal-spines-0:checked) #darterGrid .species-card:not([data-anal-spines*="0"]) { display: none; }
 #darter-form:has(#darter-anal-spines-1:checked) #darterGrid .species-card:not([data-anal-spines*="1"]) { display: none; }
@@ -1302,8 +1296,8 @@ details.invasive-accordion img.main {
           
           <input type="checkbox" class="filter-checkbox" id="key-barbels-present" data-filter="key" data-value="barbels-present">
           <label class="filter-chip" for="key-barbels-present">
-            <img src="img/Chin Barbels.png" alt="Creek chub and carp barbel" border="0">            
-            <div class="label"><span class="title">Lip barbels present (Not chin barbels)</span><span style="font-size:11px; opacity:0.8; display:block;">Long "wiskers" and/or very small bumps at corner of mouth</span></div>
+            <img src="img/Common Carp Barbel.jpg" alt="Creek chub and carp barbel" border="0">            
+            <div class="label"><span class="title">Barbels present at corner of mouth (Not chin barbels)</span></div>
           </label>
 
           <input type="checkbox" class="filter-checkbox" id="key-scales-tiny" data-filter="key" data-value="scales-tiny">
@@ -2115,7 +2109,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="silver-chub"
-         data-key="barbels-present white-outline-caudal-fin"
+         data-key=" white-outline-caudal-fin"
          data-body="round compressed"
          data-mouth="subterminal"
          data-snout="rounded pointed"
@@ -2137,7 +2131,7 @@ details.invasive-accordion img.main {
       
     
       <div class="species-card" id="creek-chub"
-         data-key="tubercles crowded-predorsal blackspot-dorsal-front barbels-present"
+         data-key="tubercles crowded-predorsal blackspot-dorsal-front "
          data-body="round compressed"
          data-mouth="terminal"
          data-snout="rounded pointed"
@@ -2164,7 +2158,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="hornyhead-chub"
-         data-key="tubercles barbels-present red-spot-head pre-dorsal-similar"
+         data-key="tubercles  red-spot-head pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="terminal"
          data-snout="rounded pointed"
@@ -2191,7 +2185,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="river-chub"
-         data-key="tubercles barbels-present pre-dorsal-similar"
+         data-key="tubercles  pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="subterminal"
          data-snout="rounded pointed"
@@ -2217,7 +2211,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="lake-chub"
-         data-key="pre-dorsal-similar barbels-present"
+         data-key="pre-dorsal-similar "
          data-body="round compressed"
          data-mouth="subterminal terminal"
          data-snout="rounded pointed"
@@ -2244,7 +2238,7 @@ details.invasive-accordion img.main {
       
       
       <div class="species-card" id="bigeye-chub"
-         data-key="pre-dorsal-similar barbels-present tubercles"
+         data-key="pre-dorsal-similar  tubercles"
          data-body="round compressed"
          data-mouth="subterminal"
          data-snout="rounded pointed"
@@ -2267,7 +2261,7 @@ details.invasive-accordion img.main {
     
 
       <div class="species-card" id="blacknose-dace"
-         data-key="barbels-present scales-tiny pre-dorsal-similar"
+         data-key=" scales-tiny pre-dorsal-similar"
          data-body="round deep"
          data-mouth="subterminal"
          data-snout="rounded pointed"
@@ -2294,7 +2288,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="longnose-dace"
-         data-key="barbels-present scales-tiny very-pointed pre-dorsal-similar"
+         data-key=" scales-tiny very-pointed pre-dorsal-similar"
          data-body="round"
          data-mouth="subterminal"
          data-snout="pointed very-pointed"
@@ -2368,7 +2362,7 @@ details.invasive-accordion img.main {
       </div>
 
       <div class="species-card" id="northern-pearl-dace"
-         data-key="barbels-present crowded-predorsal pre-dorsal-similar scales-tiny"
+         data-key=" crowded-predorsal pre-dorsal-similar scales-tiny"
          data-body="round deep-bodied"
          data-mouth="terminal subterminal"
          data-snout="rounded pointed"
@@ -2746,7 +2740,7 @@ details.invasive-accordion img.main {
     <div class="tag-row"><div><strong>Body Shape:</strong> Deep-bodied and slightly compressed</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal with lower jaw projecting forward</div></div>
     <div class="tag-row"><div><strong>Snout Shape:</strong> Round, somewhat blunt</div></div>
-    <div class="tag-row"><div><strong>Markings:</strong> Dark olive to black colored scales, Dark "teardrop" pigment underneath eye, dark vertical bars at the base of the tail</div></div>
+    <div class="tag-row"><div><strong>Markings:</strong> Dark olive to black colored scales, dark "teardrop" pigment underneath eye, dark vertical bars at the base of the tail</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 6–7</div></div>
     <div class="tag-row"><div><strong>Fun Fact:</strong> It's anus is located on it's throat!</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
@@ -3135,33 +3129,7 @@ details.invasive-accordion img.main {
         </div>
     
 
-<div class="filter-accordion-wrap">
-  <input type="checkbox" id="acc-darter-scales" class="accordion-toggle">
-  <label for="acc-darter-scales" class="accordion-header">Scales (Cheek & Opercle)</label>
-  <div class="filter-body">
-            <div class="chip-row">
-                <input type="checkbox" class="filter-checkbox" id="darter-cheek-scaled" data-filter="cheek" data-value="scaled">
-                <label class="filter-chip" for="darter-cheek-scaled">
-                   <div class="label"><span class="title">Cheeks: Scaled</span></div>
-                </label>
-                <input type="checkbox" class="filter-checkbox" id="darter-cheek-absent" data-filter="cheek" data-value="absent">
-                <label class="filter-chip" for="darter-cheek-absent">
-                  <!-- <img src="img/Zander no scale cheek.png" alt=Zander no scale cheek" border="0"> -->
-                   <div class="label"><span class="title">Cheeks: Absent (No scales)</span></div>
-                </label>
 
-
-              
-                <input type="checkbox" class="filter-checkbox" id="darter-opercle-scaled" data-filter="opercle" data-value="scaled">
-                <label class="filter-chip" for="darter-opercle-scaled">
-                   <div class="label"><span class="title">Opercle: Scaled</span></div>
-                </label>
-                <input type="checkbox" class="filter-checkbox" id="darter-opercle-absent" data-filter="opercle" data-value="absent">
-                <label class="filter-chip" for="darter-opercle-absent">
-                   <div class="label"><span class="title">Opercle: Absent (No scales)</span></div>
-                </label>
-            </div>
-        </div>
     
     
 <div class="filter-accordion-wrap">
