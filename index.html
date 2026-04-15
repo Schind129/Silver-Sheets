@@ -1026,6 +1026,46 @@ details.invasive-accordion img.main {
   white-space: normal;   /* Allows text to wrap inside the chip if long */
   overflow: hidden;
 }
+  /* Floating Action Button (FAB) Styles */
+.fab-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  /* Smoothly hide/show on mobile browsers if needed */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fab-top:hover {
+  background-color: #1e70ad; /* A slightly darker shade of your accent */
+  transform: scale(1.05);
+}
+
+.fab-top:active {
+  transform: scale(0.95);
+}
+
+.fab-icon {
+  margin-bottom: 2px; /* Visual centering adjustment for the arrow */
+}
+
+/* Optional: Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
 
 
 </style>
@@ -5160,7 +5200,9 @@ details.invasive-accordion img.main {
   
 
 
-
+<a href="#top" class="fab-top" aria-label="Scroll to top">
+  <span class="fab-icon">↑</span>
+</a>
 </body>
 </body>
 </html>
