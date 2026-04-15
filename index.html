@@ -349,17 +349,17 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     background:var(--panel);
     border-radius:10px;
     overflow:hidden;
-    border: 1px solid #cbd5e1; /* A definitive, neutral slate border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Slightly deeper shadow for better separation */
+    box-shadow:0 4px 6px rgba(0,0,0,0.05);
     /* NEW CSS for flexible layout: */
-    flex-grow: 1;
-  flex-basis: 150px;
-  min-width: calc(50% - 10px);
-  max-width: 320px;
-  transform: scale(1);
-  opacity: 1;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    flex-grow: 1; /* Allows it to grow when necessary */
+    flex-basis: 150px; /* Smallest size before wrapping */
+    min-width: calc(50% - 10px); /* Always show at least two per row on mobile (taking gap into account) */
+    max-width: 320px; /* Prevents cards from getting too wide on desktop if there are few */
+    
+    transform:scale(1);
+    opacity:1;
+    transition:transform 0.3s ease, opacity 0.3s ease;
+  }
   /* On larger screens, force the min-width to smaller to allow more columns */
   @media (min-width: 640px) {
     .species-card{
