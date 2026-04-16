@@ -3960,8 +3960,9 @@ html {
   <div class="project-content">
     <form id="salmon-form">
 
-      <details class="filter-accordion">
-        <summary>Life Stage</summary>
+    <div class="filter-accordion-wrap">
+        <input type="checkbox" id="acc-salmon-stage" class="accordion-toggle">
+        <label for="acc-salmon-stage" class="accordion-header">Life Stage</label>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-stage-adult" data-filter="stage" data-value="adult">
@@ -3971,10 +3972,11 @@ html {
             <label class="filter-chip" for="salmon-stage-juv"><div class="label">Juvenile (Parr)</div></label>
           </div>
         </div>
-      </details>
+      </div>
 
-      <details class="filter-accordion">
-        <summary>Mouth and Gum Color</summary>
+      <div class="filter-accordion-wrap">
+        <input type="checkbox" id="acc-salmon-mouth" class="accordion-toggle">
+        <label for="acc-salmon-mouth" class="accordion-header">Mouth and Gum Color</label>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-mouth-white" data-filter="mouth" data-value="white">
@@ -3983,19 +3985,18 @@ html {
             <input type="checkbox" class="filter-checkbox" id="salmon-mouth-black" data-filter="mouth" data-value="black">
             <label class="filter-chip" for="salmon-mouth-black"><div class="label">Inside of mouth black or gray</div></label>
             
-                                    <input type="checkbox" class="filter-checkbox" id="salmon-gum-white" data-filter="mouth" data-value="white-gum">
+            <input type="checkbox" class="filter-checkbox" id="salmon-gum-white" data-filter="mouth" data-value="white-gum">
             <label class="filter-chip" for="salmon-gum-white"><div class="label">White Gums</div></label>
             
-                        <input type="checkbox" class="filter-checkbox" id="salmon-gum-black" data-filter="mouth" data-value="black-gum">
+            <input type="checkbox" class="filter-checkbox" id="salmon-gum-black" data-filter="mouth" data-value="black-gum">
             <label class="filter-chip" for="salmon-gum-black"><div class="label">Black Gums</div></label>
-            
-
           </div>
         </div>
-      </details>
+      </div>
 
-      <details class="filter-accordion">
-        <summary>Tail Shape</summary>
+      <div class="filter-accordion-wrap">
+        <input type="checkbox" id="acc-salmon-tail" class="accordion-toggle">
+        <label for="acc-salmon-tail" class="accordion-header">Tail Shape</label>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-tail-fork" data-filter="tail" data-value="forked">
@@ -4008,10 +4009,11 @@ html {
             <label class="filter-chip" for="salmon-tail-square"><div class="label">Square / Truncated</div></label>
           </div>
         </div>
-      </details>
+      </div>
 
-      <details class="filter-accordion">
-        <summary>Markings</summary>
+      <div class="filter-accordion-wrap">
+        <input type="checkbox" id="acc-salmon-markings" class="accordion-toggle">
+        <label for="acc-salmon-markings" class="accordion-header">Markings</label>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-mark-light" data-filter="mark" data-value="light-spots">
@@ -4028,14 +4030,13 @@ html {
 
             <input type="checkbox" class="filter-checkbox" id="salmon-mark-silver" data-filter="mark" data-value="silver">
             <label class="filter-chip" for="salmon-mark-silver"><div class="label">Silvery / No Spots</div></label>
-            
-            
           </div>
         </div>
-      </details>
+      </div>
 
-      <details class="filter-accordion">
-        <summary>Anal Fin Curve</summary>
+      <div class="filter-accordion-wrap">
+        <input type="checkbox" id="acc-salmon-curve" class="accordion-toggle">
+        <label for="acc-salmon-curve" class="accordion-header">Anal Fin Curve</label>
         <div class="filter-body">
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="salmon-curve-straight" data-filter="curve" data-value="straight">
@@ -4048,7 +4049,7 @@ html {
             <label class="filter-chip" for="salmon-curve-convex"><div class="label">Convex (Outward)</div></label>
           </div>
         </div>
-      </details>
+      </div>
 
       <div class="controls">
         <input type="reset" class="btn-reset" value="Reset All Filters">
