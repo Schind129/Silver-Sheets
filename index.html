@@ -52,7 +52,7 @@
 }
   
   /* Hide all project accordions starting from the 3rd one */
-details.project-accordion:nth-of-type(n+4) {
+details.project-accordion:nth-of-type(n+3) {
   display: none;
 }
   
@@ -759,10 +759,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
 #salmon-form:has(#salmon-mark-parr:checked) .species-card:not([data-mark*="parr-marks"]) { display: none; }
 #salmon-form:has(#salmon-mark-silver:checked) .species-card:not([data-mark*="silver"]) { display: none; }
 
-/* Anal Fin Curve */
-#salmon-form:has(#salmon-curve-straight:checked) .species-card:not([data-curve*="straight"]) { display: none; }
-#salmon-form:has(#salmon-curve-concave:checked) .species-card:not([data-curve*="concave"]) { display: none; }
-#salmon-form:has(#salmon-curve-convex:checked) .species-card:not([data-curve*="convex"]) { display: none; }
+
 /* GROUP 4 CATFISH: Tail & Barbels */
 #catfish-form:has(#cat-forked:checked) .species-card:not([data-cat-tail*="forked"]) { display: none; }
 #catfish-form:has(#cat-white-chin:checked) .species-card:not([data-cat-chin*="white"]) { display: none; }
@@ -4015,6 +4012,26 @@ html {
         </div>
       </div>
 
+<div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-salmon-tail-spots" class="accordion-toggle">
+  <label for="acc-salmon-tail-spots" class="accordion-header">Tail Spots</label>
+  <div class="filter-body">
+    <div class="chip-row">
+      <input type="checkbox" class="filter-checkbox" id="salmon-spots-oval" data-filter="tail-spots" data-value="oval">
+      <label class="filter-chip" for="salmon-spots-oval"><div class="label">Elongated oval-shaped spots on both lobes of tail fin</div></label>
+
+      <input type="checkbox" class="filter-checkbox" id="salmon-spots-irregular" data-filter="tail-spots" data-value="irregular">
+      <label class="filter-chip" for="salmon-spots-irregular"><div class="label">Spots on tail fin are not oval-shaped and are not arranged in orderly rows</div></label>
+
+      <input type="checkbox" class="filter-checkbox" id="salmon-spots-orderly" data-filter="tail-spots" data-value="orderly">
+      <label class="filter-chip" for="salmon-spots-orderly"><div class="label">Fully spotted, arranged in orderly rows</div></label>
+
+      <input type="checkbox" class="filter-checkbox" id="salmon-spots-none" data-filter="tail-spots" data-value="none">
+      <label class="filter-chip" for="salmon-spots-none"><div class="label">No spots or few spots, not arranged in orderly rows</div></label>
+    </div>
+  </div>
+</div>
+      
       <div class="filter-accordion-wrap">
         <input type="checkbox" id="acc-salmon-markings" class="accordion-toggle">
         <label for="acc-salmon-markings" class="accordion-header">Markings</label>
@@ -4038,23 +4055,7 @@ html {
         </div>
       </div>
 
-      <div class="filter-accordion-wrap">
-        <input type="checkbox" id="acc-salmon-curve" class="accordion-toggle">
-        <label for="acc-salmon-curve" class="accordion-header">Anal Fin Curve</label>
-        <div class="filter-body">
-          <div class="chip-row">
-            <input type="checkbox" class="filter-checkbox" id="salmon-curve-straight" data-filter="curve" data-value="straight">
-            <label class="filter-chip" for="salmon-curve-straight"><div class="label">Straight</div></label>
-
-            <input type="checkbox" class="filter-checkbox" id="salmon-curve-concave" data-filter="curve" data-value="concave">
-            <label class="filter-chip" for="salmon-curve-concave"><div class="label">Concave (Inward)</div></label>
-
-            <input type="checkbox" class="filter-checkbox" id="salmon-curve-convex" data-filter="curve" data-value="convex">
-            <label class="filter-chip" for="salmon-curve-convex"><div class="label">Convex (Outward)</div></label>
-          </div>
-        </div>
-      </div>
-
+      
       <div class="controls">
         <input type="reset" class="btn-reset" value="Reset All Filters">
       </div>
@@ -4065,15 +4066,13 @@ html {
      data-stage="adult" 
      data-mouth="white white-gum" 
      data-tail="forked" 
-     data-mark="light-spots worm" 
-     data-curve="straight">
-  <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout Adult">
+     data-mark="light-spots worm">
+      <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Adult)" alt="Lake Trout Adult">
   <h3>Lake Trout (Adult)</h3>
   <div class="tag-list">
     <div class="tag-row"><div><strong>Mouth/Gums:</strong> White mouth and gums.</div></div>
     <div class="tag-row"><div><strong>Tail:</strong> Deeply forked.</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Light cream spots on dark green/gray, worm-like marks on back (Vermiculations).</div></div>
-    <div class="tag-row"><div><strong>Anal Fin:</strong> Straight margin.</div></div>
   </div><a href="#top" class="card-top-btn">Back to top</a>
 </div>
 
@@ -4081,8 +4080,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white white-gum" 
      data-tail="forked" 
-     data-mark="parr-marks" 
-     data-curve="straight">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/2F4F4F/FFF?text=Lake+Trout+(Parr)" alt="Lake Trout Juvenile">
   <h3>Lake Trout (Juvenile)</h3>
   <div class="tag-list">
@@ -4094,8 +4092,7 @@ html {
      data-stage="adult" 
      data-mouth="black black-gum" 
      data-tail="square" 
-     data-mark="light-spots worm" 
-     data-curve="concave">
+     data-mark="light-spots worm" >
   <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Adult)" alt="Brook Trout Adult">
   <h3>Brook Trout (Adult)</h3>
   <div class="tag-list">
@@ -4110,8 +4107,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="square" 
-     data-mark="parr-marks" 
-     data-curve="concave">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/556B2F/FFF?text=Brook+Trout+(Parr)" alt="Brook Trout Juvenile">
   <h3>Brook Trout (Juvenile)</h3>
   <div class="tag-list">
@@ -4139,8 +4135,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="silver" 
-     data-curve="concave">
+     data-mark="silver" >
   <img class="extra" src="https://placehold.co/300x180/C0C0C0/000?text=Whitefish+(Juv)" alt="Lake Whitefish Juvenile">
   <h3>Lake Whitefish (Juvenile)</h3>
   <div class="tag-list">
@@ -4152,8 +4147,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="silver" 
-     data-curve="concave">
+     data-mark="silver" >
   <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Adult)" alt="Cisco Adult">
   <h3>Cisco / Lake Herring (Adult)</h3>
   <div class="tag-list">
@@ -4168,8 +4162,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="silver" 
-     data-curve="concave">
+     data-mark="silver" >
   <img class="extra" src="https://placehold.co/300x180/A9A9A9/000?text=Cisco+(Juv)" alt="Cisco Juvenile">
   <h3>Cisco / Lake Herring (Juvenile)</h3>
   <div class="tag-list">
@@ -4182,7 +4175,6 @@ html {
      data-mouth="black" 
      data-tail="notched" 
      data-mark="dark-spots" 
-     data-curve="straight">
   <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Adult)" alt="Chinook Adult">
   <h3>Chinook Salmon (Adult)</h3>
   <div class="tag-list">
@@ -4197,8 +4189,7 @@ html {
      data-stage="juvenile" 
      data-mouth="black" 
      data-tail="notched" 
-     data-mark="parr-marks" 
-     data-curve="straight">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/4682B4/FFF?text=Chinook+(Parr)" alt="Chinook Juvenile">
   <h3>Chinook Salmon (Juvenile)</h3>
   <div class="tag-list">
@@ -4210,8 +4201,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="notched" 
-     data-mark="dark-spots" 
-     data-curve="convex">
+     data-mark="dark-spots" >
   <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Adult)" alt="Coho Adult">
   <h3>Coho Salmon (Adult)</h3>
   <div class="tag-list">
@@ -4226,8 +4216,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="notched" 
-     data-mark="parr-marks" 
-     data-curve="convex">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/778899/FFF?text=Coho+(Parr)" alt="Coho Juvenile">
   <h3>Coho Salmon (Juvenile)</h3>
   <div class="tag-list">
@@ -4239,8 +4228,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="square" 
-     data-mark="dark-spots" 
-     data-curve="straight">
+     data-mark="dark-spots" >
   <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+Trout+(Adult)" alt="Rainbow Adult">
   <h3>Rainbow Trout / Steelhead (Adult)</h3>
   <div class="tag-list">
@@ -4255,8 +4243,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="square" 
-     data-mark="parr-marks" 
-     data-curve="straight">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/DB7093/FFF?text=Rainbow+(Parr)" alt="Rainbow Juvenile">
   <h3>Rainbow Trout (Juvenile)</h3>
   <div class="tag-list">
@@ -4268,8 +4255,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="square" 
-     data-mark="dark-spots" 
-     data-curve="straight">
+     data-mark="dark-spots" >
   <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Adult)" alt="Brown Trout Adult">
   <h3>Brown Trout (Adult)</h3>
   <div class="tag-list">
@@ -4284,8 +4270,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="square" 
-     data-mark="parr-marks" 
-     data-curve="straight">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/B8860B/FFF?text=Brown+Trout+(Parr)" alt="Brown Trout Juvenile">
   <h3>Brown Trout (Juvenile)</h3>
   <div class="tag-list">
@@ -4297,8 +4282,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="notched" 
-     data-mark="dark-spots" 
-     data-curve="straight">
+     data-mark="dark-spots" >
   <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+Salmon+(Adult)" alt="Pink Salmon Adult">
   <h3>Pink Salmon (Adult)</h3>
   <div class="tag-list">
@@ -4313,8 +4297,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="notched" 
-     data-mark="silver" 
-     data-curve="straight">
+     data-mark="silver" >
   <img class="extra" src="https://placehold.co/300x180/FFB6C1/000?text=Pink+(Juv)" alt="Pink Salmon Juvenile">
   <h3>Pink Salmon (Juvenile)</h3>
   <div class="tag-list">
@@ -4326,8 +4309,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="notched" 
-     data-mark="dark-spots" 
-     data-curve="concave">
+     data-mark="dark-spots" >
   <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+Salmon+(Adult)" alt="Atlantic Salmon Adult">
   <h3>Atlantic Salmon (Adult)</h3>
   <div class="tag-list">
@@ -4342,8 +4324,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="parr-marks" 
-     data-curve="concave">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/87CEEB/000?text=Atlantic+(Parr)" alt="Atlantic Salmon Juvenile">
   <h3>Atlantic Salmon (Juvenile)</h3>
   <div class="tag-list">
@@ -4355,9 +4336,7 @@ html {
      data-stage="adult" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="silver" 
-     data-curve="concave" 
-     data-tail-spots="none">
+     data-mark="silver">
   <img class="extra" src="https://placehold.co/300x180/696969/FFF?text=Round+Whitefish+(Adult)" alt="Round Whitefish Adult">
   <h3>Round Whitefish (Adult)</h3>
   <div class="tag-list">
@@ -4373,9 +4352,7 @@ html {
      data-stage="juvenile" 
      data-mouth="white" 
      data-tail="forked" 
-     data-mark="parr-marks" 
-     data-curve="concave" 
-     data-tail-spots="none">
+     data-mark="parr-marks" >
   <img class="extra" src="https://placehold.co/300x180/696969/FFF?text=Round+Whitefish+(Parr)" alt="Round Whitefish Juvenile">
   <h3>Round Whitefish (Juvenile)</h3>
   <div class="tag-list">
