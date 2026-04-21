@@ -12,6 +12,12 @@
     --chip:#f3f7fa;
     --chip-active:#d7ecff;
   }
+
+    /* Hide all project accordions starting from the 3rd one */
+details.project-accordion:nth-of-type(n+3) {
+  display: none;
+}
+  
 /* 1. Hide the accordion toggle checkbox */
 .accordion-toggle {
   display: none;
@@ -51,10 +57,7 @@
   display: block; /* Expanded when checkbox is checked */
 }
   
-  /* Hide all project accordions starting from the 3rd one */
-details.project-accordion:nth-of-type(n+4) {
-  display: none;
-}
+
   
   /* --- TOP LEVEL PROJECT ACCORDIONS --- */
 details.project-accordion {
