@@ -17,6 +17,11 @@
   display: none;
 }
 
+    /* Hide all project accordions starting from the 3rd one */
+details.project-accordion:nth-of-type(n+4) {
+  display: none;
+}
+
 /* 2. Style the Label to look like your old Summary */
 .accordion-header {
   display: block;
@@ -51,10 +56,7 @@
   display: block; /* Expanded when checkbox is checked */
 }
   
-  /* Hide all project accordions starting from the 3rd one */
-details.project-accordion:nth-of-type(n+4) {
-  display: none;
-}
+
   
   /* --- TOP LEVEL PROJECT ACCORDIONS --- */
 details.project-accordion {
