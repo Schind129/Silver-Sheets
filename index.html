@@ -12,12 +12,6 @@
     --chip:#f3f7fa;
     --chip-active:#d7ecff;
   }
-
-    /* Hide all project accordions starting from the 3rd one */
-details.project-accordion:nth-of-type(n+3) {
-  display: none;
-}
-  
 /* 1. Hide the accordion toggle checkbox */
 .accordion-toggle {
   display: none;
@@ -57,7 +51,10 @@ details.project-accordion:nth-of-type(n+3) {
   display: block; /* Expanded when checkbox is checked */
 }
   
-
+  /* Hide all project accordions starting from the 3rd one */
+details.project-accordion:nth-of-type(n+4) {
+  display: none;
+}
   
   /* --- TOP LEVEL PROJECT ACCORDIONS --- */
 details.project-accordion {
@@ -296,7 +293,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   max-width: 300px;    /* Reduced from 420px */
   user-select: none;
 }
-  .filter-chip img{height:56px;object-fit:contain;border-radius:8px;border:1px solid #d6e6ec;flex-shrink:0}
+  .filter-chip img{height:56px;object-fit:cover;border-radius:8px;border:1px solid #d6e6ec;flex-shrink:0}
 .filter-chip .label {
   font-size: 13px;
   line-height: 1.25;  /* Increased slightly for better readability on multiple lines */
@@ -314,9 +311,14 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     box-shadow:0 2px 6px rgba(14,78,135,0.12);
   }
 
-  /* Responsive tweaks */
+/* Responsive tweaks */
   @media (max-width:560px){
-    .filter-chip img{width:72px;height:72px}
+    .filter-chip img {
+      width: auto;          /* Allows the width to scale naturally based on the photo's aspect ratio */
+      max-width: 65px;      /* Prevents extremely wide images from crushing your text label */
+      height: 50px;         /* Sets a consistent height for the row */
+      object-fit: contain;  /* Guarantees the entire image fits inside its designated space without cropping */
+    }
   }
 
   /* Reset button styling */
