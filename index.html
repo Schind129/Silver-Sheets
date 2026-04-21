@@ -17,6 +17,11 @@
   display: none;
 }
 
+    /* Hide all project accordions starting from the 3rd one */
+details.project-accordion:nth-of-type(n+4) {
+  display: none;
+}
+
 /* 2. Style the Label to look like your old Summary */
 .accordion-header {
   display: block;
@@ -51,10 +56,7 @@
   display: block; /* Expanded when checkbox is checked */
 }
   
-  /* Hide all project accordions starting from the 3rd one */
-details.project-accordion:nth-of-type(n+3) {
-  display: none;
-}
+
   
   /* --- TOP LEVEL PROJECT ACCORDIONS --- */
 details.project-accordion {
@@ -293,7 +295,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   max-width: 300px;    /* Reduced from 420px */
   user-select: none;
 }
-  .filter-chip img{height:56px;object-fit:contain;border-radius:8px;border:1px solid #d6e6ec;flex-shrink:0}
+  .filter-chip img{height:56px;object-fit:cover;border-radius:8px;border:1px solid #d6e6ec;flex-shrink:0}
 .filter-chip .label {
   font-size: 13px;
   line-height: 1.25;  /* Increased slightly for better readability on multiple lines */
@@ -311,9 +313,14 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
     box-shadow:0 2px 6px rgba(14,78,135,0.12);
   }
 
-  /* Responsive tweaks */
+/* Responsive tweaks */
   @media (max-width:560px){
-    .filter-chip img{width:72px;height:72px}
+    .filter-chip img {
+      width: auto;          /* Allows the width to scale naturally based on the photo's aspect ratio */
+      max-width: 65px;      /* Prevents extremely wide images from crushing your text label */
+      height: 50px;         /* Sets a consistent height for the row */
+      object-fit: contain;  /* Guarantees the entire image fits inside its designated space without cropping */
+    }
   }
 
   /* Reset button styling */
@@ -488,7 +495,7 @@ h2{text-align:center;margin:0 0 14px 0;font-size:15px}
   #filter-form:has(#key-round-tail:checked) .species-card:not([data-key*="round-tail"]) { display: none; }
   #filter-form:has(#key-red-spot-head:checked) .species-card:not([data-key*="red-spot-head"]) { display: none; }
   #filter-form:has(#key-red-pigment-eye:checked) .species-card:not([data-key*="red-pigment-eye"]) { display: none; }
-  #filter-form:has(#key-tiny-caudal-peduncle:checked) .species-card:not([data-key*="tiny-caudal-peduncle"]) { display: none;}
+  #filter-form:has(#key-narrow-caudal-peduncle:checked) .species-card:not([data-key*="narrow-caudal-peduncle"]) { display: none;}
   #filter-form:has(#key-spots-top:checked) .species-card:not([data-key*="spots-top"]) { display: none;}
     #filter-form:has(#key-eye-low:checked) .species-card:not([data-key*="eye-low"]) { display: none; }
 
@@ -1202,11 +1209,11 @@ html {
             <div class="label"><span class="title">Two dark bands on lateral line</span><span class="highlight"style="font-size:12px; display:block;">(Northern Redbelly Dace)</span></div>
           </label>
           
-            <input type="checkbox" class="filter-checkbox" id="key-tiny-caudal-peduncle" data-filter="" data-value="tiny-caudal-peduncle">
-          <label class="filter-chip" for="key-tiny-caudal-peduncle">
+            <input type="checkbox" class="filter-checkbox" id="key-narrow-caudal-peduncle" data-filter="" data-value="narrow-caudal-peduncle">
+          <label class="filter-chip" for="key-narrow-caudal-peduncle">
             <img src="img/Caudal Peduncle.png" alt="Caudal Peduncle" border="0">
             <div class="label">
-              <span class="title"> Tiny caudal-peduncle</span><span class="highlight"style="font-size:12px; display:block;">(Sticklebacks)</span></div>
+              <span class="title"> Narrow caudal-peduncle</span><span class="highlight"style="font-size:12px; display:block;">(Sticklebacks)</span></div>
           </label>
 
           
@@ -1284,7 +1291,7 @@ html {
           <label class="filter-chip" for="key-blackspot-dorsal-front">
             <img src="img/Bluntnose dark spot.jpg" alt="Bluntnose dark spot front" border="0">
             <div class="label">
-              <span class="title">Black spot on front of dorsal fin</span>
+              <span class="title">Dark pigment at base of dorsal fin or on front of dorsal fin</span>
             </div>
           </label>
           
@@ -1318,13 +1325,15 @@ html {
             </div>
           </label>
           
-                    <input type="checkbox" class="filter-checkbox" id="key-pre-dorsal-similar" data-filter="key" data-value="pre-dorsal-similar">
+  <!--                  <input type="checkbox" class="filter-checkbox" id="key-pre-dorsal-similar" data-filter="key" data-value="pre-dorsal-similar">
           <label class="filter-chip" for="key-pre-dorsal-similar">
             <img src="img/Emerald predorsal.jpg" alt="Emerald-predorsal" border="0">
             <div class="label">
               <span class="title">Pre-dorsal scales similar in size & evenly spaced</span>
             </div>
           </label>
+
+            -->
           
           <input type="checkbox" class="filter-checkbox" id="key-tubercles" data-filter="key" data-value="tubercles">
           <label class="filter-chip" for="key-tubercles">
@@ -1496,7 +1505,7 @@ html {
 
 <div class="filter-accordion-wrap">
   <input type="checkbox" id="acc-markings" class="accordion-toggle">
-  <label for="acc-markings" class="accordion-header">Markings / Pigment</label>
+  <label for="acc-markings" class="accordion-header">Body Markings / Pigment</label>
   <div class="filter-body">
 
         <div class="chip-row">
@@ -1504,21 +1513,10 @@ html {
           
                     <input type="checkbox" class="filter-checkbox" id="markings-dorsal-wedge" data-filter="markings" data-value="dorsal-wedge">
           <label class="filter-chip" for="markings-dorsal-wedge">
-            <img src="img/Sand Shiner Dorsal Wedge zoom.jpg" alt="Sand-Shiner-Dorsal-Wedge-zoom">
+            <img src="img/Sand Shiner Dorsal Wedge zoom more.JPG" alt="Sand-Shiner-Dorsal-Wedge-zoom">
             <div class="label"><span class="title">Dark pigment in front of dorsal forming a wedge shape</span><span class="highlight"style="font-size:12px; display:block;">(Sand Shiner)</span></div>
           </label>
           
-                    <input type="checkbox" class="filter-checkbox" id="markings-black-spot-dorsal-backend" data-filter="markings" data-value="black-spot-dorsal-backend">
-          <label class="filter-chip" for="markings-black-spot-dorsal-backend">
-            <img src="img/black spot on back dorsal.jpg" alt="black-spot-on-back-dorsal" border="0">
-            <div class="label"><span class="title">Black spot on backend of dorsal fin</span><span class="highlight"style="font-size:12px; display:block;">(Spotfin Shiner)</span></div>
-          </label>
-          
-                                        <input type="checkbox" class="filter-checkbox" id="markings-white-outline-caudal-fin" data-filter="markings" data-value="white-outline-caudal-fin">
-          <label class="filter-chip" for="markings-white-outline-caudal-fin">
-            <img src="img/Silver chub caudal white outline.jpg" alt="Silver chub caudal white outline" border="0">
-            <div class="label"><span class="title">White outline on the bottom of the caudal fin</span><span class="highlight"style="font-size:12px; display:block;">(Silver Chub)</span></div>
-          </label>
 
                               <input type="checkbox" class="filter-checkbox" id="markings-double-dark-band" data-filter="markings" data-value="double-dark-band">
           <label class="filter-chip" for="markings-double-dark-band">
@@ -1562,25 +1560,7 @@ html {
             <div class="label"><span class="title">Vertical stripes/bars</span></div>
           </label>
 
-          <input type="checkbox" class="filter-checkbox" id="markings-rosy-head-fins" data-filter="markings" data-value="rosy-head-fins">
-          <label class="filter-chip" for="markings-rosy-head-fins">
-            <img src="img/Red fins.jpg" alt="Red-fins" border="0">
-            <div class="label"><span class="title">Rosy/red head and/or fins</span></div>
-          </label>
 
-          <input type="checkbox" class="filter-checkbox" id="markings-black-spot-tail" data-filter="markings" data-value="black-spot-tail">
-          <label class="filter-chip" for="markings-black-spot-tail">
-            <img src="img/Spottail spot.jpg" alt="Spottail-spot" border="0">
-            <div class="label"><span class="title">Black spot at base of tail (Can be very faint)</span></div>
-          </label>
-
-                              <input type="checkbox" class="filter-checkbox" id="markings-blackspot-dorsal-front" data-filter="markings" data-value="blackspot-dorsal-front">
-          <label class="filter-chip" for="markings-blackspot-dorsal-front">
-            <img src="img/Creek Chub black dorsal.jpg" alt="Creek-Chub-black-dorsal" border="0">
-            <div class="label">
-              <span class="title">Black spot on front of dorsal fin</span></div>
-          </label>
-        
           <input type="checkbox" class="filter-checkbox" id="markings-dark-edged-scales" data-filter="markings" data-value="dark-edged-scales">
           <label class="filter-chip" for="markings-dark-edged-scales">
             <img src="img/top scales outlined sand shiner.png" alt="top scales outlined sand shiner" border="0">
@@ -1596,6 +1576,46 @@ html {
         </div>
       </div>
    </div>
+   
+   <div class="filter-accordion-wrap">
+  <input type="checkbox" id="acc-fin-pigment" class="accordion-toggle">
+  <label for="acc-fin-pigment" class="accordion-header">Pigment on Fins</label>
+  <div class="filter-body">
+        <div class="chip-row">
+
+          <input type="checkbox" class="filter-checkbox" id="markings-rosy-head-fins" data-filter="markings" data-value="rosy-head-fins">
+          <label class="filter-chip" for="markings-rosy-head-fins">
+            <img src="img/Red fins.jpg" alt="Red-fins" border="0">
+            <div class="label"><span class="title">Rosy/red head and/or fins</span></div>
+          </label>
+
+          <input type="checkbox" class="filter-checkbox" id="markings-white-outline-caudal-fin" data-filter="markings" data-value="white-outline-caudal-fin">
+          <label class="filter-chip" for="markings-white-outline-caudal-fin">
+            <img src="img/Silver chub caudal white outline.jpg" alt="Silver chub caudal white outline" border="0">
+            <div class="label"><span class="title">White outline on the bottom of the caudal fin</span><span class="highlight"style="font-size:12px; display:block;">(Silver Chub and Spottail Shiner)</span></div>
+          </label>
+
+          <input type="checkbox" class="filter-checkbox" id="markings-black-spot-tail" data-filter="markings" data-value="black-spot-tail">
+          <label class="filter-chip" for="markings-black-spot-tail">
+            <img src="img/Spottail spot.jpg" alt="Spottail-spot" border="0">
+            <div class="label"><span class="title">Black spot at base of tail (Can be very faint)</span></div>
+          </label>
+
+          <input type="checkbox" class="filter-checkbox" id="markings-black-spot-dorsal-backend" data-filter="markings" data-value="black-spot-dorsal-backend">
+          <label class="filter-chip" for="markings-black-spot-dorsal-backend">
+            <img src="img/black spot on back dorsal.jpg" alt="black-spot-on-back-dorsal" border="0">
+            <div class="label"><span class="title">Black spot on backend of dorsal fin</span><span class="highlight"style="font-size:12px; display:block;">(Spotfin Shiner)</span></div>
+          </label>
+
+          <input type="checkbox" class="filter-checkbox" id="markings-blackspot-dorsal-front" data-filter="markings" data-value="blackspot-dorsal-front">
+          <label class="filter-chip" for="markings-blackspot-dorsal-front">
+            <img src="img/Creek Chub black dorsal.jpg" alt="Creek-Chub-black-dorsal" border="0">
+            <div class="label"><span class="title">Black spot on front of dorsal fin</span></div>
+          </label>
+
+        </div>
+  </div>
+</div>
 
 <div class="filter-accordion-wrap">
   <input type="checkbox" id="acc-anal" class="accordion-toggle">
@@ -1772,9 +1792,9 @@ html {
       </div>
 
 <div class="species-card" id="bleak"
-     data-key="scaleless-keel" 
+     data-key="scaleless-keel upturned-mouth" 
      data-body="sharp-keel compressed" 
-     data-mouth="superior" 
+     data-mouth="superior upturned-mouth" 
      data-snout="rounded pointed"
      data-lateral="strongly-decurved"
      data-markings="bright-silver-sides" 
@@ -1946,12 +1966,12 @@ html {
         <img class="extra" src="img/bluntnose shiner uniform.png" alt="Bluntnose-Shiner" border="0">
         <h3>Bluntnose Minnow</h3>
         <div class="tag-list">
-          <div class="tag-row"><div><strong>Key Features:</strong> Crowded pre-dorsal scales, tubercles on breeding males, black spot on front of dorsal fin</div></div>
+          <div class="tag-row"><div><strong>Key Features:</strong> Crowded pre-dorsal scales, tubercles on breeding males, Dark pigment at base of dorsal fin or on front of dorsal fin</div></div>
           <div class="tag-row"><div><strong>Body Shape:</strong> Round, slightly compressed</div></div>
           <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal mouth that extends to anterior(front) of eye</div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt, slightly rounded</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Dark lateral band</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong> Sometimes black spot at base of tail, scales on the back and upperside have dark edges, dark anal base, black spot on front of dorsal fin</div></div>
+          <div class="tag-row"><div><strong>Markings:</strong> Sometimes black spot at base of tail, scales on the back and upperside have dark edges, dark anal base, Dark pigment at base of dorsal fin or on front of dorsal fin</div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7</div></div>
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
@@ -1959,8 +1979,8 @@ html {
       <div class="species-card" id="fathead-minnow"
            data-key="crowded-predorsal tubercles blackspot-dorsal-front"
            data-body="round compressed deep-bodied"
-           data-mouth="terminal superior"
-           data-snout="rounded pointed"
+           data-mouth="terminal"
+           data-snout="rounded"
            data-lateral=" "
            data-markings="dark-edged-scales dark-band black-spot-tail blackspot-dorsal-front"
            data-anal="7">
@@ -1969,7 +1989,7 @@ html {
         <div class="tag-list">
           <div class="tag-row"><div><strong>Key Features:</strong> Crowded pre-dorsal scales, tubercles on breeding males</div></div>
           <div class="tag-row"><div><strong>Body Shape:</strong> Round and deep, slightly compressed</div></div>
-          <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal to superior</div></div>
+          <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Rounded, slightly blunt</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Dark lateral band, sometimes very faint</div></div>
           <div class="tag-row"><div><strong>Markings:</strong> Sometimes a dark spot on front of dorsal fin, sometimes a black spot at base of tail</div></div>
@@ -1978,7 +1998,7 @@ html {
       </div>
 
       <div class="species-card" id="spottail-shiner"
-           data-key=" pre-dorsal-similar"
+           data-key=" pre-dorsal-similar white-outline-caudal-fin"
            data-body="round slightly-compressed"
            data-mouth="terminal subterminal"
            data-snout="rounded pointed"
@@ -2012,7 +2032,7 @@ html {
           <div class="tag-row"><div><strong>Key Features:</strong> Black spot on backend of dorsal fin</div></div>
           <div class="tag-row"><div><strong>Body Shape:</strong> Deep bodied and laterally compressed</div></div>
           <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal </div></div>
-          <div class="tag-row"><div><strong>Snout Shape:</strong> Rounded</div></div>
+          <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Tall scales around lateral line(about 3x taller than it is wide)</div></div>
           <div class="tag-row"><div><strong>Markings:</strong> Black spot on backend of dorsal fin, black spot at base of tail, bright silver sides</div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 7–8</div></div>
@@ -2101,15 +2121,15 @@ html {
            data-markings="dark-edged-scales rosy-head-fins black-spot-tail bright-silver-sides"
            data-anal="10 11">
         <img class="extra" src="img/Redfin Shiner uniform.jpg" alt="Redfin Shiner" border="0">
-        <img class="extra" src="img/Redfin Shiner2.jpg" alt="Redfin Shiner" border="0">
+        <img class="extra" src="img/Redfin Shiner.png" alt="Redfin Shiner" border="0">
         <h3>Redfin Shiner</h3>
         <div class="tag-list">
-          <div class="tag-row"><div><strong>Key Features:</strong> Crowded pre-dorsal scales, black spot on front of dorsal fin, tubercles on breeding males</div></div>
+          <div class="tag-row"><div><strong>Key Features:</strong> Crowded pre-dorsal scales, Dark pigment at base of dorsal fin or on front of dorsal fin, tubercles on breeding males</div></div>
           <div class="tag-row"><div><strong>Body Shape:</strong> Deep-bodied, latterally compressed</div></div>
           <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Strongly decurved lateral line (curves far down side), faint lateral line</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong>  Red fins, scales on the back and upperside have slightly darker edges, bright silver sides</div></div>
+          <div class="tag-row"><div><strong>Markings:</strong>  Usually has red fins, scales on the back and upperside have slightly darker edges, bright silver sides</div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 10–12 (usually 11)</div></div>
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
@@ -2182,7 +2202,7 @@ html {
          data-key="tubercles crowded-predorsal blackspot-dorsal-front "
          data-body="round compressed"
          data-mouth="terminal"
-         data-snout="rounded pointed"
+         data-snout="rounded"
          data-lateral=" "
          data-markings=" dark-band black-spot-tail blackspot-dorsal-front"
          data-anal="8">
@@ -2200,7 +2220,7 @@ html {
             </details>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt, round</div></div>
           <div class="tag-row"><div><strong>Lateral Line:</strong> Wide black band around lateral line, sometimes faint</div></div>
-          <div class="tag-row"><div><strong>Markings:</strong> Black spot at base of tail, black spot on front of dorsal fin, </div></div>
+          <div class="tag-row"><div><strong>Markings:</strong> Black spot at base of tail, black spot on front of dorsal fin </div></div>
           <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 8</div></div>
         </div><a href="#top" class="card-top-btn">Back to top</a>
       </div>
@@ -2209,7 +2229,7 @@ html {
          data-key="tubercles  red-spot-head pre-dorsal-similar"
          data-body="round compressed"
          data-mouth="terminal"
-         data-snout="rounded pointed"
+         data-snout="rounded"
          data-lateral="dark-band "
          data-markings="black-spot-tail dark-band red-spot-head dark-edged-scales"
          data-anal="7">
@@ -2326,7 +2346,7 @@ html {
             </details>
       <div class="tag-list">
           <div class="tag-row"><div><strong>Key Features:</strong> Tiny scales, tiny barbels present</div></div>
-          <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
+          <div class="tag-row"><div><strong>Body Shape:</strong>Pointed</div></div>
           <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal</div></div>
           <div class="tag-row"><div><strong>Snout Shape:</strong> Pointed, slightly round</div></div>
           <div class="tag-row"><div><strong>Markings:</strong> No pigment on chin, mottled pigment on body, sometimes a dark lateral band</div></div>
@@ -2479,9 +2499,9 @@ html {
    
 
 <div class="species-card" id="alewife"
-     data-key="sharp-keel pre-dorsal-similar"
+     data-key="sharp-keel pre-dorsal-similar upturned-mouth"
      data-body="deep-bodied compressed sharp-keel"
-     data-mouth="terminal superior"
+     data-mouth="terminal superior upturned-mouth"
      data-snout="rounded pointed"
      data-lateral=""
      data-markings="bright-silver-sides"
@@ -2492,7 +2512,7 @@ html {
     <div class="tag-row"><div><strong>Key Features:</strong>Sharp keel</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Sharp keel, deep-bodied, strongly compressed</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Superior to slightly terminal</div></div>
-    <div class="tag-row"><div><strong>Snout Type:</strong> Rounded, slightly pointed</div></div>
+    <div class="tag-row"><div><strong>Snout Type:</strong> Pointed</div></div>
     <div class="tag-row"><div><strong>Lateral Line:</strong> Faint or absent</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Bright silver sides, dark shoulder spot</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 15–21</div></div>
@@ -2500,7 +2520,7 @@ html {
 </div>
 
 <div class="species-card" id="brook-stickleback"
-     data-key="tiny-caudal-peduncle round-tail"
+     data-key="narrow-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2510,7 +2530,7 @@ html {
   <img class="extra" src="img/Brook Stickleback uniform.jpg" alt="Brook Stickleback uniform" border="0">
   <h3>Brook Stickleback</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Tiny caudal-peduncle and 4 to 6, but usually 5, freestanding spines</div></div>
+    <div class="tag-row"><div><strong>Key Features:</strong> Narrow caudal-peduncle and 4 to 6, but usually 5, freestanding spines</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Laterally compressed, deep-bodied</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
     <div class="tag-row"><div><strong>Snout Type:</strong> Pointed</div></div>
@@ -2522,7 +2542,7 @@ html {
 
 
 <div class="species-card" id="threespine-stickleback"
-     data-key="tiny-caudal-peduncle round-tail"
+     data-key="narrow-caudal-peduncle round-tail"
      data-body="compressed deep-bodied"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2532,7 +2552,7 @@ html {
   <img class="extra" src="img/Threespine Stickleback uniform.jpg" alt="Threespine Stickleback" border="0">
   <h3>Three-spine Stickleback</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Tiny caudal-peduncle and 3 freestanding spines</div></div>
+    <div class="tag-row"><div><strong>Key Features:</strong> Narrow caudal-peduncle and 3 freestanding spines</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Deep bodied, laterally compressed</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
     <div class="tag-row"><div><strong>Snout Type:</strong> Pointed</div></div>
@@ -2544,7 +2564,7 @@ html {
 
 
 <div class="species-card" id="ninespine-stickleback"
-     data-key="tiny-caudal-peduncle round-tail"
+     data-key="narrow-caudal-peduncle round-tail"
      data-body="round"
      data-mouth="terminal"
      data-snout="pointed"
@@ -2554,7 +2574,7 @@ html {
   <img class="extra" src="img/Ninespine Stickleback uniform.png" alt="Ninespine Stickleback uniform" border="0">
   <h3>Nine-spine Stickleback</h3>
   <div class="tag-list">
-    <div class="tag-row"><div><strong>Key Features:</strong> Tiny caudal-peduncle and 9 freestanding spines</div></div>
+    <div class="tag-row"><div><strong>Key Features:</strong> Narrow caudal-peduncle and 9 freestanding spines</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
     <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
     <div class="tag-row"><div><strong>Snout Type:</strong> Pointed</div></div>
@@ -2588,7 +2608,7 @@ html {
 <div class="species-card" id="central-mudminnow"
      data-key="round-tail"
      data-body="round"
-     data-mouth="subterminal"
+     data-mouth="subterminal terminal"
      data-snout="rounded"
      data-lateral=""
      data-markings="vertical-bars mottled"
@@ -2598,7 +2618,7 @@ html {
   <div class="tag-list">
  <div class="tag-row"><div><strong>Key Features:</strong>Round tail fin</div></div>
     <div class="tag-row"><div><strong>Body Shape:</strong> Round</div></div>
-    <div class="tag-row"><div><strong>Mouth Position:</strong> Subterminal</div></div>
+    <div class="tag-row"><div><strong>Mouth Position:</strong> Terminal</div></div>
     <div class="tag-row"><div><strong>Snout Type:</strong> Blunt, slightly round</div></div>
     <div class="tag-row"><div><strong>Markings:</strong> Vertical bars, mottled</div></div>
     <div class="tag-row"><div><strong>Anal Fin Rays:</strong> 9–11</div></div>
@@ -2987,7 +3007,7 @@ html {
 </div>
 
  <div class="species-card" 
-     data-key="tiny-scales round-tail barbels red-pigment-eye" 
+     data-key="tiny-scales barbels red-pigment-eye" 
      data-body="round compressed deep-bodied" 
      data-mouth="terminal" 
      data-snout="rounded pointed"
@@ -3852,7 +3872,7 @@ html {
         <img class="extra" src="img/Round Goby Uniform.jpg" alt="Round Goby" border="0">
         <h3>Round Goby<span class="invasive"style="font-size:12px; display:block;">INVASIVE</span></h3>
             <div class="tag-list">
-            <div class="tag-row"><div><strong>Key Feature:</strong> Fused pelvic fin, single black spot on first dorsal fin</div></div>
+            <div class="tag-row"><div><strong>Key Feature:</strong> Fused pelvic fin, pigment at base of dorsal fin or on front of dorsal fin</div></div>
             <div class="tag-row"><div><strong>Markings:</strong> Mottled gray/brown/black</div></div>
             <div class="tag-row"><div><strong>Snout Shape:</strong> Blunt, frog-like raised eyes</div></div>
             <div class="tag-row"><div><strong>Scales:</strong>Cheeks: Absent | Opercle: Absent</div></div>
@@ -3969,10 +3989,10 @@ html {
   <details class="project-accordion" id="group-pike">
   <summary>
     <div class="summary-content-wrapper">
-      <span class="summary-text">Esocidae (Pike & Pickerels)</span>
+      <span class="summary-text">"Duck Billed" Snout (Pike & Pickerels)</span>
       <div class="header-images">
-        <img src="img/Muskellunge.jpg" alt="Muskellunge" border="0">
-        <img src="img/Northern Pike.jpg" alt="Northern Pike" border="0">
+        <img src="img/Musky bars.jpg" alt="Muskellunge" border="0">
+        <img src="img/Northern Pike.png" alt="Northern Pike" border="0">
         <img src="img/Grass Pickerel.jpg" alt="Grass Pickerel" border="0">
       </div>
     </div>
@@ -3999,7 +4019,7 @@ html {
 
             <input type="checkbox" class="filter-checkbox" id="pike-pores-6" data-filter="pores" data-value="6-9">
             <label class="filter-chip" for="pike-pores-6">
-              <img src="img/6 pores.jpg" alt="6-9 Pores" border="0">
+              <img src="img/Musky pores.jpg" alt="6-9 Pores" border="0">
               <div class="label"><span class="title">6 to 9 Pores per side</span><span class="highlight" style="font-size:12px; display:block;">(Muskellunge)</span></div>
             </label>
           </div>
@@ -4015,19 +4035,19 @@ html {
           <div class="chip-row">
             <input type="checkbox" class="filter-checkbox" id="pike-scale-full" data-filter="scales" data-value="full-full">
             <label class="filter-chip" for="pike-scale-full">
-              <img src="img/Scales Full Full.jpg" alt="Fully Scaled" border="0">
+              <img src="img/Grass Pickerel Cheek outline.png" alt="Fully Scaled" border="0">
               <div class="label"><span class="title">Cheek: Fully Scaled<br>Opercle: Fully Scaled</span></div>
             </label>
 
             <input type="checkbox" class="filter-checkbox" id="pike-scale-half-op" data-filter="scales" data-value="full-half">
             <label class="filter-chip" for="pike-scale-half-op">
-              <img src="img/Scales Full Half.jpg" alt="Half Scaled Opercle" border="0">
+              <img src="img/Musky Cheek outline.png" alt="Half Scaled Opercle" border="0">
               <div class="label"><span class="title">Cheek: Fully Scaled<br>Opercle: Upper Half Scaled</span></div>
             </label>
 
             <input type="checkbox" class="filter-checkbox" id="pike-scale-half-half" data-filter="scales" data-value="half-half">
             <label class="filter-chip" for="pike-scale-half-half">
-              <img src="img/Musky Cheek.jpg" alt="Half Scaled Both" border="0">
+              <img src="img/Musky Cheek outline.png" alt="Half Scaled Both" border="0">
               <div class="label"><span class="title">Cheek: Upper Half Scaled<br>Opercle: Upper Half Scaled</span></div>
             </label>
           </div>
@@ -4079,7 +4099,7 @@ html {
              data-mark="dark-marks">
           <img class="extra" src="img/Musky Spots 2.jpg" alt="Muskellunge">
            <img class="extra" src="img/Musky bars.jpg" alt="Muskellunge">
-          <img class="extra" src="img/Musky Small.jpg" alt="Muskellunge">
+          <img class="extra" src="img/Musky Small.png" alt="Muskellunge">
           <h3>Muskellunge</h3>
           <div class="tag-list">
             <div class="tag-row"><div><strong>Pores:</strong> 6 to 9 submandibular pores on each side of the lower jaw.</div></div>
@@ -4093,7 +4113,7 @@ html {
              data-pores="5"
              data-scales="full-half"
              data-mark="light-spots">
-          <img class="extra" src="img/Northern Pike.jpg" alt="Northern Pike">
+          <img class="extra" src="img/Northern Pike.png" alt="Northern Pike">
           <h3>Northern Pike</h3>
           <div class="tag-list">
             <div class="tag-row"><div><strong>Pores:</strong> Usually exactly 5 submandibular pores on each side of the lower jaw.</div></div>
@@ -4109,12 +4129,13 @@ html {
              data-scales="full-full"
              data-mark="mottled">
           <img class="extra" src="img/Grass Pickerel.jpg" alt="Grass Pickerel">
+           <img class="extra" src="img/Grass Pickerel 1.jpg" alt="Grass Pickerel">
           <h3>Grass Pickerel</h3>
           <div class="tag-list">
             <div class="tag-row"><div><strong>Key Features:</strong> No spots on fins</div></div>
             <div class="tag-row"><div><strong>Pores:</strong> 4 submandibular pores on each side of the lower jaw</div></div>
             <div class="tag-row"><div><strong>Scales:</strong> Both cheek and opercle are FULLY scaled</div></div>
-            <div class="tag-row"><div><strong>Markings:</strong> Mottled, wavy dark vertical bars or vermiculations on a brownish/green background, Usually a light line along side</div></div>
+            <div class="tag-row"><div><strong>Markings:</strong> Mottled, wavy dark vertical bars or vermiculations on a brownish/green background, Usually a light line along the side</div></div>
             <div class="tag-row"><div><strong>Teardrop:</strong> Distinct dark vertical bar angled backwards slightly from the eye</div></div>
           </div><a href="#group-pike" class="card-top-btn">Back to top</a>
         </div>
